@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>灵活高效的jQuery颜色拾取插件DEMO演示</title>
+
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+
+<!--必要样式-->
+<link rel="stylesheet" type="text/css" href="css/jquery.bigcolorpicker.css" />
+<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.bigcolorpicker.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#c1").bigColorpicker("c1");
+	$("#btn").bigColorpicker("c2");
+	$("#img").bigColorpicker(function(el,color){
+		$(el).css("background-color",color);
+	});
+	$(".ku").bigColorpicker(function(el,color){
+		$(el).css("background-color",color);
+	});
+	$("#c5").bigColorpicker("c5","L",6);
+});
+</script>
+<style type="text/css">
+.demo{width:400px; margin:20px auto}
+.demo p{padding-bottom:10px}
+#img{width:25px;height:25px;display:block; border:1px solid #d3d3d3;}
+.ku{width:25px;height:25px;display:block; border:1px solid #d3d3d3; float:left; margin-right:10px}
+.clear{clear:both}
+</style>
+</head>
+
+<body>
+
+<div id="main">
+<div style="text-align:center;clear:both">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+   <div class="demo">
+   		<p>1.点击输入框选取颜色</p>
+   		<input type="text" id="c1">
+   </div>
+   <div class="demo">
+   		<p>2.点击选色按钮选取颜色</p>
+        <input type="text" id="c2"><input id="btn" type="button" value="选色" />
+   </div>
+   <div class="demo">
+   		<p>3.点击方框选取颜色</p>
+        <a href="javascript:void(0)" id="img"></a>
+   </div>
+   <div class="demo">
+   		<p>4.选取多个颜色</p>
+        <a href="javascript:void(0)" class="ku"></a>
+        <a href="javascript:void(0)" class="ku"></a>
+        <a href="javascript:void(0)" class="ku"></a>
+        <a href="javascript:void(0)" class="ku"></a>
+        <div class="clear"></div>
+   </div>
+   <div class="demo">
+   		<p>5.自定义颜色块个数</p>
+        <input type="text" id="c5">
+   </div>
+
+</div>
+</body>
+</html>

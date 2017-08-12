@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>别具创意的CSS3鼠标悬停翻转按钮DEMO演示</title>
+
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css" />
+<link rel="stylesheet" type="text/css" href="css/zzsc.css">
+<style type="text/css">
+	.btn{
+		border: none;
+		border-radius: 0;
+		text-transform: uppercase;
+		padding-top: 0;
+		padding-bottom: 0;
+		position: relative;
+		transition: all 0.3s ease 0s;
+	}
+	.btn:before{
+		content: "";
+		display: block;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-top: 2px solid transparent;
+		transition: all 0.3s ease 0s;
+	}
+	.btn:hover:before{
+		transform: translateY(42px);
+	}
+	.btn:after{
+		content: "\f105";
+		font-family:fontawesome;
+		display: inline-block;
+		width: 44px;
+		height: 44px;
+		border: 2px solid transparent;
+		font-size: 24px;
+		line-height: 40px;
+		position: relative;
+		top: 0;
+		right: -16px;
+		transition: all 0.43s ease 0s;
+	}
+	.btn:hover:after{
+		transform: rotateX(180deg);
+	}
+	.btn.btn-sm:hover:before{
+		transform: translateY(32px);
+	}
+	.btn.btn-sm:after{
+		width: 34px;
+		height: 34px;
+		line-height: 30px;
+		font-size: 20px;
+		right: -10px;
+	}
+	.btn.btn-xs:hover:before{
+		transform: translateY(22px);
+	}
+	.btn.btn-xs:after{
+		width: 24px;
+		height: 24px;
+		line-height: 20px;
+		font-size: 16px;
+		right: -5px;
+	}
+	.btn.red{
+		color: #ff6e6e;
+	}
+	.btn.red:before,
+	.btn.red:after{
+		border-color: #ff6e6e;
+	}
+	.btn.blue{
+		color: #5cbcf7;
+	}
+	.btn.blue:before,
+	.btn.blue:after{
+		border-color: #5cbcf7;
+	}
+	.btn.orange{
+		color: #ef965b;
+	}
+	.btn.orange:before,
+	.btn.orange:after{
+		border-color: #ef965b;
+	}
+	.btn.green{
+		color: #7ad79a;
+	}
+	.btn.green:before,
+	.btn.green:after{
+		border-color: #7ad79a;
+	}
+	@media only  screen and (max-width: 767px){
+		.btn{ margin-bottom: 20px; }
+	}
+</style>
+</head>
+<body>
+<div class="demo pad-50">
+	<div class="container">
+		<div class="row pad-15">
+			<div class="col-sm-3">
+				<a href="#" class="btn btn-lg red">button</a>
+			</div>
+
+			<div class="col-sm-3">
+				<a href="#" class="btn btn-lg blue">button</a>
+			</div>
+
+			<div class="col-sm-3">
+				<a href="#" class="btn btn-lg orange">button</a>
+			</div>
+
+			<div class="col-sm-3">
+				<a href="#" class="btn btn-lg green">button</a>
+			</div>
+		</div>
+
+		<div class="row pad-15">
+			<div class="col-sm-3">
+				<a href="#" class="btn btn-sm red">button</a>
+			</div>
+
+			<div class="col-sm-3">
+				<a href="#" class="btn btn-sm blue">button</a>
+			</div>
+
+			<div class="col-sm-3">
+				<a href="#" class="btn btn-sm orange">button</a>
+			</div>
+
+			<div class="col-sm-3">
+				<a href="#" class="btn btn-sm green">button</a>
+			</div>
+		</div>
+
+		<div class="row pad-15">
+			<div class="col-sm-3">
+				<a href="#" class="btn btn-xs red">button</a>
+			</div>
+
+			<div class="col-sm-3">
+				<a href="#" class="btn btn-xs blue">button</a>
+			</div>
+
+			<div class="col-sm-3">
+				<a href="#" class="btn btn-xs orange">button</a>
+			</div>
+
+			<div class="col-sm-3">
+				<a href="#" class="btn btn-xs green">button</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+
+</body>
+</html>

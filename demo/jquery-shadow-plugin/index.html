@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>可以帮你快速生成各种阴影效果的jQuery插件DEMO演示</title>
+
+<link rel="stylesheet" href="css/jquery.shadow.css" />
+<style type="text/css">
+	body {
+		font:12px/1.5 Arial, sans-serif;
+		text-align:center;
+		color:#333;
+		background:#f3f3f1;
+	}
+	.container {
+		position:relative;
+		z-index:1;
+		width:600px;
+		padding:20px;
+		margin:0 auto;
+	}
+	.container:after {
+		content:"";
+		display:block;
+		clear:both;
+		visibility:hidden;
+		height:0;
+		font-size:0;
+	}
+	.box {
+		float:left;
+		height:100px;
+		width:40%;    
+		padding:1em; 
+		margin:2em 10px 4em; 
+		background:#fff;
+	}
+</style>
+
+</head>
+<body>
+<div class="container">
+	<div class="box standard">
+			<p><code>$('.box.standard')<br/>&nbsp;&nbsp;&nbsp;&nbsp;.shadow();</code></p>
+		</div>
+
+		<div class="box lifted">
+			<p><code>$('.box.lifted')<br/>&nbsp;&nbsp;&nbsp;&nbsp;.shadow('lifted');</code></p>
+		</div>
+				
+		<div class="box perspective">
+			<p><code>$('.box.perspective')<br/>&nbsp;&nbsp;&nbsp;&nbsp;.shadow('perspective');</code></p>
+		</div>
+		
+		<div class="box raised">
+			<p><code>$('.box.raised')<br/>&nbsp;&nbsp;&nbsp;&nbsp;.shadow('raised');</code></p>
+		</div>
+
+		<div class="box sides-vt-1">
+			<p><code>$('.box.sides-vt-1')<br/>&nbsp;&nbsp;&nbsp;&nbsp;.shadow({type:'sides', sides:'vt-1'});</code></p>
+		</div>
+
+		<div class="box sides-vt-2">
+			<p><code>$('.box.sides-vt-2')<br/>&nbsp;&nbsp;&nbsp;&nbsp;.shadow({type:'sides', sides:'vt-2'});</code></p>
+		</div>
+		
+		<div class="box sides-hz-1">
+			<p><code>$('.box.sides-hz-1')<br/>&nbsp;&nbsp;&nbsp;&nbsp;.shadow({type:'sides', sides:'hz-1'});</code></p>
+		</div>
+		
+		<div class="box sides-hz-2">
+			<p><code>$('.box.sides-hz-2')<br/>&nbsp;&nbsp;&nbsp;&nbsp;.shadow({type:'sides', sides:'hz-2'});</code></p>
+		</div>
+
+
+		<div class="box rotated">
+			<p><code>$('.box.rotated')<br/>&nbsp;&nbsp;&nbsp;&nbsp;.shadow({type:'rotated',<br/>rotate:'-5deg'});</code></p>
+		</div>
+		
+		 <div class="box rotated lifted">
+			<p><code>.rotated.lifted</code></p>
+		</div>
+		
+		<div class="box rotated perspective">
+			<p><code>.rotated.perspective</code></p>
+		</div>
+		
+		<div class="box rotated raised">
+			<p><code>.rotated.raised</code></p>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/jquery.shadow.js"></script>	
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.box.standard').shadow();
+		$('.box.lifted').shadow('lifted');
+		$('.box.perspective').shadow('perspective');
+		$('.box.raised').shadow('raised');
+		$('.box.sides-vt-1').shadow({type:'sides',sides:'vt-1'});
+		$('.box.sides-vt-2').shadow({type:'sides',sides:'vt-2'});
+		$('.box.sides-hz-1').shadow({type:'sides',sides:'hz-1'});
+		$('.box.sides-hz-2').shadow({type:'sides',sides:'hz-2'});
+		$('.box.rotated').shadow({type:'rotated',rotate:'-5deg'});
+	});
+</script>
+
+<div style="text-align:center;clear:both">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+</body>
+</html>
