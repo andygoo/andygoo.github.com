@@ -1,0 +1,150 @@
+$segments: 19;
+$height: 192px;
+$height2: 8px;
+$leftColor: rgb(238,0,0);
+$leftTransparent: transparent;
+$rightColor: rgb(170,0,0);
+$rightTransparent: transparent;
+$baseColor: rgb(83, 96, 7);
+$speed: 6s;
+
+@font-face {
+    font-family: 'ChowFun';
+    src: url('https://dl.dropboxusercontent.com/u/2241077/webfonts/chowfun/chowfun-webfont.eot');
+    src: url('https://dl.dropboxusercontent.com/u/2241077/webfonts/chowfun/chowfun-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://dl.dropboxusercontent.com/u/2241077/webfonts/chowfun/chowfun-webfont.woff2') format('woff2'),
+         url('https://dl.dropboxusercontent.com/u/2241077/webfonts/chowfun/chowfun-webfont.woff') format('woff'),
+         url('https://dl.dropboxusercontent.com/u/2241077/webfonts/chowfun/chowfun-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+	background-color: #D3A87A;
+	text-align: center;
+	font-size: 100%;
+    font-family: Arial;
+    line-height: 1.2;
+}
+h1 {
+  text-align: center;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
+  font-size: 8vmin;
+  font-family: 'ChowFun';
+}
+.wrapper {
+	position: relative;
+	perspective: 1600px;
+	perspective-origin: 50% 50%;
+	transform-origin: 100% 100%;
+	display: inline-block;
+	margin: 5px auto;
+}
+.fan {
+	transform-style: preserve-3d;
+	position: relative;
+	width: $height*2 + $height2*2;
+	height: $height + $height2;
+	background-color: rgba(255,0,0,0);
+	transform-origin: center bottom;
+    animation: wave $speed ease infinite;
+}
+.segment {
+	overflow: hidden;
+  position: absolute;
+  display: inline-block;
+  transform-origin: 50% 100%;
+  bottom: 0;
+  left: $height - $height2;
+  animation: none $speed ease infinite;
+}
+.top {
+    position: relative;
+    width: 32px;
+    height: $height2;
+}
+.segment.leaf .top {
+    animation: scale $speed ease infinite;
+}
+.top:before, .top:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+}
+.top:before {
+    left: 0;
+    border-width: $height2 0 0 16px;
+    border-color: $leftTransparent $leftTransparent $leftTransparent $leftColor;
+}
+.top:after {
+    right: 0;
+    border-width: 0 0 $height2 16px;
+    border-color: $rightTransparent $rightTransparent $rightColor $rightTransparent;
+}
+.bottom {
+    position: relative;
+    width: 32px;
+    height:  $height;
+}
+.segment.leaf .bottom {
+    animation: scale $speed ease infinite;
+}
+.bottom:before, .bottom:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+}
+.bottom:before {
+    left: 0;
+    border-width: 0 16px $height 0;
+    border-color: $leftTransparent $leftColor $leftTransparent $leftTransparent;
+}
+.bottom:after {
+    right: 0;
+    border-width:$height 16px 0 0 ;
+    border-color: $rightColor $rightTransparent $rightTransparent $rightTransparent;
+}
+.segment.base .top:before,
+.segment.base .top:after {
+    border-color: $baseColor;
+}
+.segment.base .bottom:before {
+    border-color: $leftTransparent $baseColor $leftTransparent $leftTransparent;
+}
+.segment.base .bottom:after {
+    border-color: $baseColor $rightTransparent $rightTransparent $rightTransparent;
+}
+@keyframes wave {
+    0%, 39%, 71%, 100% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    40%, 46%, 52%, 58%, 63%, 69% {
+        transform: rotateX(0deg) rotateY(10deg);
+    }
+    43%, 49%, 55%, 61%, 66% {
+        transform: rotateX(30deg) rotateY(10deg);
+    }
+
+}
+@keyframes scale {
+    0%, 20%, 90%, 100% {
+        transform: scaleX(.1);
+    }
+    40%, 70% {
+        transform: scaleX(1);
+    }
+}
+@for $i from 1 through $segments {
+    .segment:nth-of-type(#{$i}) {
+      transform: rotate((90deg - $i * 9deg));
+      animation-name: fold#{$i};
+    }
+
+    @keyframes fold#{$i} {
+        0%, 20%, 90%, 100% {
+          transform: rotate(90deg - $i * 0deg);
+        }
+        40%, 70% {
+          transform: rotate(90deg - $i * 9deg);
+        }
+    }
+}

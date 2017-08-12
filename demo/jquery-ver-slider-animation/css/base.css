@@ -1,0 +1,56 @@
+body,html{ 
+    background:#FFF; color: #666;
+}
+body,button,input,select,textarea{
+	font:12px 宋体,tahoma,arial;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	margin:0;padding:0; margin:0;padding:0;font-family: "宋体","tahoma","arial",;
+}
+header, footer, nav, section, article, aside, dialog, figure, menu { display:block }
+table{
+	border-collapse:collapse;border-spacing:0;
+}
+fieldset,img{
+	border:0;
+}
+ol,ul {
+	list-style:none;
+}
+a{
+    color: #666;
+	text-decoration:none;
+}
+a:hover {
+    color:#116ec1;
+	text-decoration:underline;
+}
+
+
+.fn-clear:after {
+	visibility:hidden;	
+	display:block;	
+	font-size:0;	
+	content:" ";	
+	clear:both;	
+	height:0;
+}
+.fn-clear {
+	zoom:1; /* for IE6 IE7 */
+}
+.fn-left,.fn-right {
+	display:inline;
+}
+.fn-left {
+	float:left;
+}
+.fn-right {
+	float:right;
+}
+.relative{ 
+    position:relative;
+}
+
+/*------------------------------------------------------------------公用框架样式------------------------------------------------------------------*/
+.wrapper{ width:960px; margin:0 auto;}

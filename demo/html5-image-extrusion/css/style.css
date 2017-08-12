@@ -1,0 +1,33 @@
+body {
+  background: #000;
+}
+
+.zone {
+  width: 800px;
+  height: 600px;
+  background: #000;
+  margin: auto;
+  -webkit-filter: blur(15px) saturate(800%);
+          filter: blur(15px) saturate(800%);
+  cursor: none;
+}
+.zone .blob {
+  width: 90px;
+  height: 67.5px;
+  margin: 20px 20px;
+  background: red;
+  float: left;
+  border-radius: 100%;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+.zone .repulse {
+  width: 90px;
+  height: 67.5px;
+  background: lightblue;
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  -webkit-filter: saturate(600%);
+          filter: saturate(600%);
+}

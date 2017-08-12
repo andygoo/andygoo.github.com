@@ -1,0 +1,207 @@
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+	border:0;
+}
+
+/* 本例子css */
+.foucebox {
+	font:normal 12px/22px 宋体;
+	width:934px;
+	height:400px;
+	background:#fff;
+	margin:30px auto;
+	padding:7px;
+	border:#ddd 1px solid;
+	
+	
+	/* Gecko browsers */
+-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	/* Webkit browsers */
+-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	/* W3C syntax */
+border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius:  3px;
+	
+	
+}
+.foucebox .bd {
+	position:relative;
+	float:right;
+	width:680px;
+	height:400px;
+	overflow:hidden;
+}
+.foucebox .showDiv {
+	position:relative;
+	width:680px;
+	height:400px;
+}
+.foucebox .showDiv img {
+	width:680px;
+	height:400px;
+	/* Gecko browsers */
+-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	/* Webkit browsers */
+-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	/* W3C syntax */
+border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius:  3px;
+}
+.foucebox .showDiv p {
+	position:absolute;
+	left:20px;
+	bottom:0;
+	padding-right:20px;
+	color:#aaa;
+	z-index:9;
+	height:44px;
+}
+.foucebox .showDiv h2 {
+	position:absolute;
+	left:20px;
+	bottom:0;
+	width:380px;
+	height:34px;
+	background:url(../images/foucebox_h2.png) no-repeat 0 4px;
+	_background:none;
+	padding-left:40px;
+	_padding-left:0;
+	font-size:24px;
+	font-family:"Microsoft Yahei";
+	line-height:34px;
+	z-index:9;
+	overflow:hidden;
+}
+.foucebox .showDiv h2 a {
+	color:#FFF;
+	font-weight:normal;
+	text-decoration:none;
+}
+.foucebox .foucebox_bg {
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:680px;
+	height:107px;
+	background:#000;
+	filter:alpha(opacity=60);
+	opacity:0.6;
+	z-index:8;
+	overflow:hidden;
+}
+.foucebox .hd {
+	width:254px;
+	height:318px;
+	float:left;
+}
+.foucebox .hd ul li {
+	width:120px;
+	height:95px;
+	float:left;
+	margin:0 7px 7px 0px;
+	display:inline;
+	position:relative;
+}
+.foucebox .hd ul a {
+	display:block;
+	width:120px;
+	height:95px;
+}
+.foucebox .hd ul img {
+	width:114px;
+	height:88px;
+	border:3px solid #888;
+	
+	
+	
+	/* Gecko browsers */
+-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	/* Webkit browsers */
+-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	/* W3C syntax */
+border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius:  3px;
+}
+.foucebox .hd ul .txt_bg {
+	width:114px;
+	height:24px;
+	position:absolute;
+	left:3px;
+	top:67px;
+	background:url(../images/bg_png.png) no-repeat;
+	_background:none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,src="../images/bg_png.png");
+}
+.foucebox .hd ul .txt {
+	width:110px;
+	height:24px;
+	line-height:24px;
+	color:#fff;
+	position:absolute;
+	left:4px;
+	bottom:4px;
+	z-index:2;
+	text-align:right;
+	padding-right:5px;
+	overflow:hidden;
+}
+.foucebox .hd ul .mask {
+	width:114px;
+	height:89px;
+	display:block;
+	position:absolute;
+	left:3px;
+	bottom:3px;
+	z-index:3;
+	filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#66000000',endColorstr='#66000000');
+	background:rgba(0,0,0,0.4);
+}
+.foucebox .hd ul a:hover .mask,.foucebox .hd ul .on .mask {
+	display:none;
+	position:relative;
+}
+.foucebox .hd ul a:hover img,.foucebox .hd ul .on img {
+	border-color:#1689d9;
+}
+
+
+.foucebox .hd ul .on .txt_bg {
+	background:#1689d9;
+}
+
+
+.foucebox .hd ul a:hover {
+	color:#fff;
+}
+
+
+
+.foucebox .hd ul a:hover .txt_bg {
+	background:#1689d9;
+}

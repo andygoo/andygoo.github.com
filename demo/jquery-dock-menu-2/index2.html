@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery实现苹果Dock样式的菜单DEMO演示</title>
+    <style type="text/css">
+        *{margin: 0;padding:0;}
+        #wrapper{position: absolute;bottom: 0;text-align: center;width: 100%;}
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+           document.onmousemove=function(ev){
+               var oevent=ev||event;
+               var aimg=document.getElementsByTagName('img');
+               var odiv=document.getElementById('wrapper');
+               for(var i=0;i<aimg.length;i++){
+                      var x=aimg[i].offsetLeft+aimg[i].offsetWidth/2;
+                      var y=aimg[i].offsetTop+odiv.offsetTop+aimg[i].offsetHeight/2;
+                      var a=x-oevent.clientX;
+                      var b=y-oevent.clientY;
+                      var dis=parseInt(Math.sqrt(a*a+b*b));
+                      var scale=1-dis/200;
+                    if(scale<0.5){
+                        scale=0.5;
+                    }
+                    aimg[i].width=scale*128;
+
+               }
+           }
+        }
+    </script>
+</head>
+<body>
+<div id="wrapper">
+    <img src="images/1.png" width="64">
+    <img src="images/2.png" width="64">
+    <img src="images/3.png" width="64">
+    <img src="images/4.png" width="64">
+    <img src="images/5.png" width="64">
+</div>
+
+</body>
+</html>

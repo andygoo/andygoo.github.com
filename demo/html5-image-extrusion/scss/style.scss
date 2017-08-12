@@ -1,0 +1,36 @@
+$w:800px;
+$h:600px;
+
+body{
+  background: #000; 
+}
+
+.zone{
+  width: $w;
+  height: $h;
+  background: #000; 
+  margin: auto;
+  filter:  blur(15px) saturate(800%); 
+  cursor: none;
+
+
+  .blob{
+    width: ($w*4.5)/40;
+    height: ($h*4.5)/40; 
+    margin:$h/30 $h/30; 
+    background: red;
+    float: left;
+    border-radius: 100%;
+    transform: translateZ(0);
+  }
+
+  .repulse{
+    width: ($w*4.5)/40;
+    height: ($h*4.5)/40; 
+    background: lightblue;
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    filter: saturate(600%);
+  }
+}

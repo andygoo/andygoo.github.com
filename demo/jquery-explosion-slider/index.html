@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>jQuery带爆炸特效的焦点图动画DEMO演示</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			height: 3400px;
+		}
+		#baiyechuang{
+			width: 560px;
+			height: 300px;
+			margin: 100px auto;
+			position: relative;
+		}
+		#baiyechuang .anniu .leftbut{
+			position: absolute;
+			width: 45px;
+			height: 45px;
+			top: 122px;
+			left: 10px;
+			background:url(images/icons.png) no-repeat 0 0;
+			cursor: pointer;
+		}
+		#baiyechuang .anniu .rightbut{
+			position: absolute;
+			width: 45px;
+			height: 45px;
+			top: 122px;
+			right: 10px;
+			background:url(images/icons.png) no-repeat 0 -45px;
+			cursor: pointer;
+		}
+		#baiyechuang .dianul{
+			list-style: none;
+			position: absolute;
+			right: 27px;
+			bottom: 12px;
+		}
+		#baiyechuang .dianul li{
+			float: left;
+			width: 15px;
+			height: 15px;
+			margin-right: 8px;
+			background:url(images/icons.png) no-repeat -23px -125px;
+			cursor: pointer;
+		}
+		#baiyechuang .dianul li.cur{
+			background-position: -8px -125px;
+		}
+		#baiyechuang .maonimen{
+			-webkit-perspective:600px;
+		}
+		#baiyechuang .maonimen p{
+			position: absolute;
+			width: 140px;
+			height: 100px;
+			background-image:url(images/0.jpg);
+			font-size: 40px;
+		}
+		#baiyechuang .maonimen.fei p{
+			opacity: 0;
+		}
+		#baiyechuang .maonimen.fei p:nth-child(1){-webkit-transform:rotateX(30deg) rotateY(10deg) translateZ(400px);}
+		#baiyechuang .maonimen.fei p:nth-child(2){-webkit-transform:rotateX(330deg) rotateY(10deg) translateZ(400px);}
+		#baiyechuang .maonimen.fei p:nth-child(3){-webkit-transform:rotateX(3450deg) rotateY(10deg) translateZ(400px);}
+		#baiyechuang .maonimen.fei p:nth-child(4){-webkit-transform:rotateX(-30deg) rotateY(-10deg) translateZ(400px);}
+		#baiyechuang .maonimen.fei p:nth-child(5){-webkit-transform:rotateX(330deg) rotateY(10deg) translateZ(400px);}
+		#baiyechuang .maonimen.fei p:nth-child(6){-webkit-transform:rotateX(40deg) rotateY(20deg) translateZ(400px);}
+		#baiyechuang .maonimen.fei p:nth-child(7){-webkit-transform:rotateX(340deg) rotateY(10deg) translateZ(400px);}
+		#baiyechuang .maonimen.fei p:nth-child(8){-webkit-transform:rotateX(3450deg) rotateY(60deg) translateZ(400px);}
+		#baiyechuang .maonimen.fei p:nth-child(9){-webkit-transform:rotateX(230deg) rotateY(10deg) translateZ(400px);}
+		#baiyechuang .maonimen.fei p:nth-child(10){-webkit-transform:rotateX(20deg) rotateY(20deg) translateZ(400px);}
+		#baiyechuang .maonimen.fei p:nth-child(11){-webkit-transform:rotateX(30deg) rotateY(10deg) translateZ(400px);}
+		#baiyechuang .maonimen.fei p:nth-child(12){-webkit-transform:rotateX(10deg) rotateY(10deg) translateZ(400px);}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+
+	//parseInt(Math.random() * 100 + 200)
+
+
+		$(document).ready(
+			function() {
+				var nowimg = 0;
+				$(".maonimen p").each(
+					function(){
+						var a = $(this).index() % 4 * 140;
+						var b = parseInt($(this).index() / 4) * 100;
+						$(this).css(
+							{
+								"left":a,
+								"top": b,
+								"background-position":(-a) + "px " + (-b) + "px"
+							}
+						);
+					}
+				);
+
+				$(".rightbut").click(
+					function(){
+						if(nowimg < 4){
+							nowimg ++;
+						}else{
+							nowimg = 0;
+						}
+						dong();
+					}
+				);
+				$(".leftbut").click(
+					function(){
+						if(nowimg > 0 ){
+							nowimg --;
+						}else{
+							nowimg = 4;
+						}
+						dong();
+					}
+				);
+				function dong(){
+						//加过渡：
+						$(".maonimen p").css("transition","all 1s ease 0s");
+						$(".maonimen").addClass("fei");
+						
+						$(".zhentu img").attr("src","images/" + nowimg + ".jpg");
+
+						setTimeout(function(){
+							//去掉过渡
+							$(".maonimen p").css("transition","none");
+							$(".maonimen p").css("background-image","url(images/" + nowimg + ".jpg)");
+							//我们准备下一张图
+							$(".maonimen").removeClass("fei");
+						},1000);
+				}
+			}
+		);
+	</script>
+</head>
+<body>
+	<div id="baiyechuang">
+		<div class="tutu">
+			<div class="maonimen">
+				<p>1</p>
+				<p>2</p>
+				<p>3</p>
+				<p>4</p>
+				<p>5</p>
+				<p>6</p>
+				<p>7</p>
+				<p>8</p>
+				<p>9</p>
+				<p>10</p>
+				<p>11</p>
+				<p>12</p>
+			</div>
+			<div class="zhentu">
+				<img src="images/1.jpg"  />
+			</div>
+		</div>
+		<div class="anniu">
+			<span class="leftbut"></span>
+			<span class="rightbut"></span>
+		</div>
+		<ul class="dianul">
+			<li class="cur"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+
+<div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+</body>
+</html>
