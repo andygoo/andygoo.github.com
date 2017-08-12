@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>HTML5播放器API集合 轻松学会HTML5播放器开发演示地址</title>
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+
+  <video id="video" controls="" preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
+      <source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+       <p>Your user agent does not support the HTML5 Video element.</p>
+ </video>
+<div id="buttons">
+      <button class="large awesome" onclick="document._video.load()">load()</button>
+      <button class="large awesome" onclick="document._video.play()">play()</button>
+      <button class="large awesome" onclick="document._video.pause()">pause()</button>
+      <button class="large awesome" onclick="document._video.currentTime+=10">currentTime+=10</button>
+      <button class="large awesome" onclick="document._video.currentTime-=10">currentTime-=10</button>
+      <button class="large awesome" onclick="document._video.currentTime=50">currentTime=50</button><br>
+      <button class="large awesome" onclick="document._video.playbackRate++">playbackRate++</button>
+      <button class="large awesome" onclick="document._video.playbackRate--">playbackRate--</button>
+      <button class="large awesome" onclick="document._video.playbackRate+=0.1">playbackRate+=0.1</button>
+      <button class="large awesome" onclick="document._video.playbackRate-=0.1">playbackRate-=0.1</button><br>
+      <button class="large awesome" onclick="document._video.volume+=0.1">volume+=0.1</button>
+      <button class="large awesome" onclick="document._video.volume-=0.1">volume-=0.1</button>
+      <button class="large red awesome" onclick="document._video.muted=true">muted=true</button>
+      <button class="large red awesome" onclick="document._video.muted=false">muted=false</button><br>
+      <button class="large blue awesome" onclick="switchVideo(0);">Sintel teaser</button>
+      <button class="large blue awesome" onclick="switchVideo(1);">Bunny trailer</button>
+      <button class="large blue awesome" onclick="switchVideo(2);">Bunny movie</button>
+      <button class="large blue awesome" onclick="switchVideo(3);">Test movie</button>
+    </div>
+
+  <script src='http://codepen.io/assets/libs/fullpage/none.js'></script>
+
+  <script src="js/index.js"></script>
+<div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+</body>
+
+</html>

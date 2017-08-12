@@ -1,0 +1,104 @@
+@import "compass/css3";
+
+$space: 8px;
+$listWidth: 300px;
+$labelWidth: 80px;
+$numberWidth: 30px;
+
+@keyframes grow-padding-left {
+  from { padding-left: 0; }
+}
+@keyframes grow-padding-right {
+  from { padding-right: 0; }
+}
+
+h1 {
+  text-align: center;
+}
+div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 650px;
+  margin: 0 auto;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  li {
+    font-weight: bold;
+    margin-bottom: $space/2;
+    border-radius: $space/2;
+    width: $listWidth;
+  }
+  em {
+    display: inline-block;
+    width: $labelWidth;
+    font-style: normal;
+  }
+  span {
+    display: inline-block;
+  }
+}
+.style-1 {
+  li {
+    color: white;
+    background: crimson;
+  }
+  em {
+    background: rgba(0,0,0,0.4);
+    padding: $space;
+    border-radius: $space/2;
+    animation: grow-padding-right 10s;
+  }
+  span {
+    float: right;
+    padding: $space;
+  }
+}
+.style-2 {
+  em {
+    text-align: right;
+    padding: $space $space $space 0;
+  }
+  span {
+    color: white;
+    background: cornflowerblue;
+    padding: $space;
+    width: $numberWidth;
+    border-radius: $space/2;
+    animation: grow-padding-right 5s;
+  }
+}
+.style-3 {
+  li {
+    color: white;
+    background: orange;
+  }
+  em {
+    padding: $space;
+  }
+  span {
+    float: right;
+    background: rgba(0,0,0,0.3);
+    padding: $space;
+    width: $numberWidth;
+    text-align: right;
+    border-radius: $space/2;
+    animation: grow-padding-left 5s;
+  }
+}
+.style-4 {
+  em {
+    padding: $space;
+  }
+  span {
+    float: right;
+    text-align: right;
+    padding: $space;
+    width: $numberWidth;
+    background: olivedrab;
+    border-radius: $space/2;
+    animation: grow-padding-left 1s;
+  }
+}

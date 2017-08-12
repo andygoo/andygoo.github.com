@@ -1,0 +1,98 @@
+@keyframes grow-padding-left {
+  from {
+    padding-left: 0;
+  }
+}
+@keyframes grow-padding-right {
+  from {
+    padding-right: 0;
+  }
+}
+h1 {
+  text-align: center;
+}
+
+div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 650px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+ul li {
+  font-weight: bold;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  width: 300px;
+}
+ul em {
+  display: inline-block;
+  width: 80px;
+  font-style: normal;
+}
+ul span {
+  display: inline-block;
+}
+
+.style-1 li {
+  color: white;
+  background: crimson;
+}
+.style-1 em {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  border-radius: 4px;
+  animation: grow-padding-right 10s;
+}
+.style-1 span {
+  float: right;
+  padding: 8px;
+}
+
+.style-2 em {
+  text-align: right;
+  padding: 8px 8px 8px 0;
+}
+.style-2 span {
+  color: white;
+  background: cornflowerblue;
+  padding: 8px;
+  width: 30px;
+  border-radius: 4px;
+  animation: grow-padding-right 5s;
+}
+
+.style-3 li {
+  color: white;
+  background: orange;
+}
+.style-3 em {
+  padding: 8px;
+}
+.style-3 span {
+  float: right;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  width: 30px;
+  text-align: right;
+  border-radius: 4px;
+  animation: grow-padding-left 5s;
+}
+
+.style-4 em {
+  padding: 8px;
+}
+.style-4 span {
+  float: right;
+  text-align: right;
+  padding: 8px;
+  width: 30px;
+  background: olivedrab;
+  border-radius: 4px;
+  animation: grow-padding-left 1s;
+}

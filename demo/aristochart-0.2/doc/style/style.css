@@ -1,0 +1,269 @@
+@import url("reset.css");
+body {
+  font-family: Helvetica;
+}
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: -2px;
+  margin: 32px 0;
+  margin-top: 100px;
+}
+h2 {
+  font-size: 18px;
+  font-weight: 100;
+  padding: 4px;
+  color: #30beda;
+  border-bottom: 1px solid #b2e7f1;
+  margin: 18px 0;
+}
+h3 {
+  font-size: 24px;
+  font-family: Georgia;
+  font-weight: 100;
+  font-style: italic;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 6px;
+}
+.column {
+  display: inline-block;
+  vertical-align: top;
+}
+.column.wide {
+  width: 70%;
+}
+.column.thin {
+  width: 30%;
+}
+.column.half {
+  width: 50%;
+}
+code,
+pre {
+  margin: 30px;
+  background: rgba(0, 0, 0, 0.065);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 12px 18px;
+  font-family: monospace;
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.6);
+  overflow-x: scroll;
+}
+code {
+  padding: 2px 4px;
+  margin: 0;
+}
+p {
+  line-height: 150%;
+}
+p a {
+  color: #19788b;
+}
+p .tag {
+  color: #fc356c;
+  font-family: monospace;
+  font-size: 120%;
+}
+p .tag:before {
+  content: '<';
+}
+p .tag:after {
+  content: '>';
+}
+p .version {
+  font-family: monospace;
+  font-size: 120%;
+  color: #ff942d;
+}
+ul li {
+  list-style-type: disc;
+  margin-left: 18px;
+}
+table {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 18px 0;
+}
+table th,
+table td {
+  padding: 8px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+table th {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.5);
+}
+table th:last-child,
+table td:last-child {
+  border-right: none;
+}
+table tr td:first-child {
+  text-align: center;
+}
+table tr td:last-child {
+  font-family: monospace;
+  font-size: 110%;
+  color: #19788b;
+}
+table tr td:last-child em {
+  font-family: Helvetica;
+  font-size: 90%;
+  color: #000;
+}
+table tr:last-child th,
+table tr:last-child td {
+  border-bottom: none;
+}
+.button {
+  display: inline-block;
+  background: #30beda;
+  padding: 8px 14px;
+  color: #fff;
+  text-decoration: none;
+  margin: 8px;
+  font-weight: bold;
+  font-size: 20px;
+}
+header {
+  height: 60px;
+}
+header .wrapper {
+  height: inherit;
+  border-bottom: 1px solid #ddd;
+}
+header nav {
+  float: right;
+}
+header nav li {
+  display: inline-block;
+  margin: 22px 6px;
+}
+header nav li a {
+  font-size: 16px;
+  color: #273137;
+  text-decoration: none;
+}
+header nav li a:hover {
+  text-decoration: underline;
+}
+header nav .highlighted {
+  padding-bottom: 17px;
+  border-bottom: 4px solid #30beda;
+}
+header nav .github {
+  font-weight: bold;
+}
+header h1 {
+  float: left;
+  color: #273137;
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: -3px;
+  margin: 8px;
+}
+header h1 em {
+  font-family: Georia;
+  font-style: italic;
+  font-size: 118%;
+  letter-spacing: -2px;
+}
+footer {
+  margin-top: 40px;
+  background: #273137;
+  height: 200px;
+}
+footer p {
+  color: #839aa7;
+  font-size: 14px;
+  text-align: center;
+  padding: 20px;
+}
+footer p a {
+  color: #219eb6;
+}
+.examples {
+  min-height: 400px;
+}
+.examples span {
+  font-weight: normal;
+}
+.examples span a {
+  font-weight: bold;
+}
+.themes .thin {
+  padding-top: 10px;
+}
+.themes h2 {
+  margin: 12px 0;
+}
+.themes #themes {
+  display: inline-block;
+  margin: 4px;
+  margin-top: -4px;
+  width: 86px;
+}
+.links div {
+  margin: 14px 12px;
+  list-style: none;
+  font-weight: bold;
+  font-weight: 18px;
+}
+.links div a {
+  color: #273137;
+}
+.links div span:before {
+  content: '\27dc  ';
+}
+.documentation #sidebar {
+  position: fixed;
+  margin-top: 14px;
+}
+.documentation #sidebar h3 {
+  font-size: 18px;
+  margin-right: 18px;
+}
+.documentation .wide {
+  margin-left: 288px;
+}
+.home .flap-active {
+  -webkit-transform: translate(0, 0);
+}
+.home .features .wide h3 {
+  margin-right: 14px;
+}
+.home .download {
+  text-align: center;
+}
+.home .download .button:first-child {
+  padding: 14px 17px;
+  margin-bottom: 0;
+  width: 230px;
+  font-size: 19px;
+}
+.home .download .button:nth-child(2) {
+  background: #1d8ba1;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: normal;
+  width: 82%;
+  margin-top: 0;
+}
+.home .download p {
+  color: rgba(0, 0, 0, 0.6);
+}
+.home ul {
+  margin: 16px 0;
+}
+.home ul li {
+  list-style: none;
+  font-size: 16px;
+  margin: 4px;
+}
+.home ul li:before {
+  content: '\27dc  ';
+}

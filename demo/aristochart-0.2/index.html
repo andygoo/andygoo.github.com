@@ -1,0 +1,78 @@
+<html>
+<head>
+	<title>Aristochart - Sophisticated Javascript charting.</title>
+	<link href="doc/style/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<header>
+		<div class="wrapper">
+			<h1><em>Aristo</em>chart</h1>
+			<nav>
+				<li><a href="index.html" class="highlighted">Home</a></li>
+				<li><a href="doc/index.html">Documentation</a></li>
+				<li><a href="examples/index.html">Examples</a></li>
+				<li><a href="themes/index.html">Themes</a></li>
+				<li><a href="https://github.com/dunxrion/aristochart" class="github">Github</a></li>
+			</nav>
+		</div>
+	</header>
+	<div class="content home">
+		<div class="wrapper">
+			<section>
+				<div  class="column wide flap-active" id="holder">
+				</div><div class="column thin">
+					<h1>Simple <br>and <em>sophisticated</em> static <br>2D<br> line charts.</h1>
+				</div>
+			</section>
+			<section class="features">
+				<div class="column wide">
+						<p>Aristochart is highly customizable and flexible line charting library for <span class="tag">canvas</span>. Aristochart allows you to focus on aesthetic while it handles and manipulates the data.</p>
+					<!-- <div class="column half">
+						<h3>Features</h3>
+						<ul>
+							<li>Heavily customizable.</li>
+							<li>Automatic data scaling.</li>
+							<li>Built on canvas.</li>
+							<li>Resolution independant.</li>
+							<li>Supported by all major browsers.</li>
+						</ul>
+					</div> -->
+				</div><div class="column thin">
+					<div class="download">
+						<a class="button" href="https://raw.github.com/dunxrion/aristochart/master/Aristochart.js">Download Aristochart.js</a>
+						<a class="button" href="https://github.com/dunxrion/aristochart/archive/master.zip">Download docs, examples, themes</a>
+						<p>Version 0.1. Hosted on <a href="https://github.com/dunxrion/aristochart" class="github">Github</a></p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<footer>
+		<div class="wrapper">
+			<p>An open-source project by <a href="http://adriancooney.ie">Adrian Cooney</a>.</p>
+		</div>
+	</footer>
+</body>
+<script src="Aristochart.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	//Print the chart mustache!
+	var graph = new Aristochart(document.getElementById("holder"), {
+		width: 700,
+
+		axis: {
+			y: {
+				steps: 5,
+				min: 0
+			}
+		},
+
+		data: {
+			x: 10,
+			y: [20, 19, 18, 19, 18, 19, 20, 20, 20],
+			y1: [14, 11, 9, 8, 8, 8, 9, 11, 13, 11, 9, 8, 8, 8, 9, 11, 14],
+			y2: [14, 6, 3, 2, 2, 2, 4, 7, 4, 2, 2, 2, 3, 6, 14]
+		}
+	});
+</script>
+</html>

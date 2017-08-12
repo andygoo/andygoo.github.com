@@ -1,0 +1,355 @@
+@import url("reset.css");
+
+// Color palette gotten from the beautiful http://www.soundsupp.ly/
+@grey: #273137;
+@orange: #ff942d;
+@red: #fc356c;
+@white: #fff;
+@blue: #30beda;
+
+// Dimensions
+@content_width: 960px;
+
+body {
+	font-family: Helvetica;
+}
+
+.wrapper {
+	width: @content_width;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 48px;
+	font-weight: bold;
+	letter-spacing: -2px;
+	margin: 32px 0;
+	margin-top: 100px;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: 100;
+	padding: 4px;
+	color: @blue;
+	border-bottom: 1px solid lighten(@blue, 30%);
+	margin: 18px 0;
+}
+
+h3 {
+	font-size: 24px;
+	font-family: Georgia;
+	font-weight: 100;
+	font-style: italic;
+	padding: 8px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 6px;
+}
+
+.column {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.column.wide {
+	width: 70%;
+}
+
+.column.thin {
+	width: 30%;
+}
+
+.column.half {
+	width: 50%;
+}
+
+code, pre {
+	margin: 30px;
+	background: rgba(0, 0, 0, 0.065);
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	padding: 12px 18px;
+	font-family: monospace;
+	border-radius: 6px;
+	color: rgba(0,0,0,0.6);
+	overflow-x: scroll;
+}
+
+code {
+	padding: 2px 4px;
+	margin: 0;
+}
+
+p {
+	line-height: 150%;
+
+	a {
+		color: darken(@blue, 20%);
+	}
+
+	.tag {
+		color: @red;
+		font-family: monospace;
+		font-size: 120%;
+	}
+
+	.tag:before {
+		content: '<';
+	}
+
+	.tag:after {
+		content: '>';
+	}
+
+	.version {
+		font-family: monospace;
+		font-size: 120%;
+		color: @orange;
+	}
+}
+
+ul {
+	li {
+		list-style-type: disc;
+		margin-left: 18px;
+	}
+}
+
+table {
+	border: 1px solid rgba(0,0,0,0.3);
+	margin: 18px 0;
+
+	th, td {
+		padding: 8px;
+		border-right: 1px solid rgba(0,0,0,0.1);
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+	}
+
+	th {
+		background: rgba(0,0,0,0.05);
+		color: rgba(0,0,0,0.5);
+	}
+
+	th:last-child, td:last-child {
+		border-right: none;
+	}
+
+	tr {
+		td:first-child {
+			text-align: center;
+		}
+
+		td:last-child {
+			font-family: monospace;
+			font-size: 110%;
+			color: darken(@blue, 20%);
+
+			em {
+				font-family: Helvetica;
+				font-size: 90%;
+				color: #000;
+			}
+		}
+	}
+
+	tr:last-child {
+		th, td {
+			border-bottom: none;
+		}
+	}
+}
+
+.button {
+	display: inline-block;
+	background: @blue;
+	padding: 8px 14px;
+	color: #fff;
+	text-decoration: none;
+	margin: 8px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+header {
+	height: 60px;
+
+	.wrapper {
+		height: inherit;
+		border-bottom: 1px solid #ddd;
+	}
+
+	nav {
+		float: right;
+
+		li {
+			display: inline-block;
+			margin: 22px 6px;
+
+			a {
+				font-size: 16px;
+				color: @grey;
+				text-decoration: none;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.highlighted {
+			padding-bottom: 17px;
+			border-bottom: 4px solid @blue;
+		}
+
+		.github {
+			font-weight: bold;
+		}
+	}
+
+	h1 {
+		float: left;
+		color: @grey;
+		font-weight: bold;
+		font-size: 36px;
+		letter-spacing: -3px;
+		margin: 8px;
+
+		em {
+			font-family: Georia;
+			font-style: italic;
+			font-size: 118%;
+			letter-spacing: -2px;
+		}
+	}
+}
+
+footer {
+	margin-top: 40px;
+	background: @grey;
+	height: 200px;
+
+	p {
+		color: lighten(@grey, 40%);
+		font-size: 14px;
+		text-align: center;
+		padding: 20px;
+
+		a {
+			color: darken(@blue, 10%);
+		}
+	}
+}
+
+.examples {
+	min-height: 400px;
+
+	span {
+		font-weight: normal;
+
+		a {
+			font-weight: bold;
+		}
+	}
+}
+
+.themes {
+
+	.thin {
+		padding-top: 10px;
+	}
+
+	h2 {
+		margin: 12px 0;
+	}
+
+	#themes {
+		display: inline-block;
+		margin: 4px;
+		margin-top: -4px;
+		width: 86px;
+	}
+}
+
+.links {
+	div {
+		margin: 14px 12px;
+		list-style: none;
+		font-weight: bold;
+		font-weight: 18px;
+
+		a {
+			color: @grey;
+		}
+
+		span:before {
+			content: '\27dc  ';
+		}
+	}
+}
+
+.documentation {
+	#sidebar {
+		position: fixed;
+		margin-top: 14px;
+
+		h3 {
+			font-size: 18px;
+			margin-right: 18px;
+		}
+	}
+
+	.wide {
+		margin-left: @content_width * 0.3;
+	}
+}
+
+.home {
+	.flap-active {
+		-webkit-transform: translate(0, 0);
+	}
+
+	.features {
+		.wide {
+			h3 {
+				margin-right: 14px;
+			}
+		}
+	}
+
+	.download {
+		text-align: center;
+
+		.button:first-child {
+			padding: 14px 17px;
+			margin-bottom: 0;
+			width: 230px;
+			font-size: 19px;
+		}
+
+		.button:nth-child(2) {
+			background: darken(@blue, 15%);
+			font-size: 14px;
+			color: rgba(255, 255, 255, 0.9);
+			font-weight: normal;
+			width: 82%;
+			margin-top: 0;
+		}
+
+		p {
+			color: rgba(0,0,0,0.6);
+		}
+	}
+
+	ul {
+		margin: 16px 0;
+
+		li {
+			list-style: none;
+			font-size: 16px;
+			margin: 4px;
+		}
+
+		li:before {
+			content: '\27dc  ';
+		}
+	}
+}
