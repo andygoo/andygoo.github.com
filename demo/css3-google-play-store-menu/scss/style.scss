@@ -1,0 +1,120 @@
+@import "compass/css3";
+
+//// Import fonts 
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+
+//// Mixins 
+
+// Adding Square
+@mixin square($color) {
+  background:$color;
+  width:50px;
+  height:50px;
+  margin-bottom:px;
+}
+
+// Adding Icon
+@mixin icon($image){
+  position:absolute;
+  margin-left:10px;
+  padding-top:12px;
+  &:before{
+    width:50px;
+    height:50px;
+    margin-right:30px;
+    content:url($image);    
+  }
+}
+
+//// Nav
+
+nav {
+  background:rgba(245,245,245,0.95);
+  box-shadow:0 1px 6px rgba(0,0,0,0.1);
+  -moz-box-shadow:0 1px 6px rgba(0,0,0,0.1);
+  -webkit-box-shadow:0 1px 6px rgba(0,0,0,0.1);
+  width:200px;
+  ul {
+    padding:0;
+    margin:0;
+  li{
+    list-style:none;
+    height:50px;
+    &:hover{
+        width:200px;
+        height:50px;
+       }
+    a{
+     position:absolute;  
+     width:140px;
+     height:40px;
+     text-decoration:none;
+     color:#555;
+     padding:10px 0 0 60px;
+     &:hover{
+       color:#fff;
+        }
+      }
+    }
+  }
+}
+
+
+//// List
+
+.store {
+  @include square (#b3c833);
+}
+
+.movies {
+   @include square (#ce5043);
+}
+
+.music {
+   @include square (#fb8521);
+}
+
+.books {
+  @include square (#1aa1e1);
+}
+
+.magazines {
+  @include square (#5e5ca6);
+}
+
+.devices {
+  @include square (#658092);
+}
+
+//// Icons
+
+.store-icon {
+  @include icon("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAA0UlEQVRIx+XWUQ2DMBCA4UpAAhIqAQmTgIRJqIRKqAQkIAEJSKiDfy+3rFm6wpWyJeySvnC0H1euBAOYbwzzE6gUQAcEIPKKCbCFOToIsAkQAAd4uRaBWytokQVtpspnrj8EAaNUMn7I95L3R6EJWDfeX/YeLTQD0wbkyCxQam9P+3A5yF0OuhcmRGBtBQ2FCXPS7lEBDVVQclDdTrAeejusoQbqNFAClh7QZg+ssqI9W2gOQdIUe7qwDpJtWhRdp4aifPe0oYZq4x+g6/1unTkek/bCyLhDiUMAAAAASUVORK5CYII=");
+}
+
+.movies-icon {
+  @include icon("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAANklEQVRIx2P4//8/Az0ww6hF1LCIVmCALWKAArJNxdQ/GnSjQTcadKNBNxp0wyLoRtsMI9wiAFADCXZf9dlZAAAAAElFTkSuQmCC");
+}
+
+.music-icon {
+  @include icon("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABWklEQVRIx82W0Y2DMAxAGSEjZARGYARGYAQ2aDYoG7QbXDcoG8AGxwZlg3cf50i+NA2BRtVZCh/E8Usc23EFVJ8Yv58MAZpwJHT3gYAOuJGWEegOgYAWWNgnC9Bmg4AhYmQCzsBJjbP8D2XYBEUgF8Bu3J0VPS3XlyBxl5dH6rITwfJQNtonEGCAVUHq6oDI6b7Fzip2/4D6dyEKVquT9SFo9hNVAVEbn0PQCbhUhURsTmL3KRjGxO5cGH1yHy7mBTG+vAoGACOKRgx1OiEDY6uaawSq1xMLBqd8atRCp5MjAGnxuo2sn8Pk9SCdqKuKmDETNKgAWGNVwoNskGzeHbmgUfQJkt7GgqEvDOpTte6rEOi+VVRdIZD7NyBTCGRyHr6rKHc7QDf1zFxzX1gjdcqF/UJGwk6x06R6BquqQw6oFw/Yo11QrUM2mLurOftWu6VOVyc2YnP6uh+8uEodULzJQAAAAABJRU5ErkJggg==");
+}
+
+.books-icon {
+  @include icon("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAA9klEQVRIx+3VYQ2DMBCGYSQgYRJwMCQgAQk4ACcgAQfgAAnMAXPw7sc+kqOjwBjjF5c0hGt7D21ILgCCM4abSIAaaPUsgFuwEsBNa+3e2AcVQASEQM40aiD2AJVZNwC55mKhH9AYlbAI6BywMEgKPM1cIzh0cC+ECqQq6J6u0BXbGE+ROfgqNEarr4z1xY3yD/MeaU3rqbEJGk+X4f+j5k6xC7IbtuQu6IIu6IJ2QAnvfnIUNKjmFDKNrDsA6lBnnoU0EQLlD1AJhKbePOR00OELaEDN0qmzDGmRbedLUAdEnhrrkHOVAdAbpFfubq9qFfr3OA16AcSstrz4r0qKAAAAAElFTkSuQmCC");
+}
+
+.magazines-icon {
+  @include icon("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAA1klEQVRIx72WYQ3DIBBGkVAJSMDAEiQgoRIqAQmTMAmVgIRJqIQ5ePuxa8K6lgSyuy+5pAncfX1wvdQB7krABEQgAw+gAC9aSZ+8n3B1DuCBBViBjbbCkJG8+VF3oVqEqg7fbQQEKXqTovP+LImpVbiXaNezPrbD2ogujb53KRilwx0ULaO9dYscnxpRtCLKVkTeiihWRKrtPVkRTaNEF5Ph3KhqCF0iKdhN1Jh1TaOiPoJGjUaJshVRtiKarYiiFVEwITorWn1ffzdaZUMBkhtQ6y9IPd6TPeBqjeAP/QAAAABJRU5ErkJggg==");
+}
+
+.devices-icon {
+  @include icon("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAa0lEQVRIx2P4//8/Az0wusCC/5SDBAYowGcRVQDRFjGQCciyiBxfjFo0ci0C5TkBAqmQKhYZEKHmA8UWwdQQka9GLRq1aNSiUYtItYjYqpsii4gAB3BZhFyi47PoApEWgUplBShNVulNMwwA8TkerCj0FuMAAAAASUVORK5CYII=");
+}
+
+
+body {
+  background:#e5e5e5; 
+  font-family: 'Roboto', sans-serif;
+  font-size:18px;
+}

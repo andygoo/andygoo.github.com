@@ -1,0 +1,37 @@
+*,*:before,*:after{margin:0;padding:0;}
+body{width:800px;margin:0 auto;padding:25px;background:#000;color:#fff;font-family:Georgia;}
+.cdiv {
+  position: relative;
+  width: 800px;
+  height: 300px;
+  border: 4px solid #08f;
+}
+/* OPTIONAL BACKGROUND VIA CSS */
+/* div:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  box-shadow: 0 0 1px 0 #024,
+              0 25px 1px 0 #024,
+              0 50px 1px 0 #024,
+              0 75px 1px 0 #024,
+              0 100px 1px 0 #024,
+              0 125px 1px 0 #024,
+              0 150px 1px 0 #024,
+              0 175px 1px 0 #024,
+              0 200px 1px 0 #024,
+              0 225px 1px 0 #024,
+              0 250px 1px 0 #024,
+              0 275px 1px 0 #024,
+              0 300px 1px 0 #024;
+} */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

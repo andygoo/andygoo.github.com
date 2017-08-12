@@ -1,0 +1,237 @@
+@import "compass/css3";
+
+// HTML5 Form Validation
+// -----------------------------------------------------
+// Design based on Sign In by Rogie King -
+// http://dribbble.com/shots/344627-Sign-In
+
+// Imports
+// -----------------------------------------------------
+// Font - Entypo
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+// Mixins
+// -----------------------------------------------------
+// Input placeholder attribute
+@mixin input-placeholder {
+  @if $experimental-support-for-webkit {
+    &::-webkit-input-placeholder { @content; }
+  }
+  @if $experimental-support-for-mozilla {
+    &::-moz-placeholder { @content; }
+  }
+  @if $experimental-support-for-microsoft {
+    &:-ms-input-placeholder { @content; }
+  }
+}
+
+// Variables
+// -----------------------------------------------------
+$body-background:                  #292931 !default;
+$data-icon-font-size:              16px !default;
+$form-margin:                      20px 0 0 0 !default;
+$form-fieldset-background:         #423142 !default;
+$form-fieldset-width:              200px !default;
+$form-fieldset-padding:            16px !default;
+$form-label-width:                 32px !default;
+$form-label-height:                32px !default;
+$form-label-color:                 #847384 !default;
+$form-label-background:            #dedede !default;
+$form-label-border-radius:         3px 0 0 3px !default;
+$form-label-border:                1px solid #cecece !default;
+$form-input-text-width:            166px !default;
+$form-input-text-height:           32px !default;
+$form-input-text-margin:           0 0 10px $form-label-width !default;
+$form-input-text-padding:          0 0 0 8px !default;
+$form-input-text-border-radius:    0 3px 3px 0 !default;
+$form-input-text-border:           0 !default;
+$form-input-text-font:             14px Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif !default;
+$form-input-text-placeholder-color:#848484 !default;
+$form-button-color:                #ffffff !default;
+$form-button-background:           #ad6bad !default;
+$form-button-width:                32px !default;
+$form-button-height:               32px !default;
+$form-button-border:               0 !default;
+$form-button-border-radius:        0 3px 3px 0 !default;
+$form-error-height:                $form-input-text-height !default;
+$form-error-padding:               0 10px !default;
+$form-error-font:                  $form-input-text-font !default;
+$form-error-color:                 #ffffff !default;
+$form-error-background:            #e62163 !default;
+$form-error-border:                0 !default;
+$form-error-box-shadow:            0 0 0 rgba(0,0,0,0) !default;
+$form-error-border-radius:         3px !default;
+$form-error-arrow-width:           8px !default;
+$form-error-white-space:           nowrap !default;
+
+body {
+  background: $body-background;
+  padding: 0;
+  margin: 0;
+}
+
+[data-icon]:after {
+  font-family: "entypo";
+  content: attr(data-icon);
+  speak: none;
+} 
+
+.hide-text {
+  display: block;
+  text-indent: 150%;
+  overflow: hidden;
+  
+  &:before,
+  &:after {
+    text-indent: 0;
+  }
+}
+
+form {
+  margin: $form-margin;  
+}
+
+fieldset {
+  @include box-sizing(border-box);
+  position: relative;
+  width: $form-fieldset-width;
+  padding: $form-fieldset-padding $form-fieldset-padding $form-fieldset-padding/2 $form-fieldset-padding;
+  background: $form-fieldset-background;
+  border: 0;
+}
+
+label,
+button {
+  // Icon
+  &[data-icon]:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: $data-icon-font-size;
+  }
+}
+
+label {
+  @extend .hide-text;
+  @include border-radius($form-label-border-radius);
+  position: absolute;
+  margin-top: -#{$form-label-height + 10};
+  width: $form-label-width;
+  height: $form-label-height;
+  background: $form-label-background;
+  border-right: $form-label-border;
+  cursor: pointer;
+
+  // Icon
+  &[data-icon]:after {
+    color: $form-label-color;
+  }
+
+  // Icon - User
+  &[for="username"][data-icon]:after {
+    margin: -#{$data-icon-font-size/1.75} 0 0 -#{$data-icon-font-size/2.25};
+  }
+
+  // Icon - Locked
+  &[for="password"][data-icon]:after {
+    margin: -#{$data-icon-font-size/1.75} 0 0 -#{$data-icon-font-size/3.25};
+  }
+}
+
+input[type="text"],
+input[type="password"] {
+  &::-webkit-input-placeholder {
+    color: $form-input-text-placeholder-color;
+  }
+  &::-moz-input-placeholder {
+    color: $form-input-text-placeholder-color;
+  }
+  &:-ms-input-placeholder {
+    color: $form-input-text-placeholder-color;
+  }
+  /*@include input-placeholder {
+    color: $form-input-text-placeholder-color;
+  }*/
+  @include border-radius($form-input-text-border-radius);
+  height: $form-input-text-height;
+  width: $form-input-text-width;
+  border: $form-input-text-border;
+  margin: $form-input-text-margin;
+  padding: $form-input-text-padding;
+  font: $form-input-text-font;
+
+  // Tooltip - Valid Error Message
+  + label + span {
+    display: none;
+    @include border-radius($form-error-border-radius);
+    @include box-shadow($form-error-box-shadow);
+    position: absolute;
+    left: #{$form-input-text-width + $form-label-width + $form-fieldset-padding*2.25};  
+    margin-top: -#{$form-input-text-height + 10};
+    padding: $form-error-padding;
+    height: $form-error-height;
+    color: $form-error-color;
+    background: $form-error-background;
+    border: $form-error-border;
+    font: $form-error-font;
+    line-height: $form-error-height;
+    white-space: $form-error-white-space;
+
+    // Left Arrow
+    &:before {
+      width: 0;
+      height: 0;
+      left: -$form-error-arrow-width;
+      top: #{($form-error-height / 2) -($form-error-arrow-width / 2)};
+      content: '';
+      position: absolute;
+      border-top: #{$form-error-arrow-width / 2} solid transparent;
+      border-right: $form-error-arrow-width solid $form-error-background;
+      border-bottom: #{$form-error-arrow-width / 2} solid transparent;
+    }
+  }
+  
+  // Invalid
+  &:invalid {
+    display: block;
+    box-shadow: none;
+    outline: none;
+  }
+
+  // Invalid - Label
+  //&:focus:required:invalid
+  &.blur:required:invalid + label {
+    background: $form-error-background;
+    border-right-color: #ffffff;
+         
+    &:after {
+      margin: -#{$data-icon-font-size/1.75} 0 0 -#{$data-icon-font-size/2};
+      // Icon - ! Info
+      content: '\26A0';
+      color: $form-error-color;
+    }
+  }
+}
+
+button {
+  @include border-radius($form-button-border-radius);
+  @extend .hide-text;
+  position: absolute;
+  right: $form-fieldset-padding;
+  width: $form-button-width;
+  height: $form-button-height;
+  margin-top: -#{$form-input-text-height + 10};
+  color: $form-button-color;
+  background: $form-button-background;
+  border: $form-button-border;
+
+  // Icon - Right Arrow
+  &[data-icon]:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -#{$data-icon-font-size/1.75} 0 0 -#{$data-icon-font-size/2.5};
+    color: $form-button-color;
+    font-size: $data-icon-font-size;
+  }
+}

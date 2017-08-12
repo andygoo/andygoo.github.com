@@ -1,0 +1,157 @@
+div{font-size:10px}
+.calendar_modern {
+  padding: 50px;
+}
+.calendar_modern .calendar {
+  margin: auto;
+  width: 240px;
+  height: 290px;
+}
+.calendar_modern .calendar .nav {
+  height: 0;
+  position: relative;
+}
+.calendar_modern .calendar .nav i, .calendar_modern .calendar .nav b {
+  display: block;
+  font-style: normal;
+  position: absolute;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  z-index: 100;
+  top: 0;
+}
+.calendar_modern .calendar .nav i {
+  left: 0;
+  border-right: 1px solid #423a37;
+  background: url(http://cs4399.userapi.com/u49225742/docs/58f03726ea27/lft.png) no-repeat center center transparent;
+}
+.calendar_modern .calendar .nav b {
+  right: 0;
+  border-left: 1px solid #423a37;
+  background: url(http://cs4399.userapi.com/u49225742/docs/5fd2e9dd3a9f/rgt.png) no-repeat center center transparent; 
+}
+.calendar_modern .calendar .month .header {
+  height: 30px;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 1.4em;
+  text-align: center;
+  background: #372f2c;
+  border-radius: 3px;
+}
+.calendar_modern .calendar .month .body {
+  background: #e4e4e4;
+}
+.calendar_modern .calendar .month .body .day_names {
+  height: 25px;
+}
+.calendar_modern .calendar .month .body .day_names i {
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-style: normal;
+  float: left;
+  width: 34px;
+}
+.calendar_modern .calendar .month .body .days i, .calendar_modern .calendar .month .body .days b, .calendar_modern .calendar .month .body .days s, .calendar_modern .calendar .month .body .days a {
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  float: left;
+  width: 33px;
+  height: 33px;
+  color: #8d8d8d;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 34px;
+  text-align: center;
+  font-style: normal;
+  background: #e4e4e4;
+  text-decoration: none;
+  /* table like borders */
+  border-right: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+  /* table like borders */
+}
+.calendar_modern .calendar .month .body .days i.weekend, .calendar_modern .calendar .month .body .days b.weekend, .calendar_modern .calendar .month .body .days s.weekend, .calendar_modern .calendar .month .body .days a.weekend {
+  color: #444;
+  background: InactiveCaption;
+}
+.calendar_modern .calendar .month .body .days i:nth-child(7n + 1), .calendar_modern .calendar .month .body .days b:nth-child(7n + 1), .calendar_modern .calendar .month .body .days s:nth-child(7n + 1), .calendar_modern .calendar .month .body .days a:nth-child(7n + 1) {
+  border-left: 1px solid #aaaaaa;
+}
+.calendar_modern .calendar .month .body .days i:nth-child(n+1):nth-child(-n+7), .calendar_modern .calendar .month .body .days b:nth-child(n+1):nth-child(-n+7), .calendar_modern .calendar .month .body .days s:nth-child(n+1):nth-child(-n+7), .calendar_modern .calendar .month .body .days a:nth-child(n+1):nth-child(-n+7) {
+  border-top: 1px solid #aaaaaa;
+}
+.calendar_modern .calendar .month .body .days i:nth-child(n+1):nth-child(-n+7).empty, .calendar_modern .calendar .month .body .days b:nth-child(n+1):nth-child(-n+7).empty, .calendar_modern .calendar .month .body .days s:nth-child(n+1):nth-child(-n+7).empty, .calendar_modern .calendar .month .body .days a:nth-child(n+1):nth-child(-n+7).empty {
+  border-top: 1px solid #d5d5d5;
+  border-bottom: 1px solid #aaaaaa;
+}
+.calendar_modern .calendar .month .body .days s:nth-child(7n + 1) {
+  border-left: 1px solid #d5d5d5;
+}
+.calendar_modern .calendar .month .body .days a {
+  color: #372f2d;
+  background: #d1d1d1;
+  text-shadow: 1px 1px 0px white;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #dadada), color-stop(100%, #cfcfcf));
+  background-image: -webkit-linear-gradient(bottom, #dadada, #cfcfcf);
+  background-image: -moz-linear-gradient(bottom, #dadada, #cfcfcf);
+  background-image: -o-linear-gradient(bottom, #dadada, #cfcfcf);
+  background-image: linear-gradient(bottom, #dadada, #cfcfcf);
+}
+.calendar_modern .calendar .month .body .days a.today {
+  color: white;
+  text-shadow: 1px 1px 2px teal;
+  -webkit-box-shadow: 0 0 18px teal inset;
+  -moz-box-shadow: 0 0 18px teal inset;
+  box-shadow: 0 0 18px teal inset;
+}
+.calendar_modern .calendar .month .body .days a.selected {
+  color: white;
+  text-shadow: 1px 1px 2px blue;
+  -webkit-box-shadow: 0 0 18px #000066 inset;
+  -moz-box-shadow: 0 0 18px #000066 inset;
+  box-shadow: 0 0 18px #000066 inset;
+}
+.calendar_modern .calendar .month .body .days a:hover {
+  color: white;
+  -webkit-transition-property: text-shadow;
+  -moz-transition-property: text-shadow;
+  -o-transition-property: text-shadow;
+  transition-property: text-shadow;
+  -webkit-transition-property: box-shadow;
+  -moz-transition-property: box-shadow;
+  -o-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  text-shadow: 1px 1px 2px green;
+  -webkit-box-shadow: 0 0 18px #006600 inset;
+  -moz-box-shadow: 0 0 18px #006600 inset;
+  box-shadow: 0 0 18px #006600 inset;
+}
+.calendar_modern .calendar .month .body .days b, .calendar_modern .calendar .month .body .days i, .calendar_modern .calendar .month .body .days s {
+  color: #ccc;
+}
+.calendar_modern .calendar .month .body .days b, .calendar_modern .calendar .month .body .days s {
+  background: #eee;
+  border-color: #d5d5d5;
+}
+.calendar_modern .calendar .month .body .days b {
+  border-top: 1px solid #d5d5d5 !important;
+  border-bottom: 1px solid #aaaaaa !important;
+}
+.calendar_modern .calendar .month .body .days b:first-child {
+  border-left: 1px solid #d5d5d5 !important;
+}
+.calendar_modern .calendar .month .body .days b:last-of-type{
+  border-right: 1px solid #aaaaaa !important;
+}

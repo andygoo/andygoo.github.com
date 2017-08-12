@@ -1,0 +1,525 @@
+@import "compass/css3";
+
+/* Color Variables*/
+$bridge: #FF6600;
+$bay: #071733;
+$land: #666633;
+$dkland: #454523;
+$fog: #d1d1d1;
+
+/* Functions */
+@function half-height($height) {
+  @return ($height/2);
+}
+@function half-width($width) {
+  @return ($width/2);
+}
+@function cross-width($width) {
+  @return ($width + ($width/2));
+}
+
+/* Mixins */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin gradient($color1, $color2) {
+  background: -moz-linear-gradient(top,  $color1 0%, $color2 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(100%,#071733));
+  background: -webkit-linear-gradient(top,  $color1 0%,$color2 100%);
+  background: -o-linear-gradient(top,  $color1 0%,$color2 100%);
+  background: -ms-linear-gradient(top,  $color1 0%,$color2 100%);
+  background: linear-gradient(to bottom,  $color1 0%,$color2 100%);
+}
+/*mixin for pseudo elements :before and :after */
+@mixin pseudo {
+  content: '';
+  display: block;
+  position: absolute;
+}
+/*bridge tower sections*/
+@mixin section($width, $height, $border) {
+  width: $width;
+  height: $height;
+  border-left: $border solid $bridge;
+  border-right: $border solid $bridge;
+  position: relative;
+}
+/*bridge tower horizontal dividers*/
+@mixin divider($width, $height, $border) {
+  width: $width;
+  height: half-height($height);
+  border-bottom: $border solid $bridge;
+  position: absolute;
+  top: 0;
+  &:before {
+    @include pseudo;
+    width: $width;
+    height: half-height($height);
+    border: $border solid $bridge;
+    border-top-color: transparent;
+    @include border-radius(0 0 50% 50%);
+    left: -$border;
+    top: -$border;
+  }
+  &:after {
+    @include pseudo;
+    width: $width;
+    height: half-height($height);
+    border: $border solid $bridge;
+    border-bottom-color: transparent;
+    @include border-radius(50% 50% 0 0);
+    left: -$border;
+    top: half-height($height);
+  }
+}
+/*bridge tower bottom cross sections*/
+@mixin crosses($width, $height, $border) {
+  width: $width;
+  height: $height;
+  border-bottom: $border solid $bridge;
+  position: absolute;
+  &:before {
+    @include pseudo;
+    border-top: $border solid $bridge;
+    width: cross-width($width);
+    height: 0;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    left: -$width/4;
+  }
+  &:after {
+    @include pseudo;
+    width: cross-width($width);
+    height: 0;
+    border-top: $border solid $bridge;
+    transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
+    left: -$width/4;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+	  height: 100%;
+  width: 100%;
+  min-width: 1000px;
+  min-height: 700px;
+  overflow: hidden;
+}
+body {
+  background: black;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.sky {
+  @include gradient(#071733,#405577);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.bay {
+  background: $bay;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 430px;
+}
+.background {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background: $dkland;
+  &:before {
+    @include pseudo;
+    width: 100px;
+    height: 100px;
+    top: 405px;
+    left: 25px;
+    @include border-radius(40%);
+    box-shadow: 
+      100px -2px 0 $dkland,
+      130px 0px 0 $dkland,
+      165px -1px 0 $dkland,
+      170px 5px 0 $dkland,
+      200px 5px 0 $dkland,
+      245px 6px 0 $dkland,
+      272px 8px 0 $dkland;
+  }
+  &:after {
+    @include pseudo;
+    background: $dkland;
+    width: 340px;
+    height: 445px;
+    top: 170px;
+    right: -100px;
+    @include border-radius(70% 3% 3% 3%);
+  }
+}
+#golden-gate {
+  position: relative;
+  top: 10%;
+  width: 940px;
+  height: 460px;
+  overflow: hidden;
+  .cables {
+    position: absolute;
+    overflow: hidden;
+    &.left {
+      width: 155px;
+      height: 143px;
+      left: 2px;
+      top: 185px;
+      transform:rotate(-10deg);
+      -ms-transform:rotate(-10deg);
+      -webkit-transform:rotate(-10deg);
+      &:before {
+        @include pseudo;
+        width: 140px;
+        height: 120px;
+        left: 0px;
+        top: 0px;
+        border-right: 4px solid $bridge;
+        border-bottom: 2px solid $bridge;
+        border-left: 2px solid transparent;
+        @include border-radius(0 0 90% 0);
+        transform:rotate(8deg);
+        -ms-transform:rotate(8deg);
+        -webkit-transform:rotate(8deg);
+      }
+      &:after {
+        @include pseudo;
+        width: 1px;
+        height: 100px;
+        top: 0px;
+        transform:rotate(10deg);
+        -ms-transform:rotate(10deg);
+        -webkit-transform:rotate(10deg);
+        box-shadow: 
+          14px 110px 0 $bridge,
+          18px 110px 0 $bridge,
+          22px 110px 0 $bridge,
+          26px 110px 0 $bridge,
+          30px 110px 0 $bridge,
+          34px 110px 0 $bridge,
+          38px 109px 0 $bridge,
+          42px 108px 0 $bridge,
+          46px 107px 0 $bridge,
+          50px 106px 0 $bridge,
+          54px 104px 0 $bridge,
+          58px 104px 0 $bridge,
+          62px 102px 0 $bridge,
+          66px 100px 0 $bridge,
+          70px 98px 0 $bridge,
+          74px 96px 0 $bridge,
+          78px 94px 0 $bridge,
+          82px 93px 0 $bridge,
+          86px 92px 0 $bridge,
+          90px 90px 0 $bridge,
+          95px 85px 0 $bridge,
+          100px 80px 0 $bridge,
+          105px 75px 0 $bridge,
+          110px 70px 0 $bridge,
+          115px 65px 0 $bridge,
+          120px 60px 0 $bridge,
+          125px 55px 0 $bridge,
+          130px 50px 0 $bridge,
+          135px 40px 0 $bridge,
+          140px 30px 0 $bridge;
+      }
+      &.back {
+        left: 44px;
+        top: 180px;
+      }
+    }
+    /*end left cables*/
+    &.middle {
+      width: 490px;
+      left: 139px;
+      top: 33px;
+      height: 260px;
+      transform:rotate(-4deg);
+      -ms-transform:rotate(-4deg);
+      -webkit-transform:rotate(-4deg);
+      &:before {
+        @include pseudo;
+        width: 424px;
+        height: 310px;
+        border-right: 6px solid $bridge;
+        border-bottom: 4px solid $bridge;
+        border-left: 2px solid $bridge;
+        @include border-radius(0 0 90% 70%);
+        left: -13px;
+        top: -80px;
+        transform:rotate(4deg);
+        -ms-transform:rotate(4deg);
+        -webkit-transform:rotate(4deg);
+      }
+      &:after {
+        @include pseudo;
+        width: 2px;
+        height: 150px;
+        top: 50px;
+        transform:rotate(4deg);
+        -ms-transform:rotate(4deg);
+        -webkit-transform:rotate(4deg);
+        box-shadow: 
+          10px 95px 0 $bridge,
+          14px 100px 0 $bridge,
+          18px 110px 0 $bridge,
+          22px 115px 0 $bridge,
+          26px 120px 0 $bridge,
+          30px 123px 0 $bridge,
+          35px 125px 0 $bridge,
+          40px 130px 0 $bridge,
+          45px 130px 0 $bridge,
+          58px 138px 0 $bridge,
+          61px 140px 0 $bridge,
+          68px 145px 0 $bridge,
+          7px 150px 0 $bridge,
+          88px 155px 0 $bridge,
+          100px 155px 0 $bridge,
+          120px 160px 0 $bridge,
+          140px 165px 0 $bridge,
+          160px 170px 0 $bridge,
+          190px 170px 0 $bridge,
+          220px 165px 0 $bridge,
+          250px 158px 0 $bridge,
+          280px 148px 0 $bridge,
+          310px 135px 0 $bridge,
+          340px 118px 0 $bridge,
+          370px 95px 0 $bridge,
+          400px 50px 0 $bridge;
+      }
+      &.back {
+        width: 490px;
+        left: 185px;
+        top: 35px;
+        height: 255px;
+        &:before {
+          width: 450px;
+          height: 310px;
+        }
+        &:after {
+          box-shadow: 
+            8px 100px 0 $bridge,
+            14px 105px 0 $bridge,
+            18px 110px 0 $bridge,
+            22px 110px 0 $bridge,
+            26px 115px 0 $bridge,
+            30px 120px 0 $bridge,
+            35px 123px 0 $bridge,
+            40px 125px 0 $bridge,
+            45px 130px 0 $bridge,
+            50px 130px 0 $bridge,
+            58px 135px 0 $bridge,
+            68px 140px 0 $bridge,
+            78px 145px 0 $bridge,
+            88px 150px 0 $bridge,
+            100px 153px 0 $bridge,
+            120px 160px 0 $bridge,
+            140px 165px 0 $bridge,
+            160px 165px 0 $bridge,
+            190px 165px 0 $bridge,
+            220px 163px 0 $bridge,
+            250px 160px 0 $bridge,
+            280px 153px 0 $bridge,
+            310px 143px 0 $bridge,
+            340px 130px 0 $bridge,
+            375px 95px 0 $bridge,
+            400px 80px 0 $bridge;
+        }
+      }
+    }
+    /*end middle cables*/
+    &.right {
+      width: 345px;
+      height: 237px;
+      left: 545px;
+      top: 60px;
+      transform:rotate(3deg);
+      -ms-transform:rotate(3deg);
+      -webkit-transform:rotate(3deg);
+      &:before {
+        @include pseudo;
+        width: 344px;
+        height: 170px;
+        left: -10px;
+        top: 0;
+        border-right: 4px solid transparent;
+        border-bottom: 6px solid $bridge;
+        border-left: 8px solid $bridge;
+        @include border-radius(0 0 0 90%);
+        transform:rotate(10deg);
+        -ms-transform:rotate(10deg);
+        -webkit-transform:rotate(10deg);
+      }
+      &:after {
+        @include pseudo;
+        width: 3px;
+        height: 250px;
+        top: 0px;
+        transform:rotate(-3deg);
+        -ms-transform:rotate(-3deg);
+        -webkit-transform:rotate(-3deg);
+        box-shadow: 
+          15px 0px 0 $bridge,
+          45px 80px 0 $bridge,
+          75px 112px 0 $bridge,
+          105px 135px 0 $bridge,
+          135px 155px 0 $bridge,
+          165px 170px 0 $bridge,
+          195px 185px 0 $bridge,
+          225px 195px 0 $bridge,
+          255px 205px 0 $bridge,
+          285px 213px 0 $bridge,
+          315px 215px 0 $bridge;
+      }
+      &.back {
+        left: 610px;
+        top: 60px;
+      }
+    }
+    /*end right cables*/
+  }
+  /*end cables*/
+  /*start towers*/
+  .tower {
+    position: absolute;
+    bottom: 0;
+  }
+  .tower1 {
+    $width: 31px;
+    $height: 37px;
+    left: 140px;
+    bottom: 58px;
+    .section1 {
+      @include section($width,$height,12px);
+      .divider {
+        @include divider($width,$height, 12px);
+      }
+    }
+    .section2 {
+      @include section($width,$height,12px);
+      .divider {
+        @include divider($width, $height, 12px);
+      }
+    }
+    .section3 {
+      @include section($width,$height,12px);
+      .crosses {
+        @include crosses($width, $height/2, 5px);
+      }
+    }
+  }
+  /* end tower 1*/
+  .tower2 {
+    $width: 62px;
+    $height: 74px;
+    left: 545px;
+    .section1 {
+      @include section($width, $height,12px);
+      .divider {
+        @include divider($width, $height, 12px);
+      }
+    }
+    .section2 {
+      @include section($width, $height,12px);
+      .divider {
+        @include divider($width, $height, 12px);
+      }
+    }
+    .section3 {
+      @include section($width, $height,12px);
+      .crosses {
+        @include crosses($width, $height/2, 5px);
+      }
+    }
+  }
+  /* end tower 2 */
+  .deck {
+    width: 3000px;
+    height: 1000px;
+    border-left: 0px solid $bridge;
+    border-top: 16px solid $bridge;
+    @include border-radius(35%);
+    position: absolute;
+    top: 340px;
+    left: -275px;
+    transform:rotate(6deg);
+    -ms-transform:rotate(6deg);
+    -webkit-transform:rotate(6deg);
+  }
+}
+/*end bridge*/
+.middleground {
+  position: relative;
+  width: 940px;
+  top: 10%;
+  display: block;
+  margin: 0 auto;
+  .hills {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    /*left-hand hill*/
+    &:before {
+      @include pseudo;
+      @include border-radius(5% 120% 10% 10%);
+      background: $land;
+      width: 415px;
+      height: 260px;
+      top: 150px;
+      left: -300px;
+    }
+    /*right-hand hill*/
+    &:after {
+      @include pseudo;
+      background: $land;
+      width: 340px;
+      height: 245px;
+      top: 155px;
+      right: -200px;
+      @include border-radius(60% 40% 3% 3%);
+    }
+  }
+}
+
+.foreground {
+  width: 60%;
+  height: 55%;
+  position: absolute;
+  bottom: 0;
+  right: -20%;
+  background: $fog;
+  @include border-radius(100% 0 0 0);
+  &:before {
+    @include pseudo;
+    width: 200px;
+    height: 200px;
+    @include border-radius(50%);
+    bottom: 0px;
+    left: -300px;
+    box-shadow: 
+      200px 50px 0 $fog,
+      300px -50px 0 $fog,
+      400px -100px 0 $fog,
+      500px -150px 0 $fog,
+      600px -200px 0 $fog,
+      700px -200px 0 $fog,
+      800px -250px 0 $fog,
+      900px -200px 0 $fog,
+      1000px -200px 0 $fog,
+      1100px -200px 0 $fog;
+  }
+}

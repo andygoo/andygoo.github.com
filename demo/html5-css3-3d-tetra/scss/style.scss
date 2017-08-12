@@ -1,0 +1,176 @@
+@import "compass/css3";
+
+html, body { height: 100%; }
+
+html {
+  font: 100%/2em 
+    trebuchet ms, verdana, century gothic, sans-serif;
+  text-align: center;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  perspective: 25em;
+  background: black;
+  color: white;
+}
+
+/* ======== BUTTONS ======== */
+.option { display: none; }
+
+.option__text {
+  float: left;
+  width: 8em;
+  transform-origin: 0 0;
+  transform: skewX(-15deg);
+  background: dimgrey;
+  cursor: pointer;
+}
+
+.option:checked + .option__text {
+  background: grey;
+  color: yellow;
+}
+
+/* ======== TETRAHEDRON ======== */
+$l: 10em;
+$texts: 'Scooby-Doo' 'where' 'are' 'you';
+$images: 
+  'https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/couguar.jpg' 
+  'https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/tiger.jpg' 
+  'https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/snow_leopard.jpg' 
+  'https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/cheetah.jpg';
+
+$tri-n: 3;
+$tri-ca: 360deg/$tri-n;
+$tri-a: ($tri-n - 2)*180deg/$tri-n;
+$tri-sa: 90deg - $tri-a;
+$tri-ra: (90deg + $tri-sa)/2;
+$tri-sf: cos($tri-sa);
+$tri-ri: $l/2/tan($tri-ca/2);
+$tri-h: $l*sin($tri-a);
+
+$tetra-n: 4;
+$tetra-h: sqrt(pow($tri-h, 2) - pow($tri-ri, 2));
+
+@function asin($value, $unit: 'rad', $precision: 25) {
+  $coeff: 1;
+  $sum: 0;
+  $flag: 0;
+  $sign: 1;
+  
+  @if $value > 1 {
+    @warn 'Invalid input.';
+    @return false;
+  }
+  
+  @if abs($value) > 1/sqrt(2) {
+    $flag: 1;
+    $sign: $value/abs($value);
+    $value: sqrt(1 - pow($value, 2));
+  }
+  
+  $sum: $sum + $coeff*$value;
+  
+  @for $i from 1 through $precision {
+    $coeff: $coeff*(2*$i - 1)/(2*$i);
+    $sum: $sum + $coeff*pow($value, 2*$i + 1)/(2*$i + 1);
+  }
+  
+  $result: $sign*($flag*pi()/2 + pow(-1, $flag)*$sum);
+  $result: $result*180deg/pi();
+  
+  @return $result;
+}
+
+$tri-rax: asin($tri-ri/$tri-h);
+
+@mixin sp($w, $h: $w) {
+  margin: if($w == $h, -$w/2, -$h/2 (-$w/2));
+  width: $w; height: $h;
+}
+
+.polyhedron, .polyhedron *, .polyhedron *:before {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform-style: preserve-3d;
+}
+
+.polyhedron {
+  //transform: rotateX(-45deg);
+  font-size: 1.5em;
+  animation: ani 8s linear infinite;
+}
+
+@keyframes ani {
+  50% {
+    transform: 
+      rotateX(-180deg) translateZ((1 + random(2))*$l/3) 
+      rotateY(360deg) translateX((1 + random(2))*$l/2) 
+      rotateZ(180deg) translateY((1 + random(2))*$l/4) ;
+  }
+  100% {
+    transform: 
+      rotateX(-360deg) translateZ(0) 
+      rotateY(720deg) translateX(0) 
+      rotateZ(360deg) translateY(0);
+  }
+}
+
+.polyhedron__face {
+  overflow: hidden;
+  border-top: solid .125em;
+  border-left: solid .125em;
+  @include sp($l);
+  transform: rotate($tri-ra) skewX($tri-sa) scaleY($tri-sf);
+  @for $i from 0 to $tetra-n {
+    &:nth-child(#{$i + 1}) {
+      transform: 
+        if($i > 0, 
+          rotateY(($i - .5)*$tri-ca) 
+          translateZ($tri-ri) 
+          rotateX($tri-rax), 
+          rotateX(-90deg) translateY($tri-ri)
+        )
+        rotate($tri-ra) skewX($tri-sa) scaleY($tri-sf);
+      #semitransp:checked ~ .polyhedron &:before {
+        background: 
+          if($i > 0, 
+            linear-gradient(90deg, 
+              hsla($i*360/3, 100%, 50%, .32), 
+              hsla(($i + 1)*360/3, 100%, 50%, .32)), 
+            rgba(deeppink, .32));
+      }
+      #text:checked ~ .polyhedron & {
+        backface-visibility: hidden;
+        &:before {
+          background: linear-gradient(random(360)*1deg, 
+            deeppink, yellow, lime);
+          content: nth($texts, $i + 1);
+        }
+      }
+      #image:checked ~ .polyhedron & {
+        border: none;
+        backface-visibility: hidden;
+        &:before {
+          border: none;
+          background: url(nth($images, $i + 1)); 
+          background-size: cover;
+        }
+      }
+    }
+  }
+  &:before {
+    @include sp($l, $tri-h);
+    border-bottom: solid .125em;
+    transform: 
+      scaleY(1/$tri-sf) skewX(-$tri-sa) rotate(-$tri-ra) 
+      translateY(-50%);
+    font-style: oblique;
+    line-height: 4*$tri-ri;
+    text-shadow: 0 0 .25em black;
+    content: '';
+  }
+}

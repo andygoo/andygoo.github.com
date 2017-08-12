@@ -1,0 +1,16 @@
+%input.option{:type=>'radio', :id=>'wireframe', :name=>'opt', :checked=>"checked"}
+%label.option__text{:for=>'wireframe'}
+  .text__inner wireframe
+%input.option{:type=>'radio', :id=>'semitransp', :name=>'opt'}
+%label.option__text{:for=>'semitransp'}
+  .text__inner semitransparent
+%input.option{:type=>'radio', :id=>'text', :name=>'opt'}
+%label.option__text{:for=>'text'}
+  .text__inner text
+%input.option{:type=>'radio', :id=>'image', :name=>'opt'}
+%label.option__text{:for=>'image'}
+  .text__inner images
+
+.polyhedron.polyhedron--tetrahedron
+  -(1..4).each do |i|
+    .polyhedron__face.polyhedron__face--triangle
