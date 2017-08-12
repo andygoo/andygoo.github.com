@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery/CSS3渐变颜色拾取器DEMO演示</title>
+
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<link type="text/css" rel="stylesheet" href="colorpicker/css/colorpicker.css" />
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="colorpicker/js/colorpicker.js"></script>
+<script type="text/javascript" src="js/dom-drag.js"></script>
+<script type="text/javascript" src="js/gradX.js"></script>
+
+</head>
+<body>
+
+<div id="gradX" ></div>
+
+<div class="result"> Result [Target elements]</div>
+
+<div class="targets">
+	<div class="target" id="target">
+		<div class="target_text">Target #1</div>
+	</div>
+	<div class="target" id="target2">
+		<div class="target_text">Target #2</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+gradX("#gradX", {
+	targets: [".target"]
+});
+</script>
+
+<div style="text-align:center;clear:both">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+
+</body>
+</html>
+
