@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+	<title>Coded Social Media Icons</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8">
+	<meta name="author" content="@toddmotto">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="assets/css/global.css">
+	<link rel="stylesheet" href="assets/css/social-media.css">
+	
+	<!-- Load jQuery from Google CDN -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+</head>
+
+<body>
+	
+	<section id="wrapper">
+		<article id="main">
+		
+			<h3 style="clear:both;float:left;border-bottom:1px solid #E5E5E5;margin:15px 0 -10px 0;">Full Length Coded Icons (Editable text)</h3>
+			<?php
+				// Fill out the PHP Strings below to create your buttons
+				$iconfull = array(
+					array( // RSS
+						'rss', // Class for the Button (colour)
+						'#', // URL of Button
+						'rss.png', // Image name
+						'Subscribe'), // Word inside Button
+						
+					array( // Twitter
+						'twitter', // Class for the Button (colour)
+						'#', // URL of Button
+						'twitter.png', // Image name
+						'Twitter'), // Word inside Button
+						
+					array(
+						'facebook', // Class for the Button (colour)
+						'#', // URL of Button
+						'facebook.png', // Image name
+						'Facebook'), // Word inside Button
+					array(
+						'linkedin', // Class for the Button (colour)
+						'#', // URL of Button
+						'linkedin.png', // Image name
+						'LinkedIn'), // Word inside Button
+					array(
+						'googleplus', // Class for the Button (colour)
+						'#', // URL of Button
+						'googleplus.png', // Image name
+						'Google+'), // Word inside Button
+					array(
+						'pinterest', // Class for the Button (colour)
+						'#', // URL of Button
+						'pinterest.png', // Image name
+						'Pinterest'), // Word inside Button
+					array(
+						'dribbble', // Class for the Button (colour)
+						'#', // URL of Button
+						'dribbble.png', // Image name
+						'Dribbble'), // Word inside Button
+					array(
+						'forrst', // Class for the Button (colour)
+						'#', // URL of Button
+						'forrst.png', // Image name
+						'Forrst'), // Word inside Button
+	
+				); ?>
+				
+				<ul id="coded-social-full">
+					<?php
+		
+					// Spit it out!
+					
+					foreach($iconfull as $info) {echo'<li class="'.$info[0].'"><a href="'.$info[1].'"><img src="assets/img/'.$info[2].'">'.$info[3].'</a></li>
+					';}
+					?></ul>
+
+<script src="http://demo.itivy.com/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="http://demo.itivy.com/follow.js" type="text/javascript"></script>
+
+				<h3 style="clear:both;float:left;border-bottom:1px solid #E5E5E5;margin:15px 0 -10px 0;">Square Coded Icons</h3>
+				<?php
+				// Fill out the PHP Strings below to create your buttons
+				$iconsquare = array(
+					array( // RSS
+						'rss', // Class for the Button (colour)
+						'#', // URL of Button
+						'rss.png'), // Image name
+					array( // Twitter
+						'twitter', // Class for the Button (colour)
+						'#', // URL of Button
+						'twitter.png'), // Image name
+					array(
+						'facebook', // Class for the Button (colour)
+						'#', // URL of Button
+						'facebook.png'), // Image name
+					array(
+						'linkedin', // Class for the Button (colour)
+						'#', // URL of Button
+						'linkedin.png'), // Image name
+					array(
+						'googleplus', // Class for the Button (colour)
+						'#', // URL of Button
+						'googleplus.png'), // Image name
+					array(
+						'pinterest', // Class for the Button (colour)
+						'#', // URL of Button
+						'pinterest.png'), // Image name
+					array(
+						'dribbble', // Class for the Button (colour)
+						'#', // URL of Button
+						'dribbble.png'), // Image name
+					array(
+						'forrst', // Class for the Button (colour)
+						'#', // URL of Button
+						'forrst.png'), // Image name
+				); ?>
+				
+				<ul id="coded-social-square">
+					<?php
+		
+					// Spit it out!
+					
+					foreach($iconsquare as $info) {echo'<li class="'.$info[0].'"><a href="'.$info[1].'"><img src="assets/img/'.$info[2].'"></a></li>
+					';}
+					?></ul>
+
+					
+				<h3 style="clear:both;float:left;border-bottom:1px solid #E5E5E5;margin:15px 0 -10px 0;">Circle Coded Icons</h3>
+				<?php
+				// Fill out the PHP Strings below to create your buttons
+				$iconcircle = array(
+					array( // RSS
+						'rss', // Class for the Button (colour)
+						'#', // URL of Button
+						'rss.png'), // Image name
+					array( // Twitter
+						'twitter', // Class for the Button (colour)
+						'#', // URL of Button
+						'twitter.png'), // Image name
+					array(
+						'facebook', // Class for the Button (colour)
+						'#', // URL of Button
+						'facebook.png'), // Image name
+					array(
+						'linkedin', // Class for the Button (colour)
+						'#', // URL of Button
+						'linkedin.png'), // Image name
+					array(
+						'googleplus', // Class for the Button (colour)
+						'#', // URL of Button
+						'googleplus.png'), // Image name
+					array(
+						'pinterest', // Class for the Button (colour)
+						'#', // URL of Button
+						'pinterest.png'), // Image name
+					array(
+						'dribbble', // Class for the Button (colour)
+						'#', // URL of Button
+						'dribbble.png'), // Image name
+					array(
+						'forrst', // Class for the Button (colour)
+						'#', // URL of Button
+						'forrst.png'), // Image name
+				); ?>
+				
+				<ul id="coded-social-circle">
+					<?php
+		
+					// Spit it out!
+					
+					foreach($iconcircle as $info) {echo'<li class="'.$info[0].'"><a href="'.$info[1].'"><img src="assets/img/'.$info[2].'"></a></li>
+					';}
+					?></ul>
+
+				<h3 style="clear:both;float:left;border-bottom:1px solid #E5E5E5;margin:15px 0 -10px 0;">Circle (with thin border) Coded Icons</h3>
+				<?php
+				// Fill out the PHP Strings below to create your buttons
+				$iconcircleborder = array(
+					array( // RSS
+						'rss', // Class for the Button (colour)
+						'#', // URL of Button
+						'rss.png'), // Image name
+					array( // Twitter
+						'twitter', // Class for the Button (colour)
+						'#', // URL of Button
+						'twitter.png'), // Image name
+					array(
+						'facebook', // Class for the Button (colour)
+						'#', // URL of Button
+						'facebook.png'), // Image name
+					array(
+						'linkedin', // Class for the Button (colour)
+						'#', // URL of Button
+						'linkedin.png'), // Image name
+					array(
+						'googleplus', // Class for the Button (colour)
+						'#', // URL of Button
+						'googleplus.png'), // Image name
+					array(
+						'pinterest', // Class for the Button (colour)
+						'#', // URL of Button
+						'pinterest.png'), // Image name
+					array(
+						'dribbble', // Class for the Button (colour)
+						'#', // URL of Button
+						'dribbble.png'), // Image name
+					array(
+						'forrst', // Class for the Button (colour)
+						'#', // URL of Button
+						'forrst.png'), // Image name
+				); ?>
+				
+				<ul id="coded-social-circle-border">
+					<?php
+		
+					// Spit it out!
+					
+					foreach($iconcircleborder as $info) {echo'<li class="'.$info[0].'"><a href="'.$info[1].'"><img src="assets/img/'.$info[2].'"></a></li>
+					';}
+					?></ul>
+					
+		</article>
+	</section>
+
+
+<div style="width:700px;margin:10px auto 20px auto;padding:0 0 0 380px;overflow:hidden">
+		<iframe src="http://demo.itivy.com/include/follow.html" frameborder="0" scrolling="auto"  marginwidth="0" marginheight="0" allowtransparency="true" width="645px" height="35px"></iframe>
+<!-- Baidu Button BEGIN -->
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare" style="margin:10px 0 0 -4px">
+        <a class="bds_tsina"></a>
+        <a class="bds_tqq"></a>
+        <a class="bds_renren"></a>
+        <a class="bds_qzone"></a>
+        <a class="bds_douban"></a>
+        <a class="bds_xg"></a>
+        <span class="bds_more">更多</span>
+		<a class="shareCount"></a>
+    </div>
+<script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours
+();
+</script>
+<!-- Baidu Button END -->
+</div>
+				
+
+
+<div style="display: none">
+    <script language="javascript" type="text/javascript" src="http://js.users.51.la/4473358.js"></script>
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fadd0db9dee36c7a9b64141788e26de72' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21395429-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+    </div>
+	
+</body>
+</html>

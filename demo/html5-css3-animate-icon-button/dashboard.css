@@ -1,0 +1,154 @@
+
+
+@-webkit-keyframes spin {
+	0%   { 	-webkit-transform:rotate(-340deg); }
+	100% { 	-webkit-transform:rotate(20deg);   }
+}
+@-moz-keyframes spin {
+	0%   { 	-moz-transform:rotate(-340deg); }
+	100% { 	-moz-transform:rotate(20deg);   }
+}
+@-o-keyframes spin {
+	0%   { 	-o-transform:rotate(-340deg); }
+	100% { 	-o-transform:rotate(20deg);   }
+}
+@keyframes spin {
+	0%   {  transform:rotate(-340deg); }
+	100% {  transform:rotate(20deg);   }
+}
+
+@-webkit-keyframes rev1 {
+	0%   { 	-webkit-transform:rotate(-100deg); }
+	50%  { 	-webkit-transform:rotate(-20deg);  }
+	100% { 	-webkit-transform:rotate(-100deg); }
+}
+@-moz-keyframes rev1 {
+	0%   { 	-moz-transform:rotate(-100deg); }
+	50%  { 	-moz-transform:rotate(-20deg);  }
+	100% { 	-moz-transform:rotate(-100deg); }
+}
+@-o-keyframes rev1 {
+	0%   { 	-o-transform:rotate(-100deg); }
+	50%  { 	-o-transform:rotate(-20deg);  }
+	100% { 	-o-transform:rotate(-100deg); }
+}
+@keyframes rev1 {
+	0%   { 	transform:rotate(-100deg); }
+	50%  { 	transform:rotate(-20deg);  }
+	100% { 	transform:rotate(-100deg); }
+}
+
+@-webkit-keyframes rev2 {
+	0%   { 	-webkit-transform:rotate(20deg);  }
+	50%  { 	-webkit-transform:rotate(140deg); }
+	100% { 	-webkit-transform:rotate(20deg);  }
+}
+@-moz-keyframes rev2 {
+	0%   { 	-moz-transform:rotate(20deg);  }
+	50%  { 	-moz-transform:rotate(140deg); }
+	100% { 	-moz-transform:rotate(20deg);  }
+}
+@-o-keyframes rev2 {
+	0%   { 	-o-transform:rotate(20deg);  }
+	50%  { 	-o-transform:rotate(140deg); }
+	100% { 	-o-transform:rotate(20deg);  }
+}
+@keyframes rev2 {
+	0%   { 	transform:rotate(20deg);  }
+	50%  {  transform:rotate(140deg); }
+	100% { 	transform:rotate(20deg);  }
+}
+
+.dashboard > div {
+	background: url('dashboard-grey.png') no-repeat; 
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+	     -o-background-size: 100% 100%;
+			background-size: 100% 100%;
+	position: relative;
+}
+
+.selected .dashboard > div,
+.dashboard:hover > div {
+	background-image: url('dashboard.png');
+}
+
+.dashboard > div > div {
+	position: absolute;
+	top: 1.4em;
+	left: 1.05em;
+	width: 0;
+	height: 0;
+	border-left: 0.15em solid transparent;
+	border-right: 0.15em solid transparent;
+	border-bottom: 0.8em solid grey;
+
+	-webkit-transform:rotate(-120deg);
+	   -moz-transform:rotate(-120deg);
+	     -o-transform:rotate(-120deg);
+			transform:rotate(-120deg);
+	-webkit-transform-origin: 0.15em 0.7em;
+	   -moz-transform-origin: 0.15em 0.7em;
+	     -o-transform-origin: 0.15em 0.7em;
+			transform-origin: 0.15em 0.7em;
+}
+
+.dashboard > div > div:FIRST-CHILD {
+	top: 0.9em;
+	left: 2.2em;
+	border-width: 0 0.2em 1.1em;
+
+	-webkit-transform:rotate(20deg);
+	   -moz-transform:rotate(20deg);
+	     -o-transform:rotate(20deg);
+			transform:rotate(20deg);
+	-webkit-transform-origin: 0.2em 0.85em;
+	   -moz-transform-origin: 0.2em 0.85em;
+	     -o-transform-origin: 0.2em 0.85em;
+			transform-origin: 0.2em 0.85em;
+}
+
+.dashboard > div > div:LAST-CHILD {
+	left: 3.55em;
+	-webkit-transform:rotate(20deg);
+	   -moz-transform:rotate(20deg);
+	     -o-transform:rotate(20deg);
+			transform:rotate(20deg);
+}
+
+.selected .dashboard > div > div,
+.dashboard:hover > div > div,
+div.dashboard:hover > div > div {
+	border-bottom-color: #D11;
+}	
+.dashboard:hover > div > div,
+div.dashboard:hover > div > div {
+	-webkit-animation-duration: 0.6s;
+	   -moz-animation-duration: 0.6s;
+	     -o-animation-duration: 0.6s;
+			animation-duration: 0.6s;
+	-webkit-animation-timing-function: linear;
+	   -moz-animation-timing-function: linear;
+	     -o-animation-timing-function: linear;
+			animation-timing-function: linear;
+	-webkit-animation-name: rev1;
+	   -moz-animation-name: rev1;
+	     -o-animation-name: rev1;
+			animation-name: rev1;
+}
+
+.dashboard:hover > div > div:FIRST-CHILD,
+div.dashboard:hover > div > div:FIRST-CHILD {
+	-webkit-animation-name: spin;
+	   -moz-animation-name: spin;
+	     -o-animation-name: spin;
+			animation-name: spin;
+}
+
+.dashboard:hover > div > div:LAST-CHILD,
+div.dashboard:hover > div > div:LAST-CHILD {
+	-webkit-animation-name: rev2;
+	   -moz-animation-name: rev2;
+	     -o-animation-name: rev2;
+			animation-name: rev2;
+}

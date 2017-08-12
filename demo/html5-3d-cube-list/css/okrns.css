@@ -1,0 +1,9 @@
+@mixin center($w, $h){
+  position: absolute;
+  top: calc(50% - #{$h/2});
+  left: calc(50% - #{$w/2});
+}
+@mixin three($p: 1000px){
+  perspective: $p;
+  transform-style: preserve-3d;
+}

@@ -1,0 +1,103 @@
+
+
+@-webkit-keyframes rotateleft {
+	0%   { -webkit-transform:rotate(270deg); }
+	100% { -webkit-transform:rotate(30deg); }
+}
+@-moz-keyframes rotateleft {
+	0%   { -moz-transform:rotate(270deg); }
+	100% { -moz-transform:rotate(30deg); }
+}
+@-o-keyframes rotateleft {
+	0%   { -o-transform:rotate(270deg); }
+	100% { -o-transform:rotate(30deg); }
+}
+@keyframes rotateleft {
+	0%   { transform:rotate(270deg); }
+	100% { transform:rotate(30deg); }
+}
+
+
+@-webkit-keyframes rotateright {
+	0%   { -webkit-transform:rotate(-240deg); }
+	100% { -webkit-transform:rotate(0deg); }
+}
+@-moz-keyframes rotateright {
+	0%   { -moz-transform:rotate(-240deg); }
+	100% { -moz-transform:rotate(0deg); }
+}
+@-o-keyframes rotateright {
+	0%   { -o-transform:rotate(-240deg); }
+	100% { -o-transform:rotate(0deg); }
+}
+@keyframes rotateright {
+	0%   { transform:rotate(-240deg); }
+	100% { transform:rotate(0deg); }
+}
+
+.settings > div {
+}
+
+.settings > div > div:FIRST-CHILD,
+.settings > div > div:LAST-CHILD {
+	position: relative;
+	top: 3%;
+	left: 11%;
+	width: 48%;
+	height: 64%;
+	background: url('gear-grey.png') no-repeat; 
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+	     -o-background-size: 100% 100%;
+			background-size: 100% 100%;
+}
+
+.settings > div > div:LAST-CHILD {
+	top: -35%;
+	left: 48%;
+}
+
+.settings > div > div:FIRST-CHILD {
+	-webkit-transform:rotate(30deg);
+	   -moz-transform:rotate(30deg);
+	      o-transform:rotate(30deg);
+			transform:rotate(30deg);
+}
+
+.selected .settings > div > div:FIRST-CHILD,
+.selected .settings > div > div:LAST-CHILD,
+.settings:hover > div > div:FIRST-CHILD,
+.settings:hover > div > div:LAST-CHILD,
+div.settings:hover > div > div:FIRST-CHILD,
+div.settings:hover > div > div:LAST-CHILD {
+		background-image: url('gear.png'); 
+}
+
+.settings:hover > div > div:FIRST-CHILD,
+.settings:hover > div > div:LAST-CHILD,
+div.settings:hover > div > div:FIRST-CHILD,
+div.settings:hover > div > div:LAST-CHILD {
+	-webkit-animation-name: rotateleft;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function: linear;
+	
+	-moz-animation-name: rotateleft;
+	-moz-animation-duration: 0.5s;
+	-moz-animation-timing-function: linear;
+	
+	-o-animation-name: rotateleft;
+	-o-animation-duration: 0.5s;
+	-o-animation-timing-function: linear;
+	
+	animation-name: rotateleft;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+}
+
+.settings:hover > div > div:LAST-CHILD,
+div.settings:hover > div > div:LAST-CHILD {
+	-webkit-animation-name: rotateright;
+	   -moz-animation-name: rotateright;
+	     -o-animation-name: rotateright;
+			animation-name: rotateright;
+}

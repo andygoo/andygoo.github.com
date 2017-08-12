@@ -1,0 +1,73 @@
+@import "compass/css3";
+
+$items: 7;
+$color: #ecf0f1;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: $color;
+  perspective: 4000;
+  perspective-origin: 50% 0%;
+}
+
+.view {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -200px;
+}
+
+.circles {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  transform-style: preserve-3d;
+}
+
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  border: 15px solid darken($color, 10);
+  border-radius: 50%;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+@for $i from 1 through $items {
+  .h#{$i} {
+    border: 15px solid darken($color, 10 + $i);
+    border-color:
+      darken($color, 10 + $i)
+      darken($color, 8 + $i)
+      darken($color, 6 + $i)
+      darken($color, 8 + $i);
+    box-shadow:
+      0 1px 0 lighten($color, 10),
+      inset 0 5px 0px darken($color, 20 + $i),
+      inset 0 10px 0px darken($color, 20 + $i),
+      0 5px 0 darken($color, 15 + $i),
+      0 10px 0 darken($color, 15 + $i);
+    width: #{ 400 - ($i - 1) * 60 }px;
+    height: #{ 400 - ($i - 1) * 60 }px;
+    transform: rotateX(70deg) translate3d( #{ 30 * ($i - 1) }px, 0px,  -#{ 30 * $i }px );
+    animation: wave#{$i} 2s ease-in-out -#{400 * ($i - 1)}ms infinite alternate;
+  }
+
+  @keyframes wave#{$i} {
+    100% {
+      transform: rotateX(70deg) translate3d( #{ 30 * ($i - 1) }px, 0px,  #{ 100 - (30 * ($i - 1)) }px );
+    }
+  }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>360度产品图片展示</title>
+        <script type="text/javascript" src="js/jquery-1.4.4.min.js" ></script>
+        <script type="text/javascript" src="js/j360.js" ></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                jQuery('#product').j360();
+            });
+        </script>
+		<p id="adtext">
+	B2B初创公司正在逐渐显现出优势，它们已经成为最热门、并且发展速度最快的领域之一，除了许多专业的人才涌入，而且还吸引了大量资金。
+
+以往那些阻碍B2B企业发展的壁垒，早已经土崩瓦解。除了企业有过硬的产品以外，互联网和移动应用的发展也起到了很大作用，如今的商家，通过轻触智能手机屏幕即可完成交易。和那些进行一次性交易的零售消费客户不同，大规模的企业客户通常会选择长期合作合同，盈利收入甚至可以翻至50倍，这也让B2B 融资机遇变得出奇的好。
+
+现在的确是一个令人激动的时代，但是和理想的市场推广战略相匹配的投资时间、资金、以及资源可能会随时消失。因此，如果你刚刚起步，以下有一切针对于企业、营销、以及人事方面的基本规则，可以帮助那些迫切需要发展的B2B初创公司打好基础。
+
+1、战胜自己，就是胜利
+
+行动胜过空想!
+
+除了“朋友和家庭”圈，没有人会特别在意你提供的产品，因此你必须要努力争取。你必须要积极且自信，甚至要有那种斩尽杀绝的能量，当然，如果和对方当事人沟通时，还是要保持有趣可爱的个性。
+
+当你感到疲惫或失意，不要气馁，哪怕再尝试多打一次电话。坚持比常人表现的更好些，会给自己带来提升。
+
+2、不要完全依赖内部销售
+
+内部销售适合有钱和有经验的企业，不适合创业者。
+
+创业者没有足够的时间和金钱，更不用说花上1万美元投放媒体广告了。创业者要把时间用在建立渠道上面，通过自己的人脉网络，拼命的打电话吧。此外，不但要寻找有效的业务处理流程，更要通过公司提供的服务，从客户中寻找价值。通过那些付费客户的反馈，及时更新公司网站内容，并不断改进销售方法。
+
+创业者有时也需要一定的媒体广告，但是不要投入太多预算，广告投放的目的，是要引起大众关注度，而是不是寄希望于能依靠媒体带来收益。
+
+3、快速引起注意
+
+仅仅依靠电话，是做不到引起大众注意的目的的。
+
+要依靠媒体，将产品信息迅速投放到企业目标市场上去，而不是等到产品成熟之后才这么做。而且，企业可以邀请一到三个产品客户为产品做广告。因为，对企业客户而言，其他产品用户或客户对于产品的评价，显然比企业自圆其说更可信，而且更容易得到预期客户认可。
+	<p>
+        <center>
+            <div id="product" style="width: 640px; height: 480px; overflow: hidden;">
+                <img src="images/01.jpg" />
+                <img src="images/02.jpg" />
+                <img src="images/03.jpg" />
+                <img src="images/04.jpg" />
+                <img src="images/05.jpg" />
+                <img src="images/06.jpg" />
+                <img src="images/07.jpg" />
+                <img src="images/08.jpg" />
+                <img src="images/09.jpg" />
+                <img src="images/10.jpg" />
+                <img src="images/11.jpg" />
+                <img src="images/12.jpg" />
+                <img src="images/13.jpg" />
+                <img src="images/14.jpg" />
+                <img src="images/15.jpg" />
+                <img src="images/16.jpg" />
+                <img src="images/17.jpg" />
+                <img src="images/18.jpg" />
+                <img src="images/19.jpg" />
+                <img src="images/20.jpg" />
+                <img src="images/21.jpg" />
+                <img src="images/22.jpg" />
+                <img src="images/23.jpg" />
+                <img src="images/24.jpg" />
+                <img src="images/25.jpg" />
+                <img src="images/26.jpg" />
+                <img src="images/27.jpg" />
+                <img src="images/28.jpg" />
+                <img src="images/29.jpg" />
+                <img src="images/30.jpg" />
+                <img src="images/31.jpg" />
+                <img src="images/32.jpg" />
+                <img src="images/33.jpg" />
+                <img src="images/34.jpg" />
+                <img src="images/35.jpg" />
+                <img src="images/36.jpg" />
+            </div>
+
+		<script src="http://demo.itivy.com/follow.js" type="text/javascript"></script>	
+        <script src="http://demo.itivy.com/gg_bd_ad_720x90.js" type="text/javascript"></script>
+		<div style="width:700px;margin:10px auto 20px auto;padding:0 0 0 380px;overflow:hidden">
+<!-- Baidu Button BEGIN -->
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare" style="margin:10px 0 0 -4px">
+        <a class="bds_tsina"></a>
+        <a class="bds_tqq"></a>
+        <a class="bds_renren"></a>
+        <a class="bds_qzone"></a>
+        <a class="bds_douban"></a>
+        <a class="bds_xg"></a>
+        <span class="bds_more">更多</span>
+		<a class="shareCount"></a>
+    </div>
+<script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours
+();
+</script>
+<!-- Baidu Button END -->
+</div>
+
+
+<div style="display: none">
+    <script language="javascript" type="text/javascript" src="http://js.users.51.la/4473358.js"></script>
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fadd0db9dee36c7a9b64141788e26de72' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21395429-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+    </div>
+    </body>
+</html>

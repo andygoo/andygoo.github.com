@@ -1,0 +1,1427 @@
+/* Coded Social Media Buttons by Todd Motto - @toddmotto - toddmotto.com */
+
+/* =============================================================================
+   Setup the defaults applied to each button (Full length Buttons)
+   ========================================================================== */
+
+ul#coded-social-full {
+	margin:20px 0;
+	padding:0;
+	float:left;
+	clear:both;
+}
+
+ul#coded-social-full li {
+	list-style:none; /* Get rid of the bullet point */
+	float:left;
+	margin:0 10px 0 0; /* Give them some space */
+	border-radius:3px; /* Nice rounded corners */
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	width:100px; /* Fix the width of all buttons to make them even */
+	text-align:center; /* Centered text and icon */
+}
+
+ul#coded-social-full li a {
+	display:block; /* Make sure hover events apply to the whole button */
+	padding:5px 10px; /* Add some height and width to the button */
+}
+
+ul#coded-social-full li a img {
+	-ms-interpolation-mode:bicubic; /* Stop IE rendering the downscaled images funny */
+}
+
+/* =============================================================================
+   RSS icon
+   ========================================================================== */
+   
+ul#coded-social-full li.rss { /* Static Button Look */
+	background:#F08A0E; /* Fallback for Non-CSS3 browsers */
+	background-image:linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	background-image:-o-linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	background-image:-moz-linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	background-image:-webkit-linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	background-image:-ms-linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #E36A00; /* It's all in the detail, okay */
+	}
+	
+ul#coded-social-full li.rss:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+	background-image:-o-linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+	background-image:-moz-linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+	background-image:-webkit-linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+	background-image:-ms-linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+}
+
+ul#coded-social-full li.rss:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+	background-image:-o-linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+	background-image:-moz-linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+	background-image:-webkit-linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+	background-image:-ms-linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+}
+ul#coded-social-full li.rss a {
+	color:#FFF;
+}
+
+ul#coded-social-full li.rss a img {
+	width:12px; /* Our downscaled icons forced CSS width */
+	margin:-4px 5px 0 0;
+}
+
+/* =============================================================================
+   Twitter icon
+   ========================================================================== */
+   
+ul#coded-social-full li.twitter { /* Static Button Look */
+	background:#00ABEE;
+	background-image:linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	background-image:-o-linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	background-image:-moz-linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	background-image:-webkit-linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	background-image:-ms-linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #007AA9;
+	}
+	
+ul#coded-social-full li.twitter:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+	background-image:-o-linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+	background-image:-moz-linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+	background-image:-webkit-linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+	background-image:-ms-linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+}
+
+ul#coded-social-full li.twitter:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+	background-image:-o-linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+	background-image:-moz-linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+	background-image:-webkit-linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+	background-image:-ms-linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+}
+ul#coded-social-full li.twitter a {
+	color:#FFF;
+}
+
+ul#coded-social-full li.twitter a img {
+	width:14px; /* Our downscaled icons forced CSS width */
+	margin:-3px 5px 0 0;
+}
+
+/* =============================================================================
+   Facebook icon
+   ========================================================================== */
+   
+ul#coded-social-full li.facebook { /* Static Button Look */
+	background:#4266AD;
+	background-image:linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	background-image:-o-linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	background-image:-moz-linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	background-image:-webkit-linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	background-image:-ms-linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #2A4475;
+	}
+	
+ul#coded-social-full li.facebook:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+	background-image:-o-linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+	background-image:-moz-linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+	background-image:-webkit-linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+	background-image:-ms-linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+}
+
+ul#coded-social-full li.facebook:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+	background-image:-o-linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+	background-image:-moz-linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+	background-image:-webkit-linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+	background-image:-ms-linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+}
+ul#coded-social-full li.facebook a {
+	color:#FFF;
+}
+
+ul#coded-social-full li.facebook a img {
+	width:17px; /* Our downscaled icons forced CSS width */
+	margin:-3px 3px 0 -5px;
+}
+
+/* =============================================================================
+   LinkedIn icon
+   ========================================================================== */
+   
+ul#coded-social-full li.linkedin { /* Static Button Look */
+	background:#1D7CB3;
+	background-image:linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	background-image:-o-linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	background-image:-moz-linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	background-image:-webkit-linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	background-image:-ms-linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #09527D;
+	}
+	
+ul#coded-social-full li.linkedin:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+	background-image:-o-linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+	background-image:-moz-linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+	background-image:-webkit-linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+	background-image:-ms-linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+}
+
+ul#coded-social-full li.linkedin:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+	background-image:-o-linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+	background-image:-moz-linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+	background-image:-webkit-linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+	background-image:-ms-linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+}
+ul#coded-social-full li.linkedin a {
+	color:#FFF;
+}
+
+ul#coded-social-full li.linkedin a img {
+	width:16px; /* Our downscaled icons forced CSS width */
+	margin:-4px 9px 0 -5px;
+}
+
+/* =============================================================================
+   Google+ icon
+   ========================================================================== */
+   
+ul#coded-social-full li.googleplus { /* Static Button Look */
+	background:#BA2D25;
+	background-image:linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	background-image:-o-linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	background-image:-moz-linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	background-image:-webkit-linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	background-image:-ms-linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #6C140F;
+	}
+	
+ul#coded-social-full li.googleplus:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+	background-image:-o-linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+	background-image:-moz-linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+	background-image:-webkit-linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+	background-image:-ms-linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+}
+
+ul#coded-social-full li.googleplus:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #992420 28%, #C22C29 64%);
+	background-image:-o-linear-gradient(bottom, #992420 28%, #C22C29 64%);
+	background-image:-moz-linear-gradient(bottom, #992420 28%, #C22C29 64%);
+	background-image:-webkit-linear-gradient(bottom, #992420 28%, #C22C29 64%);
+	background-image:-ms-linear-gradient(bottom, #992420 28%, #C22C29 64%);
+}
+ul#coded-social-full li.googleplus a {
+	color:#FFF;
+}
+
+ul#coded-social-full li.googleplus a img {
+	width:20px; /* Our downscaled icons forced CSS width */
+	margin:-4px 9px 0 -5px;
+}
+
+/* =============================================================================
+   Dribbble icon
+   ========================================================================== */
+   
+ul#coded-social-full li.dribbble { /* Static Button Look */
+	background:#EA4C89;
+	background-image:linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	background-image:-o-linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	background-image:-moz-linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	background-image:-webkit-linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	background-image:-ms-linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #AB3E69;
+	}
+	
+ul#coded-social-full li.dribbble:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+	background-image:-o-linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+	background-image:-moz-linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+	background-image:-webkit-linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+	background-image:-ms-linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+}
+
+ul#coded-social-full li.dribbble:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+	background-image:-o-linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+	background-image:-moz-linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+	background-image:-webkit-linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+	background-image:-ms-linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+}
+ul#coded-social-full li.dribbble a {
+	color:#FFF;
+}
+
+ul#coded-social-full li.dribbble a img {
+	width:18px; /* Our downscaled icons forced CSS width */
+	margin:-4px 7px 0 -5px;
+}
+
+/* =============================================================================
+   Forrst icon
+   ========================================================================== */
+   
+ul#coded-social-full li.forrst { /* Static Button Look */
+	background:#5CA543;
+	background-image:linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	background-image:-o-linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	background-image:-moz-linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	background-image:-webkit-linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	background-image:-ms-linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #366328;
+	}
+	
+ul#coded-social-full li.forrst:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+	background-image:-o-linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+	background-image:-moz-linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+	background-image:-webkit-linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+	background-image:-ms-linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+}
+
+ul#coded-social-full li.forrst:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+	background-image:-o-linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+	background-image:-moz-linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+	background-image:-webkit-linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+	background-image:-ms-linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+}
+ul#coded-social-full li.forrst a {
+	color:#FFF;
+}
+
+ul#coded-social-full li.forrst a img {
+	width:18px; /* Our downscaled icons forced CSS width */
+	margin:-4px 7px 0 -5px;
+}
+
+/* =============================================================================
+   Pinterest icon
+   ========================================================================== */
+   
+ul#coded-social-full li.pinterest { /* Static Button Look */
+	background:#F9F9F9;
+	background-image:linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	background-image:-o-linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	background-image:-moz-linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	background-image:-webkit-linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	background-image:-ms-linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #999;
+	}
+	
+ul#coded-social-full li.pinterest:hover { /* Hover Event */
+	background-image: linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+	background-image:-o-linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+	background-image:-moz-linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+	background-image:-webkit-linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+	background-image:-ms-linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+}
+
+ul#coded-social-full li.pinterest:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+	background-image:-o-linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+	background-image:-moz-linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+	background-image:-webkit-linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+	background-image:-ms-linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+}
+ul#coded-social-full li.pinterest a {
+	color:#C8232C;
+}
+
+ul#coded-social-full li.pinterest a img {
+	width:18px; /* Our downscaled icons forced CSS width */
+	margin:-4px 7px 0 -5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============================================================================
+   Setup the defaults applied to each button (Full length Buttons)
+   ========================================================================== */
+
+ul#coded-social-square {
+	margin:20px 0;
+	padding:0;
+	float:left;
+	clear:both;
+}
+
+ul#coded-social-square li {
+	list-style:none; /* Get rid of the bullet point */
+	float:left;
+	margin:0 10px 0 0; /* Give them some space */
+	border-radius:3px; /* Nice rounded corners */
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	width:30px; /* Fix the width of all buttons to make them even */
+}
+
+ul#coded-social-square li a {
+	display:block; /* Make sure hover events apply to the whole button */
+	padding:5px 10px; /* Add some height and width to the button */
+}
+
+ul#coded-social-square li a img {
+	-ms-interpolation-mode:bicubic; /* Stop IE rendering the downscaled images funny */
+}
+
+/* =============================================================================
+   RSS icon
+   ========================================================================== */
+   
+ul#coded-social-square li.rss { /* Static Button Look */
+	background:#F08A0E; /* Fallback for Non-CSS3 browsers */
+	background-image:linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	background-image:-o-linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	background-image:-moz-linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	background-image:-webkit-linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	background-image:-ms-linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #E36A00; /* It's all in the detail, okay */
+	}
+	
+ul#coded-social-square li.rss:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+	background-image:-o-linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+	background-image:-moz-linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+	background-image:-webkit-linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+	background-image:-ms-linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+}
+
+ul#coded-social-square li.rss:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+	background-image:-o-linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+	background-image:-moz-linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+	background-image:-webkit-linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+	background-image:-ms-linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+}
+
+ul#coded-social-square li.rss a img {
+	width:12px; /* Our downscaled icons forced CSS width */
+	margin:-3px 0 0 -1px;
+}
+
+/* =============================================================================
+   Twitter icon
+   ========================================================================== */
+   
+ul#coded-social-square li.twitter { /* Static Button Look */
+	background:#00ABEE;
+	background-image:linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	background-image:-o-linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	background-image:-moz-linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	background-image:-webkit-linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	background-image:-ms-linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #007AA9;
+	}
+	
+ul#coded-social-square li.twitter:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+	background-image:-o-linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+	background-image:-moz-linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+	background-image:-webkit-linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+	background-image:-ms-linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+}
+
+ul#coded-social-square li.twitter:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+	background-image:-o-linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+	background-image:-moz-linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+	background-image:-webkit-linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+	background-image:-ms-linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+}
+
+ul#coded-social-square li.twitter a img {
+	width:14px; /* Our downscaled icons forced CSS width */
+	margin:-2px 0 0 -2px;
+}
+
+/* =============================================================================
+   Facebook icon
+   ========================================================================== */
+   
+ul#coded-social-square li.facebook { /* Static Button Look */
+	background:#4266AD;
+	background-image:linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	background-image:-o-linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	background-image:-moz-linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	background-image:-webkit-linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	background-image:-ms-linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #2A4475;
+	}
+	
+ul#coded-social-square li.facebook:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+	background-image:-o-linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+	background-image:-moz-linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+	background-image:-webkit-linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+	background-image:-ms-linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+}
+
+ul#coded-social-square li.facebook:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+	background-image:-o-linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+	background-image:-moz-linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+	background-image:-webkit-linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+	background-image:-ms-linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+}
+
+ul#coded-social-square li.facebook a img {
+	width:17px; /* Our downscaled icons forced CSS width */
+	margin:-2px 0 0 -3px;
+}
+
+/* =============================================================================
+   LinkedIn icon
+   ========================================================================== */
+   
+ul#coded-social-square li.linkedin { /* Static Button Look */
+	background:#1D7CB3;
+	background-image:linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	background-image:-o-linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	background-image:-moz-linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	background-image:-webkit-linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	background-image:-ms-linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #09527D;
+	}
+	
+ul#coded-social-square li.linkedin:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+	background-image:-o-linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+	background-image:-moz-linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+	background-image:-webkit-linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+	background-image:-ms-linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+}
+
+ul#coded-social-square li.linkedin:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+	background-image:-o-linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+	background-image:-moz-linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+	background-image:-webkit-linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+	background-image:-ms-linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+}
+
+ul#coded-social-square li.linkedin a img {
+	width:16px; /* Our downscaled icons forced CSS width */
+	margin:-3px 0 0 -3px;
+}
+
+/* =============================================================================
+   Google+ icon
+   ========================================================================== */
+   
+ul#coded-social-square li.googleplus { /* Static Button Look */
+	background:#BA2D25;
+	background-image:linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	background-image:-o-linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	background-image:-moz-linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	background-image:-webkit-linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	background-image:-ms-linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #6C140F;
+	}
+	
+ul#coded-social-square li.googleplus:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+	background-image:-o-linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+	background-image:-moz-linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+	background-image:-webkit-linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+	background-image:-ms-linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+}
+
+ul#coded-social-square li.googleplus:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #992420 28%, #C22C29 64%);
+	background-image:-o-linear-gradient(bottom, #992420 28%, #C22C29 64%);
+	background-image:-moz-linear-gradient(bottom, #992420 28%, #C22C29 64%);
+	background-image:-webkit-linear-gradient(bottom, #992420 28%, #C22C29 64%);
+	background-image:-ms-linear-gradient(bottom, #992420 28%, #C22C29 64%);
+}
+
+ul#coded-social-square li.googleplus a img {
+	width:20px; /* Our downscaled icons forced CSS width */
+	margin:-4px 0 0 -4px;
+}
+
+/* =============================================================================
+   Dribbble icon
+   ========================================================================== */
+   
+ul#coded-social-square li.dribbble { /* Static Button Look */
+	background:#EA4C89;
+	background-image:linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	background-image:-o-linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	background-image:-moz-linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	background-image:-webkit-linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	background-image:-ms-linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #AB3E69;
+	}
+	
+ul#coded-social-square li.dribbble:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+	background-image:-o-linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+	background-image:-moz-linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+	background-image:-webkit-linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+	background-image:-ms-linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+}
+
+ul#coded-social-square li.dribbble:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+	background-image:-o-linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+	background-image:-moz-linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+	background-image:-webkit-linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+	background-image:-ms-linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+}
+
+ul#coded-social-square li.dribbble a img {
+	width:18px; /* Our downscaled icons forced CSS width */
+	margin:-2px 0 0 -4px;
+}
+
+/* =============================================================================
+   Forrst icon
+   ========================================================================== */
+   
+ul#coded-social-square li.forrst { /* Static Button Look */
+	background:#5CA543;
+	background-image:linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	background-image:-o-linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	background-image:-moz-linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	background-image:-webkit-linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	background-image:-ms-linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #366328;
+	}
+	
+ul#coded-social-square li.forrst:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+	background-image:-o-linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+	background-image:-moz-linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+	background-image:-webkit-linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+	background-image:-ms-linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+}
+
+ul#coded-social-square li.forrst:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+	background-image:-o-linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+	background-image:-moz-linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+	background-image:-webkit-linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+	background-image:-ms-linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+}
+
+ul#coded-social-square li.forrst a img {
+	width:18px; /* Our downscaled icons forced CSS width */
+	margin:-4px 0 0 -4px;
+}
+
+/* =============================================================================
+   Pinterest icon
+   ========================================================================== */
+   
+ul#coded-social-square li.pinterest { /* Static Button Look */
+	background:#F9F9F9;
+	background-image:linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	background-image:-o-linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	background-image:-moz-linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	background-image:-webkit-linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	background-image:-ms-linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #999;
+	}
+	
+ul#coded-social-square li.pinterest:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+	background-image:-o-linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+	background-image:-moz-linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+	background-image:-webkit-linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+	background-image:-ms-linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+}
+
+ul#coded-social-square li.pinterest:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+	background-image:-o-linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+	background-image:-moz-linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+	background-image:-webkit-linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+	background-image:-ms-linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+}
+
+ul#coded-social-square li.pinterest a img {
+	width:18px; /* Our downscaled icons forced CSS width */
+	margin:-4px 0 0 -4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============================================================================
+   Setup the defaults applied to each button (Full length Buttons)
+   ========================================================================== */
+
+ul#coded-social-circle {
+	margin:20px 0;
+	padding:0;
+	float:left;
+	clear:both;
+}
+
+ul#coded-social-circle li {
+	list-style:none; /* Get rid of the bullet point */
+	float:left;
+	margin:0 10px 0 0; /* Give them some space */
+	border-radius:20px; /* High border-radius creates a circle :-) */
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	width:30px; /* Fix the width of all buttons to make them even */
+}
+
+ul#coded-social-circle li a {
+	display:block; /* Make sure hover events apply to the whole button */
+	padding:5px 10px; /* Add some height and width to the button */
+}
+
+ul#coded-social-circle li a img {
+	-ms-interpolation-mode:bicubic; /* Stop IE rendering the downscaled images funny */
+}
+
+/* =============================================================================
+   RSS icon
+   ========================================================================== */
+   
+ul#coded-social-circle li.rss { /* Static Button Look */
+	background:#F08A0E; /* Fallback for Non-CSS3 browsers */
+	background-image:linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	background-image:-o-linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	background-image:-moz-linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	background-image:-webkit-linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	background-image:-ms-linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #E36A00; /* It's all in the detail, okay */
+	}
+	
+ul#coded-social-circle li.rss:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+	background-image:-o-linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+	background-image:-moz-linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+	background-image:-webkit-linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+	background-image:-ms-linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+}
+
+ul#coded-social-circle li.rss:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+	background-image:-o-linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+	background-image:-moz-linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+	background-image:-webkit-linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+	background-image:-ms-linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+}
+
+ul#coded-social-circle li.rss a img {
+	width:12px; /* Our downscaled icons forced CSS width */
+	margin:-3px 0 0 -1px;
+}
+
+/* =============================================================================
+   Twitter icon
+   ========================================================================== */
+   
+ul#coded-social-circle li.twitter { /* Static Button Look */
+	background:#00ABEE;
+	background-image:linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	background-image:-o-linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	background-image:-moz-linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	background-image:-webkit-linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	background-image:-ms-linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #007AA9;
+	}
+	
+ul#coded-social-circle li.twitter:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+	background-image:-o-linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+	background-image:-moz-linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+	background-image:-webkit-linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+	background-image:-ms-linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+}
+
+ul#coded-social-circle li.twitter:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+	background-image:-o-linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+	background-image:-moz-linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+	background-image:-webkit-linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+	background-image:-ms-linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+}
+
+ul#coded-social-circle li.twitter a img {
+	width:14px; /* Our downscaled icons forced CSS width */
+	margin:-2px 0 0 -2px;
+}
+
+/* =============================================================================
+   Facebook icon
+   ========================================================================== */
+   
+ul#coded-social-circle li.facebook { /* Static Button Look */
+	background:#4266AD;
+	background-image:linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	background-image:-o-linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	background-image:-moz-linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	background-image:-webkit-linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	background-image:-ms-linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #2A4475;
+	}
+	
+ul#coded-social-circle li.facebook:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+	background-image:-o-linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+	background-image:-moz-linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+	background-image:-webkit-linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+	background-image:-ms-linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+}
+
+ul#coded-social-circle li.facebook:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+	background-image:-o-linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+	background-image:-moz-linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+	background-image:-webkit-linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+	background-image:-ms-linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+}
+
+ul#coded-social-circle li.facebook a img {
+	width:17px; /* Our downscaled icons forced CSS width */
+	margin:-2px 0 0 -3px;
+}
+
+/* =============================================================================
+   LinkedIn icon
+   ========================================================================== */
+   
+ul#coded-social-circle li.linkedin { /* Static Button Look */
+	background:#1D7CB3;
+	background-image:linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	background-image:-o-linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	background-image:-moz-linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	background-image:-webkit-linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	background-image:-ms-linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #09527D;
+	}
+	
+ul#coded-social-circle li.linkedin:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+	background-image:-o-linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+	background-image:-moz-linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+	background-image:-webkit-linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+	background-image:-ms-linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+}
+
+ul#coded-social-circle li.linkedin:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+	background-image:-o-linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+	background-image:-moz-linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+	background-image:-webkit-linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+	background-image:-ms-linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+}
+
+ul#coded-social-circle li.linkedin a img {
+	width:16px; /* Our downscaled icons forced CSS width */
+	margin:-3px 0 0 -3px;
+}
+
+/* =============================================================================
+   Google+ icon
+   ========================================================================== */
+   
+ul#coded-social-circle li.googleplus { /* Static Button Look */
+	background:#BA2D25;
+	background-image:linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	background-image:-o-linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	background-image:-moz-linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	background-image:-webkit-linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	background-image:-ms-linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #6C140F;
+	}
+	
+ul#coded-social-circle li.googleplus:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+	background-image:-o-linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+	background-image:-moz-linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+	background-image:-webkit-linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+	background-image:-ms-linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+}
+
+ul#coded-social-circle li.googleplus:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #992420 28%, #C22C29 64%);
+	background-image:-o-linear-gradient(bottom, #992420 28%, #C22C29 64%);
+	background-image:-moz-linear-gradient(bottom, #992420 28%, #C22C29 64%);
+	background-image:-webkit-linear-gradient(bottom, #992420 28%, #C22C29 64%);
+	background-image:-ms-linear-gradient(bottom, #992420 28%, #C22C29 64%);
+}
+
+ul#coded-social-circle li.googleplus a img {
+	width:20px; /* Our downscaled icons forced CSS width */
+	margin:-4px 0 0 -4px;
+}
+
+/* =============================================================================
+   Dribbble icon
+   ========================================================================== */
+   
+ul#coded-social-circle li.dribbble { /* Static Button Look */
+	background:#EA4C89;
+	background-image:linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	background-image:-o-linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	background-image:-moz-linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	background-image:-webkit-linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	background-image:-ms-linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #AB3E69;
+	}
+	
+ul#coded-social-circle li.dribbble:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+	background-image:-o-linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+	background-image:-moz-linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+	background-image:-webkit-linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+	background-image:-ms-linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+}
+
+ul#coded-social-circle li.dribbble:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+	background-image:-o-linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+	background-image:-moz-linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+	background-image:-webkit-linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+	background-image:-ms-linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+}
+
+ul#coded-social-circle li.dribbble a img {
+	width:18px; /* Our downscaled icons forced CSS width */
+	margin:-2px 0 0 -4px;
+}
+
+/* =============================================================================
+   Forrst icon
+   ========================================================================== */
+   
+ul#coded-social-circle li.forrst { /* Static Button Look */
+	background:#5CA543;
+	background-image:linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	background-image:-o-linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	background-image:-moz-linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	background-image:-webkit-linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	background-image:-ms-linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #366328;
+	}
+	
+ul#coded-social-circle li.forrst:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+	background-image:-o-linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+	background-image:-moz-linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+	background-image:-webkit-linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+	background-image:-ms-linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+}
+
+ul#coded-social-circle li.forrst:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+	background-image:-o-linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+	background-image:-moz-linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+	background-image:-webkit-linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+	background-image:-ms-linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+}
+
+ul#coded-social-circle li.forrst a img {
+	width:18px; /* Our downscaled icons forced CSS width */
+	margin:-4px 0 0 -4px;
+}
+
+/* =============================================================================
+   Pinterest icon
+   ========================================================================== */
+   
+ul#coded-social-circle li.pinterest { /* Static Button Look */
+	background:#F9F9F9;
+	background-image:linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	background-image:-o-linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	background-image:-moz-linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	background-image:-webkit-linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	background-image:-ms-linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border-bottom:1px solid #999;
+	}
+	
+ul#coded-social-circle li.pinterest:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+	background-image:-o-linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+	background-image:-moz-linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+	background-image:-webkit-linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+	background-image:-ms-linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+}
+
+ul#coded-social-circle li.pinterest:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+	background-image:-o-linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+	background-image:-moz-linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+	background-image:-webkit-linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+	background-image:-ms-linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+}
+
+ul#coded-social-circle li.pinterest a img {
+	width:18px; /* Our downscaled icons forced CSS width */
+	margin:-4px 0 0 -4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============================================================================
+   Setup the defaults applied to each button (Full length Buttons)
+   ========================================================================== */
+
+ul#coded-social-circle-border {
+	margin:20px 0;
+	padding:0;
+	float:left;
+	clear:both;
+}
+
+ul#coded-social-circle-border li {
+	list-style:none; /* Get rid of the bullet point */
+	float:left;
+	margin:0 10px 0 0; /* Give them some space */
+	border-radius:20px; /* High border-radius creates a circle :-) */
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	width:30px; /* Fix the width of all buttons to make them even */
+}
+
+ul#coded-social-circle-border li a {
+	display:block; /* Make sure hover events apply to the whole button */
+	padding:5px 10px; /* Add some height and width to the button */
+}
+
+ul#coded-social-circle-border li a img {
+	-ms-interpolation-mode:bicubic; /* Stop IE rendering the downscaled images funny */
+}
+
+/* =============================================================================
+   RSS icon
+   ========================================================================== */
+   
+ul#coded-social-circle-border li.rss { /* Static Button Look */
+	background:#F08A0E; /* Fallback for Non-CSS3 browsers */
+	background-image:linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	background-image:-o-linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	background-image:-moz-linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	background-image:-webkit-linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	background-image:-ms-linear-gradient(bottom, #F08A0E 40%, #F29D27 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border:1px solid #E36A00; /* It's all in the detail, okay */
+	}
+	
+ul#coded-social-circle-border li.rss:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+	background-image:-o-linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+	background-image:-moz-linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+	background-image:-webkit-linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+	background-image:-ms-linear-gradient(bottom, #F79A28 40%, #FAA937 70%);
+}
+
+ul#coded-social-circle-border li.rss:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+	background-image:-o-linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+	background-image:-moz-linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+	background-image:-webkit-linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+	background-image:-ms-linear-gradient(bottom, #FF8C00 40%, #F29D27 70%);
+}
+
+ul#coded-social-circle-border li.rss a img {
+	width:12px; /* Our downscaled icons forced CSS width */
+	margin:-3px 0 0 -1px;
+}
+
+/* =============================================================================
+   Twitter icon
+   ========================================================================== */
+   
+ul#coded-social-circle-border li.twitter { /* Static Button Look */
+	background:#00ABEE;
+	background-image:linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	background-image:-o-linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	background-image:-moz-linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	background-image:-webkit-linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	background-image:-ms-linear-gradient(bottom, #0296CC 40%, #00ABEE 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border:1px solid #007AA9;
+	}
+	
+ul#coded-social-circle-border li.twitter:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+	background-image:-o-linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+	background-image:-moz-linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+	background-image:-webkit-linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+	background-image:-ms-linear-gradient(bottom, #079FD6 40%, #05B9FA 70%);
+}
+
+ul#coded-social-circle-border li.twitter:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+	background-image:-o-linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+	background-image:-moz-linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+	background-image:-webkit-linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+	background-image:-ms-linear-gradient(bottom, #0296CC 40%, #05ABE8 70%);
+}
+
+ul#coded-social-circle-border li.twitter a img {
+	width:14px; /* Our downscaled icons forced CSS width */
+	margin:-2px 0 0 -2px;
+}
+
+/* =============================================================================
+   Facebook icon
+   ========================================================================== */
+   
+ul#coded-social-circle-border li.facebook { /* Static Button Look */
+	background:#4266AD;
+	background-image:linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	background-image:-o-linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	background-image:-moz-linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	background-image:-webkit-linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	background-image:-ms-linear-gradient(bottom, #3B5898 40%, #4266AD 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border:1px solid #2A4475;
+	}
+	
+ul#coded-social-circle-border li.facebook:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+	background-image:-o-linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+	background-image:-moz-linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+	background-image:-webkit-linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+	background-image:-ms-linear-gradient(bottom, #4363A3 40%, #5079C7 70%);
+}
+
+ul#coded-social-circle-border li.facebook:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+	background-image:-o-linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+	background-image:-moz-linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+	background-image:-webkit-linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+	background-image:-ms-linear-gradient(bottom, #3B588F 40%, #4C71B5 70%);
+}
+
+ul#coded-social-circle-border li.facebook a img {
+	width:17px; /* Our downscaled icons forced CSS width */
+	margin:-2px 0 0 -3px;
+}
+
+/* =============================================================================
+   LinkedIn icon
+   ========================================================================== */
+   
+ul#coded-social-circle-border li.linkedin { /* Static Button Look */
+	background:#1D7CB3;
+	background-image:linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	background-image:-o-linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	background-image:-moz-linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	background-image:-webkit-linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	background-image:-ms-linear-gradient(bottom, #10689E 40%, #1D7CB3 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border:1px solid #09527D;
+	}
+	
+ul#coded-social-circle-border li.linkedin:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+	background-image:-o-linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+	background-image:-moz-linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+	background-image:-webkit-linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+	background-image:-ms-linear-gradient(bottom, #1A6FA1 40%, #278CC2 70%);
+}
+
+ul#coded-social-circle-border li.linkedin:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+	background-image:-o-linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+	background-image:-moz-linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+	background-image:-webkit-linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+	background-image:-ms-linear-gradient(bottom, #1C6894 40%, #2481B3 70%);
+}
+
+ul#coded-social-circle-border li.linkedin a img {
+	width:16px; /* Our downscaled icons forced CSS width */
+	margin:-3px 0 0 -3px;
+}
+
+/* =============================================================================
+   Google+ icon
+   ========================================================================== */
+   
+ul#coded-social-circle-border li.googleplus { /* Static Button Look */
+	background:#BA2D25;
+	background-image:linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	background-image:-o-linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	background-image:-moz-linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	background-image:-webkit-linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	background-image:-ms-linear-gradient(bottom, #AD2E29 28%, #CC2A25 64%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border:1px solid #6C140F;
+	}
+	
+ul#coded-social-circle-border li.googleplus:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+	background-image:-o-linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+	background-image:-moz-linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+	background-image:-webkit-linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+	background-image:-ms-linear-gradient(bottom, #BD332C 28%, #E0362D 64%);
+}
+
+ul#coded-social-circle-border li.googleplus:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #992420 28%, #C22C29 64%);
+	background-image:-o-linear-gradient(bottom, #992420 28%, #C22C29 64%);
+	background-image:-moz-linear-gradient(bottom, #992420 28%, #C22C29 64%);
+	background-image:-webkit-linear-gradient(bottom, #992420 28%, #C22C29 64%);
+	background-image:-ms-linear-gradient(bottom, #992420 28%, #C22C29 64%);
+}
+
+ul#coded-social-circle-border li.googleplus a img {
+	width:20px; /* Our downscaled icons forced CSS width */
+	margin:-4px 0 0 -4px;
+}
+
+/* =============================================================================
+   Dribbble icon
+   ========================================================================== */
+   
+ul#coded-social-circle-border li.dribbble { /* Static Button Look */
+	background:#EA4C89;
+	background-image:linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	background-image:-o-linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	background-image:-moz-linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	background-image:-webkit-linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	background-image:-ms-linear-gradient(bottom, #D94A83 40%, #EA4C89 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border:1px solid #AB3E69;
+	}
+	
+ul#coded-social-circle-border li.dribbble:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+	background-image:-o-linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+	background-image:-moz-linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+	background-image:-webkit-linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+	background-image:-ms-linear-gradient(bottom, #E6508C 40%, #F0689E 70%);
+}
+
+ul#coded-social-circle-border li.dribbble:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+	background-image:-o-linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+	background-image:-moz-linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+	background-image:-webkit-linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+	background-image:-ms-linear-gradient(bottom, #DB4C85 40%, #E66599 70%);
+}
+
+ul#coded-social-circle-border li.dribbble a img {
+	width:18px; /* Our downscaled icons forced CSS width */
+	margin:-2px 0 0 -4px;
+}
+
+/* =============================================================================
+   Forrst icon
+   ========================================================================== */
+   
+ul#coded-social-circle-border li.forrst { /* Static Button Look */
+	background:#5CA543;
+	background-image:linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	background-image:-o-linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	background-image:-moz-linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	background-image:-webkit-linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	background-image:-ms-linear-gradient(bottom, #53913D 40%, #5CA543 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border:1px solid #366328;
+	}
+	
+ul#coded-social-circle-border li.forrst:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+	background-image:-o-linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+	background-image:-moz-linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+	background-image:-webkit-linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+	background-image:-ms-linear-gradient(bottom, #59993F 40%, #5EAB42 70%);
+}
+
+ul#coded-social-circle-border li.forrst:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+	background-image:-o-linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+	background-image:-moz-linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+	background-image:-webkit-linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+	background-image:-ms-linear-gradient(bottom, #508A3C 40%, #569C3D 70%);
+}
+
+ul#coded-social-circle-border li.forrst a img {
+	width:18px; /* Our downscaled icons forced CSS width */
+	margin:-4px 0 0 -4px;
+}
+
+/* =============================================================================
+   Pinterest icon
+   ========================================================================== */
+   
+ul#coded-social-circle-border li.pinterest { /* Static Button Look */
+	background:#F9F9F9;
+	background-image:linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	background-image:-o-linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	background-image:-moz-linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	background-image:-webkit-linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	background-image:-ms-linear-gradient(bottom, #F1EFEF 40%, #FCFAFA 70%);
+	box-shadow:0px 1px 2px #999;
+	-webkit-box-shadow:0px 1px 2px #999;
+	-moz-box-shadow:0px 1px 2px #999;
+	border:1px solid #999;
+	}
+	
+ul#coded-social-circle-border li.pinterest:hover { /* Hover Event */
+	background-image:linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+	background-image:-o-linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+	background-image:-moz-linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+	background-image:-webkit-linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+	background-image:-ms-linear-gradient(bottom, #FAFAFA 28%, #FCFAFA 64%);
+}
+
+ul#coded-social-circle-border li.pinterest:active { /* Active (Pressed) Button */
+	background-image:linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+	background-image:-o-linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+	background-image:-moz-linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+	background-image:-webkit-linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+	background-image:-ms-linear-gradient(bottom, #EBEBEB 28%, #F7F7F7 64%);
+}
+
+ul#coded-social-circle-border li.pinterest a img {
+	width:18px; /* Our downscaled icons forced CSS width */
+	margin:-4px 0 0 -4px;
+}

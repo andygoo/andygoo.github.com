@@ -1,0 +1,81 @@
+@import "compass/css3";
+
+$blur-steps:5;
+$rows:10;
+$cols:18;
+ 
+$spacing-x:10px;
+$spacing-y:10px;
+
+$angle:60deg;
+$step:0.8;
+
+body{
+  background:#222;
+  font-size:0;
+}
+
+.dots{
+   position:absolute;
+   top:0;
+   left:0;
+   right:0;
+   text-align:center;
+   transform-style:preserve-3d;
+}
+.dots * {
+  transform-style:preserve-3d;
+}
+
+@for $i from 1 through $blur-steps{
+  .dots:nth-child(#{$i}){
+    transform:perspective(300px) rotateX($angle+($i*$step));
+    opacity:(1/($blur-steps))+0.2;
+  }
+}
+.dot-row{
+  margin-top:$spacing-y/2;
+  margin-bottom:$spacing-y/2;
+  white-space:nowrap;
+}
+.dot{
+  background:white;
+  width:20px;
+  height:20px;
+  border-radius:100%;
+  margin-left:$spacing-x/2;
+  margin-right:$spacing-x/2;
+  display:inline-block;
+}
+@keyframes dot-anim{
+  0%{
+    transform:translate3d(0,0,-10px);
+  }
+  100%{
+    transform:translate3d(0,0,10px)
+  }
+}
+
+$time:1s;
+$p:2.5;
+@for $i from 1 through $cols{
+  .dot:nth-child(#{$i}){ 
+    animation:dot-anim $time ease-in-out ((-$time/$cols)*$i)*$p infinite alternate;
+  }
+}
+
+@keyframes row-anim{
+  0%{
+    transform:translate3d(0,0,-10px);
+  }
+  100%{
+    transform:translate3d(0,0,10px)
+  }
+}
+$time:0.8s;
+$p:1.6;
+@for $i from 1 through $rows{
+  .dot-row:nth-child(#{$i}){ 
+    animation:row-anim $time ease-in-out ((-$time/$rows)*$i)*$p infinite alternate; 
+  } 
+}

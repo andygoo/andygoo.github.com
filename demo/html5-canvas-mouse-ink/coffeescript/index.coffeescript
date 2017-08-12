@@ -1,0 +1,121 @@
+
+canvas = document.getElementById("canvas")
+context = canvas.getContext("2d")
+width = window.innerWidth
+height = window.innerHeight
+canvas.width = width
+canvas.height = height
+scene =
+  finalRadius: 100
+  duration: 800
+  innerColor: "#333"
+  outerColor: "#000"
+  
+  
+Math.easeOutQuart = (t, b, c, d) ->
+	t /= d
+	t--
+	-c * (t*t*t*t - 1) + b
+
+  
+class ExpandingDot
+  
+  completed: false
+  
+  constructor: (x, y)->
+    @finalRadius = scene.finalRadius
+    @startTime = Date.now()
+    @radius = 0
+    @innerRadius = 0
+    @position =
+      x: x
+      y: y
+
+  update: ->
+    unless @completed
+      currentTime = Date.now() - @startTime
+      @radius = Math.easeOutQuart(currentTime, 0, @finalRadius*0.9, scene.duration)
+      @innerRadius = Math.easeOutQuart(currentTime-100, 0, @finalRadius*1.1, scene.duration*2) if currentTime > 100
+
+      @radius = Math.max(@radius, 0)
+      @innerRadius = Math.max(@innerRadius, 0)
+
+      @completed = true if @innerRadius > @radius*1
+      
+      
+    
+      context.lineWidth = Math.easeOutQuart(currentTime, 30, -30, scene.duration)
+      #context.globalAlpha = 0.1 #Math.easeOutQuart(currentTime, 0, -1, 10)
+      
+
+
+  render: ->
+    #context.clearRect(0, 0, width, height)
+
+    context.globalCompositeOperation = "source-over"
+    
+    context.fillStyle = scene.innerColor
+    context.beginPath()
+    context.arc(@position.x, @position.y, @radius, 0, Math.PI * 2, false)
+    context.fill()
+
+    
+    context.strokeStyle = scene.outerColor
+    context.stroke()
+
+
+    context.globalCompositeOperation = "destination-out"
+
+    context.fillStyle = "red"
+    context.beginPath()
+    context.arc(@position.x, @position.y, @innerRadius, 0, Math.PI * 2, false)
+    context.fill()
+
+    
+dots = []
+
+(animationLoop = ->
+  context.clearRect(0, 0, width, height)
+  aliveDots = []
+  for dot in dots
+    aliveDots.push(dot) unless dot.completed
+  dots = aliveDots
+  
+  for dot in dots
+    unless dot.completed
+      dot.update()
+      dot.render()
+  
+  requestAnimationFrame animationLoop
+ )()
+
+
+  
+delayedPlace = (degree, index)->
+  setTimeout =>
+    dots.push(new ExpandingDot(width/2 + Math.cos(degree*Math.PI/180)*200, height/2 + Math.sin(degree*Math.PI/180*2)*200/2 ))
+  , index * 50
+
+for i in [0..720/10] by 1
+  delayedPlace(i*10, i)
+  
+###(placer = ->
+  setTimeout ->
+    #place(100, 100)
+    dots.push(new ExpandingDot(Math.random()*window.innerWidth, Math.random()*window.innerHeight))
+    placer()
+  , duration
+)()###
+
+window.addEventListener "mousemove", (event)->
+  dots.push(new ExpandingDot(event.pageX, event.pageY))
+
+window.addEventListener "click", (event)->
+  dots.push(new ExpandingDot(event.pageX, event.pageY))
+
+gui = new dat.GUI()
+gui.add(scene, 'finalRadius', 10, 300)
+gui.addColor(scene, 'innerColor')
+gui.addColor(scene, 'outerColor')
+
+  

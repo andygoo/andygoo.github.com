@@ -1,0 +1,155 @@
+
+
+@-webkit-keyframes columnpop1 {
+	0%  { height: 0%;  }
+	50% { height: 30%; }
+}
+@-moz-keyframes columnpop1 {
+	0%  { height: 0%;  }
+	50% { height: 30%; }
+}
+@-o-keyframes columnpop1 {
+	0%  { height: 0%;  }
+	50% { height: 30%; }
+}
+@keyframes columnpop1 {
+	0%  { height: 0%;  }
+	50% { height: 30%; }
+}
+
+
+@-webkit-keyframes columnpop2 {
+	0%  { height: 0%;  }
+	20% { height: 0%;  }
+	70% { height: 55%; }
+}
+@-moz-keyframes columnpop2 {
+	0%  { height: 0%;  }
+	20% { height: 0%;  }
+	70% { height: 55%; }
+}
+@-o-keyframes columnpop2 {
+	0%  { height: 0%;  }
+	20% { height: 0%;  }
+	70% { height: 55%; }
+}
+@keyframes columnpop2 {
+	0%  { height: 0%;  }
+	20% { height: 0%;  }
+	70% { height: 55%; }
+}
+
+
+@-webkit-keyframes columnpop3 {
+	0%  { height: 0%;  }
+	40% { height: 0%;  }
+	90% { height: 80%; }
+}
+@-moz-keyframes columnpop3 {
+	0%  { height: 0%;  }
+	40% { height: 0%;  }
+	90% { height: 80%; }
+}
+@-o-keyframes columnpop3 {
+	0%  { height: 0%;  }
+	40% { height: 0%;  }
+	90% { height: 80%; }
+}
+@keyframes columnpop3 {
+	0%  { height: 0%;  }
+	40% { height: 0%;  }
+	90% { height: 80%; }
+}
+
+
+.analytics > div {
+	border: 0.2em solid #444;
+	border-width: 0 0 0.15em 0.15em;
+	border-radius: 0.15em;
+	background: rgba(255, 255, 255, 0.5);
+	position: relative;
+}
+
+.analytics > div > div {
+	position: absolute;
+	left: 40%;
+	bottom: 0;
+	width: 22%;
+	height: 55%;
+	background: grey;
+}
+
+.analytics > div > div:FIRST-CHILD {
+	left: 10%;
+	height: 30%;
+}
+
+.analytics > div > div:LAST-CHILD {
+	left: 70%;
+	height: 80%;
+}
+
+.selected .analytics > div > div,
+.analytics:hover > div > div,
+div.analytics:hover > div > div {
+		background-image: -webkit-gradient(
+	    linear, left bottom, left top,
+	    color-stop(0, #833),
+	    color-stop(1, #D88)
+	);
+	background-image: -moz-linear-gradient( bottom, #833, #D88 );
+	background-image: -o-linear-gradient( bottom, #833, #D88 );
+	
+	box-shadow:	inset 0.1em 0.1em 0.1em rgba(0,0,0,0.2),
+				inset -0.1em 0px 0.1em rgba(255,255,255,0.2);
+}
+.analytics:hover > div > div,
+div.analytics:hover > div > div {
+		-webkit-animation-name: columnpop2;
+	   -moz-animation-name: columnpop2;
+	     -o-animation-name: columnpop2;
+			animation-name: columnpop2;
+	-webkit-animation-duration: 0.5s;
+	   -moz-animation-duration: 0.5s;
+	     -o-animation-duration: 0.5s;
+			animation-duration: 0.5s;
+}
+
+.selected .analytics > div > div:FIRST-CHILD,
+.analytics:hover > div > div:FIRST-CHILD,
+div.analytics:hover > div > div:FIRST-CHILD {
+		background-image: -webkit-gradient(
+	    linear, right bottom, left top,
+	    color-stop(0, #338),
+	    color-stop(1, #88D)
+	);
+	background-image: -moz-linear-gradient( bottom, #338, #88D );
+	background-image: -o-linear-gradient( bottom, #338, #88D );
+}
+.analytics:hover > div > div:FIRST-CHILD,
+div.analytics:hover > div > div:FIRST-CHILD{
+		-webkit-animation-name: columnpop1;
+	   -moz-animation-name: columnpop1;
+	     -o-animation-name: columnpop1;
+			animation-name: columnpop1;
+}
+
+.selected .analytics > div > div:LAST-CHILD,
+.analytics:hover > div > div:LAST-CHILD,
+div.analytics:hover > div > div:LAST-CHILD {
+		background-image: -webkit-gradient(
+	    linear, right bottom, left top,
+	    color-stop(0, #383),
+	    color-stop(1, #8D8)
+	);
+	background-image: -moz-linear-gradient( bottom, #383, #8D8 );
+	background-image: -o-linear-gradient( bottom, #383, #8D8 );
+	);
+}
+.analytics:hover > div > div:LAST-CHILD,
+div.analytics:hover > div > div:LAST-CHILD {
+		-webkit-animation-name: columnpop3;
+	   -moz-animation-name: columnpop3;
+	     -o-animation-name: columnpop3;
+			animation-name: columnpop3;
+}

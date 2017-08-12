@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery动态加载动画spin.js</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="description" content="An animated CSS activity indicator with VML fallback.">
+  <meta name="viewport" content="width=1024, maximum-scale=1">
+  <meta property="og:image" content="http://fgnass.github.com/spin.js/assets/preview.jpg?v=1" />
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="assets/main.css?v=5" type="text/css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Amaranth:400,700' rel='stylesheet' type='text/css'>
+  <link href="assets/prettify.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/fd-slider/fd-slider.css?v=2">
+  <link rel="stylesheet" type="text/css" href="assets/fd-slider/fd-slider-tooltip.css">
+  <script type="text/javascript" src="assets/prettify.js"></script>
+</head>
+<body>
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<div id="content">
+<div id="example">
+  
+  <div id="preview"></div>
+  <form id="opts">
+    <label>Lines:</label><input type="text" name="lines" min="5" max="16" step="2" value="12"><br>
+    <label>Length:</label><input type="text" name="length" min="0" max="30" value="7"><br>
+    <label>Width:</label><input type="text" name="width" min="2" max="20" value="4"><br>
+    <label>Radius:</label><input type="text" name="radius" min="0" max="40" value="10"><br>
+    <label>Corners:</label><input type="text" name="corners" min="0" max="1" step="0.1" value="1"><br>
+    <label>Rotate:</label><input type="text" name="rotate" min="0" max="90" value="0"><br>
+    <label>Trail:</label><input type="text" name="trail" min="10" max="100" value="60"><br>
+    <label>Speed:</label><input type="text" name="speed" min="0.5" max="2.2" step="0.1" value="1"><br>
+    <label>Shadow:</label><input type="checkbox" name="shadow"><br>
+    <label>Hwaccel:</label><input type="checkbox" name="hwaccel"><br>
+  </form>
+  <br clear="left">
+  <input type="checkbox" id="share">
+  <label for="share">
+    <b>Share it!</b> If checked, the option values will be stored in the URL so that you can easily share your settings.
+  </label>
+</div>
+<script src="/follow.js" type="text/javascript"></script>
+
+		
+<div style="width:700px;margin:10px auto 20px auto;padding:0 0 0 180px;overflow:hidden">
+<!-- Baidu Button BEGIN -->
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare" style="margin:10px 0 0 -4px">
+        <a class="bds_tsina"></a>
+        <a class="bds_tqq"></a>
+        <a class="bds_renren"></a>
+        <a class="bds_qzone"></a>
+        <a class="bds_douban"></a>
+        <a class="bds_xg"></a>
+        <span class="bds_more">更多</span>
+		<a class="shareCount"></a>
+    </div>
+<script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours
+();
+</script>
+<!-- Baidu Button END -->
+</div>
+				
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="assets/fd-slider/fd-slider.js"></script>
+<script src="dist/spin.min.js?v=1.2.6"></script>
+<script>
+  $.fn.spin = function(opts) {
+    this.each(function() {
+      var $this = $(this),
+          data = $this.data();
+
+      if (data.spinner) {
+        data.spinner.stop();
+        delete data.spinner;
+      }
+      if (opts !== false) {
+        data.spinner = new Spinner($.extend({color: $this.css('color')}, opts)).spin(this);
+      }
+    });
+    return this;
+  };
+  //$('#dot').spin();
+  prettyPrint();
+  function update() {
+    var opts = {};
+    $('#opts input[min]').each(function() {
+      $('#opt-' + this.name).text(opts[this.name] = parseFloat(this.value));
+    });
+    $('#opts input:checkbox').each(function() {
+      opts[this.name] = this.checked;
+      $('#opt-' + this.name).text(this.checked);
+    });
+    $('#preview').spin(opts);
+    if ($('#share').is(':checked')) {
+      window.location.replace('#?' + $('form').serialize());
+    }
+  }
+  $(function() {
+    var params = {};
+    var hash = /^#\?(.*)/.exec(location.hash);
+    if (hash) {
+      $('#share').prop('checked', true);
+      $.each(hash[1].split(/&/), function(i, pair) {
+        var kv = pair.split(/=/);
+        params[kv[0]] = kv[kv.length-1];
+      });
+    }
+    $('#opts input[min]').each(function() {
+      var val = params[this.name];
+      if (val !== undefined) this.value = val;
+      this.onchange = update;
+    });
+    $('#opts input:checkbox').each(function() {
+      this.checked = !!params[this.name];
+      this.onclick = update;
+    });
+    $('#share').click(function() {
+      window.location.replace(this.checked ? '#?' + $('form').serialize() : '#!');
+    });
+    update();
+  });
+</script>
+</body>
+</html>

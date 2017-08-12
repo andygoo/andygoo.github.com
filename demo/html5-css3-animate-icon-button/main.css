@@ -1,0 +1,121 @@
+
+@IMPORT url('dashboard.css');
+@IMPORT url('progress.css');
+@IMPORT url('analytics.css');
+@IMPORT url('settings.css');
+@IMPORT url('exit.css');
+
+html, body {
+	margin: 0; padding: 0;
+}
+
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans;
+	font-size: 12pt;
+	line-height: 1.4em;
+	background-color: lightsteelblue;
+	background-image: -webkit-gradient(
+	    linear, left bottom, left top,
+	    color-stop(0, lightsteelblue),
+	    color-stop(1, steelblue)
+	);
+	background-image: -moz-linear-gradient(
+	    center bottom,
+	    lightsteelblue 0%,
+	    steelblue 100%
+	);
+	background-repeat: no-repeat;
+}
+
+h2, h3, h4 {
+	color: steelblue;	
+}
+
+#pagewrapper {
+	width: 48em;
+	padding: 0 2em 4em;
+	margin: 0 auto 2em;
+	background: white;
+	border-radius: 0 0 2em 2em;
+}
+
+header h1{
+	font-size: 5em;
+	line-height: 0.9em;
+	letter-spacing: -0.05em;
+	margin: 0;
+}
+
+code {
+	letter-spacing: -0.05em;
+	color: steelblue;
+}
+
+pre {
+	padding: 1em;
+	border: 2px solid lightsteelblue;
+	border-radius: 0.5em;	
+}
+
+a:link, a:visited, a:hover, a:active, a:focus {
+	color: orangered;
+	font-weight: bold; 	
+}
+
+a:hover, a:active, a:focus {
+	color: orange;
+}
+
+li {
+	padding-bottom: 0.5em;	
+}
+
+.menu {
+	list-style-image: none;
+	margin: 0;
+	padding: 2em 0;
+}
+
+.menu li {
+	display: inline-block;
+	width: 150px;
+	position: relative;
+}
+
+.menu li a {
+	display: block;
+	text-align: center;
+	padding: 0.5em 0.5em 1em;
+	border-radius: 0.5em;
+	
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+
+.menu li.selected a {
+	background: lightsteelblue ;
+}
+.menu li a:hover {
+	background: gold;
+}
+
+.menu li a > div {
+	margin: 10px auto 20px;
+}
+
+.dashboard, .progress, .analytics, .settings, .exit {
+	display: block;
+	text-align: center;	
+}
+
+.dashboard > div, .progress > div, .analytics > div, .settings > div, .exit > div {
+	display: block;
+	height: 3.6em;
+	width: 4.8em;
+	margin: 0 auto;
+}
+
+.image { display: block; text-align: center; background: #E0E0E0; margin: 1em 0; border-radius: 0.5em;}
+.image .dashboard, .image .progress, .image .analytics, .image .settings, .image .exit { margin: 1em 1em 0em; display: inline-block; }
+.image p { padding-bottom: 0.5em; }
