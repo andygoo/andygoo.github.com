@@ -15,5 +15,7 @@ document.writeln("</div>");
 
 
 document.writeln("<div style=\"width:970px;margin:10px auto;\">");
+document.writeln("<a href=\"https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=uj06w9ns&productCode=vm&utm_source=uj06w9ns\" target=\"_blank\">");
 document.writeln("<img src=\"http://img.jiesc.net/2017/08/13/15025989873251.jpg\">");
+document.writeln("</a>");
 document.writeln("</div>");
