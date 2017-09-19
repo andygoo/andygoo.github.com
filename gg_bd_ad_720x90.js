@@ -3,6 +3,7 @@ document.writeln('<div id="adsbygooglediv">');
 document.writeln('<script async src="//blog.jiesc.net/static/js/adsbygoogle.js"></script>');
 document.writeln("</div>");
 */
+/*
 function isMobile() {
     var ua = navigator.userAgent.toLowerCase();
     if (ua.match(/(android|iphone)/i)){
@@ -25,4 +26,4 @@ document.writeln('var cpro_id = "u3066572";');
 document.writeln('</script>');
 document.writeln('<script async src="http://cpro.baidustatic.com/cpro/ui/c.js"></script>');
 document.writeln("</div>");
-}
+}*/
