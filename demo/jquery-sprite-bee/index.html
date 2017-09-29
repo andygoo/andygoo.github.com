@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery.spritely动画插件制作小蜜蜂飞在花丛中DEMO演示</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<style type="text/css">
+#bg {background: url(img/sky.png) 0 0 repeat-x;}
+#nuvole {background: transparent url(img/cloud.png) 0 top repeat-x;}
+#monti {background: transparent url(img/monti.png) 0 bottom repeat-x;}
+#prato {background: transparent url(img/pratoefiori.png) 0 bottom repeat-x;}
+#ape {
+	background: url(img/api.png) 0 0 no-repeat;
+	position: absolute;
+	left: 8px;
+	top: 319px;
+	height: 85px;
+	width: 136px;
+	z-index: 2000;
+	cursor: pointer;
+}
+#ape2 {
+	background: url(img/api.png) 0 bottom no-repeat;
+	position: absolute;
+	left: 685px;
+	top: 110px;
+	height: 85px;
+	width: 136px;
+	z-index: 2000;
+}
+#bombo {
+	background: url(img/bombo.png) 0 bottom no-repeat;
+	position: absolute;
+	left: 443px;
+	top: 211px;
+	height: 77px;
+	width: 125px;
+	z-index: 2000;
+}
+</style>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.spritely.js"></script>
+<script>
+$(function() {
+	$('#nuvole').pan({fps: 30, speed: 0.7, dir: 'left', depth: 10});
+	$('#monti').pan({fps: 30, speed: 1.2, dir: 'left', depth: 30});
+	$('#prato').pan({fps: 30, speed: 2, dir: 'left', depth: 70});
+	$('#nuvole, #monti, #prato').spRelSpeed(5);
+	
+	$('#ape')
+		.sprite({fps: 8, no_of_frames: 3})
+		.spRandom({top: 70, left: 100, right: 1000, bottom: 340})
+		.activeOnClick()
+		.active();
+	$('#ape2')
+		.sprite({fps: 8, no_of_frames: 3})
+		.spRandom({top: 70, left: 100, right: 1000, bottom: 340});	
+	$('#bombo')
+		.sprite({fps: 8, no_of_frames: 3})
+		.spRandom({top: 70, left: 100, right: 1000, bottom: 340});
+	$('body').flyToTap();
+});
+</script>
+</head>
+<body>
+<div id="container">
+	<div class="stage" id="stage">
+		<div class="stage" id="bg"></div>
+		<div class="stage" id="nuvole"></div>
+		<div class="stage" id="monti"></div>
+		<div class="stage" id="prato"></div>
+	</div>
+	<div id="ape"></div>
+	<div id="ape2"></div>
+	<div id="bombo"></div>
+</div>
+
+<div style="text-align:center;clear:both">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+</body>
+</html>
