@@ -1,0 +1,1646 @@
+body {
+  background: #eef;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-perspective: 400px;
+          perspective: 400px;
+}
+
+div {
+  box-sizing: border-box;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+p {
+  position: absolute;
+  font-size: 40px;
+  color: #984fbc;
+  font-family: 'Dosis', sans-serif;
+  letter-spacing: 3px;
+  -webkit-transform: translateY(-45px);
+          transform: translateY(-45px);
+}
+
+#road {
+  -webkit-animation: run 15000ms linear infinite;
+          animation: run 15000ms linear infinite;
+}
+#road .shadow {
+  position: absolute;
+  width: 300px;
+  height: 40px;
+  background: #ddd;
+  border-radius: 999px;
+  -webkit-transform: rotateX(90deg) translateX(-150px) translateZ(-92px);
+          transform: rotateX(90deg) translateX(-150px) translateZ(-92px);
+}
+#road .bike {
+  position: relative;
+}
+#road .bike_body_pedal {
+  position: absolute;
+  -webkit-transform-origin: -28px 54px;
+          transform-origin: -28px 54px;
+  -webkit-animation: tire 3000ms linear infinite;
+          animation: tire 3000ms linear infinite;
+}
+#road .bike_body_pedal .arm_a {
+  position: absolute;
+  -webkit-transform: rotateZ(0deg) translateZ(8px) translateX(-30px) translateY(50px);
+          transform: rotateZ(0deg) translateZ(8px) translateX(-30px) translateY(50px);
+}
+#road .bike_body_pedal .arm_a .bike_body_frame_side_a {
+  position: absolute;
+  height: 30px;
+  width: 4px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+}
+#road .bike_body_pedal .arm_a .bike_body_frame_side_a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+#road .bike_body_pedal .arm_a .bike_body_frame_side_a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_pedal .arm_a .bike_body_frame_side_b {
+  position: absolute;
+  height: 30px;
+  width: 4px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+  -webkit-transform: translateZ(4px);
+          transform: translateZ(4px);
+}
+#road .bike_body_pedal .arm_a .bike_body_frame_side_b::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_pedal .arm_a .bike_body_frame_side_b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+#road .bike_body_pedal .arm_b {
+  position: absolute;
+  -webkit-transform: rotateZ(0deg) translateZ(-12px) translateX(-30px) translateY(28px);
+          transform: rotateZ(0deg) translateZ(-12px) translateX(-30px) translateY(28px);
+}
+#road .bike_body_pedal .arm_b .bike_body_frame_side_a {
+  position: absolute;
+  height: 30px;
+  width: 4px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+}
+#road .bike_body_pedal .arm_b .bike_body_frame_side_a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+#road .bike_body_pedal .arm_b .bike_body_frame_side_a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_pedal .arm_b .bike_body_frame_side_b {
+  position: absolute;
+  height: 30px;
+  width: 4px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+  -webkit-transform: translateZ(4px);
+          transform: translateZ(4px);
+}
+#road .bike_body_pedal .arm_b .bike_body_frame_side_b::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_pedal .arm_b .bike_body_frame_side_b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+#road .bike_body_pedal .pedal_a {
+  position: absolute;
+  top: 28px;
+  left: -3px;
+  -webkit-transform-origin: 5px 0px;
+          transform-origin: 5px 0px;
+  -webkit-animation: pedalA 3000ms linear infinite;
+          animation: pedalA 3000ms linear infinite;
+}
+#road .bike_body_pedal .pedal_a .bike_body_frame_side_a {
+  position: absolute;
+  height: 20px;
+  width: 10px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+}
+#road .bike_body_pedal .pedal_a .bike_body_frame_side_a::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+#road .bike_body_pedal .pedal_a .bike_body_frame_side_a::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_pedal .pedal_a .bike_body_frame_side_b {
+  position: absolute;
+  height: 20px;
+  width: 10px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+  -webkit-transform: translateZ(4px);
+          transform: translateZ(4px);
+}
+#road .bike_body_pedal .pedal_a .bike_body_frame_side_b::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_pedal .pedal_a .bike_body_frame_side_b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+#road .bike_body_pedal .pedal_b {
+  position: absolute;
+  top: 0px;
+  left: -3px;
+  -webkit-transform-origin: 5px 0px;
+          transform-origin: 5px 0px;
+  -webkit-animation: pedalB 3000ms linear infinite;
+          animation: pedalB 3000ms linear infinite;
+}
+#road .bike_body_pedal .pedal_b .bike_body_frame_side_a {
+  position: absolute;
+  height: 20px;
+  width: 10px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+}
+#road .bike_body_pedal .pedal_b .bike_body_frame_side_a::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+#road .bike_body_pedal .pedal_b .bike_body_frame_side_a::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_pedal .pedal_b .bike_body_frame_side_b {
+  position: absolute;
+  height: 20px;
+  width: 10px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+  -webkit-transform: translateZ(4px);
+          transform: translateZ(4px);
+}
+#road .bike_body_pedal .pedal_b .bike_body_frame_side_b::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_pedal .pedal_b .bike_body_frame_side_b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+#road .bike_body_saddle {
+  position: absolute;
+  -webkit-transform: translateX(-80px) translateY(-50px);
+          transform: translateX(-80px) translateY(-50px);
+}
+#road .bike_body_saddle .bike_body_saddle_side_a {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background: #000;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+#road .bike_body_saddle .bike_body_saddle_side_a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 6px;
+  background: #333;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_saddle .bike_body_saddle_side_a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 6px;
+  background: #333;
+  -webkit-transform-origin: 0 6px;
+          transform-origin: 0 6px;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+#road .bike_body_saddle .bike_body_saddle_side_b {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background: #000;
+  -webkit-transform: rotateX(90deg) translateZ(-6px);
+          transform: rotateX(90deg) translateZ(-6px);
+}
+#road .bike_body_saddle .bike_body_saddle_side_b::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 6px;
+  height: 20px;
+  background: #666;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+#road .bike_body_saddle .bike_body_saddle_side_b::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 6px;
+  height: 20px;
+  background: #666;
+  -webkit-transform-origin: 6px 0;
+          transform-origin: 6px 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_rear .arm_a {
+  position: absolute;
+  -webkit-transform: rotateZ(28deg) translateZ(4px) translateX(-60px) translateY(4px);
+          transform: rotateZ(28deg) translateZ(4px) translateX(-60px) translateY(4px);
+}
+#road .bike_body_rear .arm_a .bike_body_frame_side_a {
+  position: absolute;
+  height: 90px;
+  width: 4px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+}
+#road .bike_body_rear .arm_a .bike_body_frame_side_a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+#road .bike_body_rear .arm_a .bike_body_frame_side_a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_rear .arm_a .bike_body_frame_side_b {
+  position: absolute;
+  height: 90px;
+  width: 4px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+  -webkit-transform: translateZ(4px);
+          transform: translateZ(4px);
+}
+#road .bike_body_rear .arm_a .bike_body_frame_side_b::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_rear .arm_a .bike_body_frame_side_b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+#road .bike_body_rear .arm_b {
+  position: absolute;
+  -webkit-transform: rotateZ(28deg) translateZ(-8px) translateX(-60px) translateY(4px);
+          transform: rotateZ(28deg) translateZ(-8px) translateX(-60px) translateY(4px);
+}
+#road .bike_body_rear .arm_b .bike_body_frame_side_a {
+  position: absolute;
+  height: 90px;
+  width: 4px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+}
+#road .bike_body_rear .arm_b .bike_body_frame_side_a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+#road .bike_body_rear .arm_b .bike_body_frame_side_a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_rear .arm_b .bike_body_frame_side_b {
+  position: absolute;
+  height: 90px;
+  width: 4px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+  -webkit-transform: translateZ(4px);
+          transform: translateZ(4px);
+}
+#road .bike_body_rear .arm_b .bike_body_frame_side_b::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_rear .arm_b .bike_body_frame_side_b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 4px;
+  height: 12px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_rear .arm_c {
+  position: absolute;
+  -webkit-transform: rotateZ(90deg) translateZ(4px) translateX(53px) translateY(26px);
+          transform: rotateZ(90deg) translateZ(4px) translateX(53px) translateY(26px);
+}
+#road .bike_body_rear .arm_c .bike_body_frame_side_a {
+  position: absolute;
+  height: 70px;
+  width: 4px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+}
+#road .bike_body_rear .arm_c .bike_body_frame_side_a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+#road .bike_body_rear .arm_c .bike_body_frame_side_a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_rear .arm_c .bike_body_frame_side_b {
+  position: absolute;
+  height: 70px;
+  width: 4px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+  -webkit-transform: translateZ(4px);
+          transform: translateZ(4px);
+}
+#road .bike_body_rear .arm_c .bike_body_frame_side_b::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_rear .arm_c .bike_body_frame_side_b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+#road .bike_body_rear .arm_d {
+  position: absolute;
+  -webkit-transform: rotateZ(90deg) translateZ(-8px) translateX(53px) translateY(26px);
+          transform: rotateZ(90deg) translateZ(-8px) translateX(53px) translateY(26px);
+}
+#road .bike_body_rear .arm_d .bike_body_frame_side_a {
+  position: absolute;
+  height: 70px;
+  width: 4px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+}
+#road .bike_body_rear .arm_d .bike_body_frame_side_a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+#road .bike_body_rear .arm_d .bike_body_frame_side_a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_rear .arm_d .bike_body_frame_side_b {
+  position: absolute;
+  height: 70px;
+  width: 4px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+  -webkit-transform: translateZ(4px);
+          transform: translateZ(4px);
+}
+#road .bike_body_rear .arm_d .bike_body_frame_side_b::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_rear .arm_d .bike_body_frame_side_b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+#road .bike_body_front {
+  position: absolute;
+  -webkit-transform: rotateZ(-20deg) translateX(75px) translateY(-40px);
+          transform: rotateZ(-20deg) translateX(75px) translateY(-40px);
+}
+#road .bike_body_front .bike_body_frame_1 {
+  position: absolute;
+  height: 65px;
+  width: 8px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+}
+#road .bike_body_front .bike_body_frame_2 {
+  position: absolute;
+  width: 30px;
+  height: 8px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+}
+#road .bike_body_front .side_a {
+  position: absolute;
+  -webkit-transform: translateZ(4px);
+          transform: translateZ(4px);
+}
+#road .bike_body_front .side_a .bike_body_frame_1::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_front .side_a .bike_body_frame_1::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_front .side_a .bike_body_frame_2::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_front .side_b {
+  position: absolute;
+  -webkit-transform: translateZ(-4px);
+          transform: translateZ(-4px);
+}
+#road .bike_body_front .side_b .bike_body_frame_1::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_front .side_b .bike_body_frame_1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_front .side_b .bike_body_frame_2::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_front .side_c {
+  -webkit-transform: rotateY(90deg) translateX(-40px) translateZ(30px);
+          transform: rotateY(90deg) translateX(-40px) translateZ(30px);
+}
+#road .bike_body_front .side_c .bike_body_frame_side_a {
+  position: absolute;
+  width: 80px;
+  height: 8px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+}
+#road .bike_body_front .side_c .bike_body_frame_side_a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+#road .bike_body_front .side_c .bike_body_frame_side_a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_front .side_c .bike_body_frame_side_b {
+  position: absolute;
+  width: 80px;
+  height: 8px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+  -webkit-transform: translateZ(8px);
+          transform: translateZ(8px);
+}
+#road .bike_body_front .side_c .bike_body_frame_side_b::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_front .side_c .bike_body_frame_side_b::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+#road .bike_body_front .arm_a {
+  position: absolute;
+  -webkit-transform: translateZ(4px) translateX(2px) translateY(57px);
+          transform: translateZ(4px) translateX(2px) translateY(57px);
+}
+#road .bike_body_front .arm_a .bike_body_frame_side_a {
+  position: absolute;
+  height: 70px;
+  width: 4px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+}
+#road .bike_body_front .arm_a .bike_body_frame_side_a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+#road .bike_body_front .arm_a .bike_body_frame_side_a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_front .arm_a .bike_body_frame_side_b {
+  position: absolute;
+  height: 70px;
+  width: 4px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+  -webkit-transform: translateZ(4px);
+          transform: translateZ(4px);
+}
+#road .bike_body_front .arm_a .bike_body_frame_side_b::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_front .arm_a .bike_body_frame_side_b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+#road .bike_body_front .arm_b {
+  position: absolute;
+  -webkit-transform: translateZ(-8px) translateX(2px) translateY(57px);
+          transform: translateZ(-8px) translateX(2px) translateY(57px);
+}
+#road .bike_body_front .arm_b .bike_body_frame_side_a {
+  position: absolute;
+  height: 70px;
+  width: 4px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+}
+#road .bike_body_front .arm_b .bike_body_frame_side_a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+#road .bike_body_front .arm_b .bike_body_frame_side_a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_front .arm_b .bike_body_frame_side_b {
+  position: absolute;
+  height: 70px;
+  width: 4px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+  -webkit-transform: translateZ(4px);
+          transform: translateZ(4px);
+}
+#road .bike_body_front .arm_b .bike_body_frame_side_b::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_front .arm_b .bike_body_frame_side_b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 4px;
+  height: 12px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_triangle {
+  position: absolute;
+  -webkit-transform: rotateZ(80deg) translateX(-35px) translateY(-75px);
+          transform: rotateZ(80deg) translateX(-35px) translateY(-75px);
+}
+#road .bike_body_triangle .bike_body_frame_1 {
+  position: absolute;
+  height: 130px;
+  width: 8px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotateZ(-36.5deg);
+          transform: rotateZ(-36.5deg);
+}
+#road .bike_body_triangle .bike_body_frame_2 {
+  height: 120px;
+  width: 8px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+}
+#road .bike_body_triangle .bike_body_frame_3 {
+  position: absolute;
+  bottom: 0;
+  height: 8px;
+  width: 97px;
+  background: -webkit-linear-gradient(top, #ca81ee 0%, #984fbc 100%);
+  background: linear-gradient(to bottom, #ca81ee 0%, #984fbc 100%);
+  -webkit-transform: rotateZ(-10deg) translateX(-10px);
+          transform: rotateZ(-10deg) translateX(-10px);
+}
+#road .bike_body_triangle .side_a {
+  position: absolute;
+  -webkit-transform: translateZ(4px);
+          transform: translateZ(4px);
+}
+#road .bike_body_triangle .side_a .bike_body_frame_1::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_triangle .side_a .bike_body_frame_1::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_triangle .side_a .bike_body_frame_2::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_triangle .side_a .bike_body_frame_2::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_triangle .side_a .bike_body_frame_3::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_triangle .side_a .bike_body_frame_3::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_triangle .side_b {
+  position: absolute;
+  -webkit-transform: translateZ(-4px);
+          transform: translateZ(-4px);
+}
+#road .bike_body_triangle .side_b .bike_body_frame_1::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_triangle .side_b .bike_body_frame_1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_triangle .side_b .bike_body_frame_2::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_body_triangle .side_b .bike_body_frame_2::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_triangle .side_b .bike_body_frame_3::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+#road .bike_body_triangle .side_b .bike_body_frame_3::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  background: -webkit-linear-gradient(top, #984fbc 0%, #661d8a 100%);
+  background: linear-gradient(to bottom, #984fbc 0%, #661d8a 100%);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+#road .bike_tire_frame {
+  position: absolute;
+  width: 10px;
+  height: 60px;
+  border-top: 10px solid #000;
+  border-radius: 0 0 99px 99px;
+  -webkit-transform-origin: 5px 55px;
+          transform-origin: 5px 55px;
+  -webkit-animation: transformTire 3000ms ease-in-out infinite alternate;
+          animation: transformTire 3000ms ease-in-out infinite alternate;
+}
+#road .bike_tire_frame:nth-child(2n) {
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+#road .bike_tire_frame:nth-child(1) {
+  -webkit-transform: rotateZ(0deg);
+          transform: rotateZ(0deg);
+}
+#road .bike_tire_frame:nth-child(2) {
+  -webkit-transform: rotateZ(10deg);
+          transform: rotateZ(10deg);
+}
+#road .bike_tire_frame:nth-child(3) {
+  -webkit-transform: rotateZ(20deg);
+          transform: rotateZ(20deg);
+}
+#road .bike_tire_frame:nth-child(4) {
+  -webkit-transform: rotateZ(30deg);
+          transform: rotateZ(30deg);
+}
+#road .bike_tire_frame:nth-child(5) {
+  -webkit-transform: rotateZ(40deg);
+          transform: rotateZ(40deg);
+}
+#road .bike_tire_frame:nth-child(6) {
+  -webkit-transform: rotateZ(50deg);
+          transform: rotateZ(50deg);
+}
+#road .bike_tire_frame:nth-child(7) {
+  -webkit-transform: rotateZ(60deg);
+          transform: rotateZ(60deg);
+}
+#road .bike_tire_frame:nth-child(8) {
+  -webkit-transform: rotateZ(70deg);
+          transform: rotateZ(70deg);
+}
+#road .bike_tire_frame:nth-child(9) {
+  -webkit-transform: rotateZ(80deg);
+          transform: rotateZ(80deg);
+}
+#road .bike_tire_frame:nth-child(10) {
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+#road .bike_tire_frame:nth-child(11) {
+  -webkit-transform: rotateZ(100deg);
+          transform: rotateZ(100deg);
+}
+#road .bike_tire_frame:nth-child(12) {
+  -webkit-transform: rotateZ(110deg);
+          transform: rotateZ(110deg);
+}
+#road .bike_tire_frame:nth-child(13) {
+  -webkit-transform: rotateZ(120deg);
+          transform: rotateZ(120deg);
+}
+#road .bike_tire_frame:nth-child(14) {
+  -webkit-transform: rotateZ(130deg);
+          transform: rotateZ(130deg);
+}
+#road .bike_tire_frame:nth-child(15) {
+  -webkit-transform: rotateZ(140deg);
+          transform: rotateZ(140deg);
+}
+#road .bike_tire_frame:nth-child(16) {
+  -webkit-transform: rotateZ(150deg);
+          transform: rotateZ(150deg);
+}
+#road .bike_tire_frame:nth-child(17) {
+  -webkit-transform: rotateZ(160deg);
+          transform: rotateZ(160deg);
+}
+#road .bike_tire_frame:nth-child(18) {
+  -webkit-transform: rotateZ(170deg);
+          transform: rotateZ(170deg);
+}
+#road .bike_tire_frame:nth-child(19) {
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+#road .bike_tire_frame:nth-child(20) {
+  -webkit-transform: rotateZ(190deg);
+          transform: rotateZ(190deg);
+}
+#road .bike_tire_frame:nth-child(21) {
+  -webkit-transform: rotateZ(200deg);
+          transform: rotateZ(200deg);
+}
+#road .bike_tire_frame:nth-child(22) {
+  -webkit-transform: rotateZ(210deg);
+          transform: rotateZ(210deg);
+}
+#road .bike_tire_frame:nth-child(23) {
+  -webkit-transform: rotateZ(220deg);
+          transform: rotateZ(220deg);
+}
+#road .bike_tire_frame:nth-child(24) {
+  -webkit-transform: rotateZ(230deg);
+          transform: rotateZ(230deg);
+}
+#road .bike_tire_frame:nth-child(25) {
+  -webkit-transform: rotateZ(240deg);
+          transform: rotateZ(240deg);
+}
+#road .bike_tire_frame:nth-child(26) {
+  -webkit-transform: rotateZ(250deg);
+          transform: rotateZ(250deg);
+}
+#road .bike_tire_frame:nth-child(27) {
+  -webkit-transform: rotateZ(260deg);
+          transform: rotateZ(260deg);
+}
+#road .bike_tire_frame:nth-child(28) {
+  -webkit-transform: rotateZ(270deg);
+          transform: rotateZ(270deg);
+}
+#road .bike_tire_frame:nth-child(29) {
+  -webkit-transform: rotateZ(280deg);
+          transform: rotateZ(280deg);
+}
+#road .bike_tire_frame:nth-child(30) {
+  -webkit-transform: rotateZ(290deg);
+          transform: rotateZ(290deg);
+}
+#road .bike_tire_frame:nth-child(31) {
+  -webkit-transform: rotateZ(300deg);
+          transform: rotateZ(300deg);
+}
+#road .bike_tire_frame:nth-child(32) {
+  -webkit-transform: rotateZ(310deg);
+          transform: rotateZ(310deg);
+}
+#road .bike_tire_frame:nth-child(33) {
+  -webkit-transform: rotateZ(320deg);
+          transform: rotateZ(320deg);
+}
+#road .bike_tire_frame:nth-child(34) {
+  -webkit-transform: rotateZ(330deg);
+          transform: rotateZ(330deg);
+}
+#road .bike_tire_frame:nth-child(35) {
+  -webkit-transform: rotateZ(340deg);
+          transform: rotateZ(340deg);
+}
+#road .bike_tire_frame:nth-child(36) {
+  -webkit-transform: rotateZ(350deg);
+          transform: rotateZ(350deg);
+}
+#road .bike_tire_frame:nth-child(37) {
+  -webkit-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+}
+#road .bike_tire .side_a {
+  -webkit-transform: translateZ(3px);
+          transform: translateZ(3px);
+  -webkit-animation: transformSideA 3000ms ease-in-out infinite alternate;
+          animation: transformSideA 3000ms ease-in-out infinite alternate;
+}
+#road .bike_tire .side_a .bike_tire_frame::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 10px;
+  height: 6px;
+  background: -webkit-linear-gradient(top, black 0%, #444444 30%, #444444 70%, black 100%);
+  background: linear-gradient(to bottom, black 0%, #444444 30%, #444444 70%, black 100%);
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  -webkit-animation: transformSideAFrame 3000ms ease-in-out infinite alternate;
+          animation: transformSideAFrame 3000ms ease-in-out infinite alternate;
+}
+#road .bike_tire .side_a .bike_tire_frame::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  width: 10px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
+  background: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
+  -webkit-transform: translateZ(0.1px);
+          transform: translateZ(0.1px);
+}
+#road .bike_tire .side_b {
+  -webkit-transform: translateZ(-3px);
+          transform: translateZ(-3px);
+  -webkit-animation: transformSideB 3000ms ease-in-out infinite alternate;
+          animation: transformSideB 3000ms ease-in-out infinite alternate;
+}
+#road .bike_tire .side_b .bike_tire_frame::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  width: 10px;
+  height: 6px;
+  background: -webkit-linear-gradient(top, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
+  background: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  -webkit-animation: transformSideBFrame 3000ms ease-in-out infinite alternate;
+          animation: transformSideBFrame 3000ms ease-in-out infinite alternate;
+}
+#road .bike_tire .side_b .bike_tire_frame::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  width: 10px;
+  height: 4px;
+  background: -webkit-linear-gradient(top, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
+  background: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
+  -webkit-transform: translateZ(-0.1px);
+          transform: translateZ(-0.1px);
+}
+#road .bike_tire .side_c .bike_tire_frame {
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  border-left: 1px solid silver;
+}
+#road .bike_tire .side_c .bike_tire_frame:nth-child(even) {
+  border: none;
+}
+#road .bike_tire.front {
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+}
+#road .bike_tire.rear {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+}
+#road .bike_tire .rotate_tire {
+  -webkit-transform-origin: 5px 55px;
+          transform-origin: 5px 55px;
+  -webkit-animation: tire 3000ms linear infinite;
+          animation: tire 3000ms linear infinite;
+}
+
+@-webkit-keyframes transformTire {
+  0% {
+    border-top-width: 10px;
+  }
+  100% {
+    border-top-width: 30px;
+  }
+}
+
+@keyframes transformTire {
+  0% {
+    border-top-width: 10px;
+  }
+  100% {
+    border-top-width: 30px;
+  }
+}
+@-webkit-keyframes transformSideA {
+  0% {
+    -webkit-transform: translateZ(3px);
+            transform: translateZ(3px);
+  }
+  100% {
+    -webkit-transform: translateZ(20px);
+            transform: translateZ(20px);
+  }
+}
+@keyframes transformSideA {
+  0% {
+    -webkit-transform: translateZ(3px);
+            transform: translateZ(3px);
+  }
+  100% {
+    -webkit-transform: translateZ(20px);
+            transform: translateZ(20px);
+  }
+}
+@-webkit-keyframes transformSideB {
+  0% {
+    -webkit-transform: translateZ(-3px);
+            transform: translateZ(-3px);
+  }
+  100% {
+    -webkit-transform: translateZ(-20px);
+            transform: translateZ(-20px);
+  }
+}
+@keyframes transformSideB {
+  0% {
+    -webkit-transform: translateZ(-3px);
+            transform: translateZ(-3px);
+  }
+  100% {
+    -webkit-transform: translateZ(-20px);
+            transform: translateZ(-20px);
+  }
+}
+@-webkit-keyframes transformSideAFrame {
+  0% {
+    top: -10px;
+    height: 6px;
+  }
+  100% {
+    top: -30px;
+    height: 40px;
+  }
+}
+@keyframes transformSideAFrame {
+  0% {
+    top: -10px;
+    height: 6px;
+  }
+  100% {
+    top: -30px;
+    height: 40px;
+  }
+}
+@-webkit-keyframes transformSideBFrame {
+  0% {
+    height: 6px;
+  }
+  100% {
+    height: 40px;
+  }
+}
+@keyframes transformSideBFrame {
+  0% {
+    height: 6px;
+  }
+  100% {
+    height: 40px;
+  }
+}
+@-webkit-keyframes run {
+  0% {
+    -webkit-transform: rotateX(-30deg) rotateY(0deg);
+            transform: rotateX(-30deg) rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateX(10deg) rotateY(-180deg);
+            transform: rotateX(10deg) rotateY(-180deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-30deg) rotateY(-360deg);
+            transform: rotateX(-30deg) rotateY(-360deg);
+  }
+}
+@keyframes run {
+  0% {
+    -webkit-transform: rotateX(-30deg) rotateY(0deg);
+            transform: rotateX(-30deg) rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateX(10deg) rotateY(-180deg);
+            transform: rotateX(10deg) rotateY(-180deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-30deg) rotateY(-360deg);
+            transform: rotateX(-30deg) rotateY(-360deg);
+  }
+}
+@-webkit-keyframes tire {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+@keyframes tire {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+@-webkit-keyframes pedalA {
+  0% {
+    -webkit-transform: rotateZ(0deg) rotateX(90deg) translateY(4px);
+            transform: rotateZ(0deg) rotateX(90deg) translateY(4px);
+  }
+  100% {
+    -webkit-transform: rotateZ(-360deg) rotateX(90deg) translateY(4px);
+            transform: rotateZ(-360deg) rotateX(90deg) translateY(4px);
+  }
+}
+@keyframes pedalA {
+  0% {
+    -webkit-transform: rotateZ(0deg) rotateX(90deg) translateY(4px);
+            transform: rotateZ(0deg) rotateX(90deg) translateY(4px);
+  }
+  100% {
+    -webkit-transform: rotateZ(-360deg) rotateX(90deg) translateY(4px);
+            transform: rotateZ(-360deg) rotateX(90deg) translateY(4px);
+  }
+}
+@-webkit-keyframes pedalB {
+  0% {
+    -webkit-transform: rotateZ(0deg) rotateX(-90deg) translateY(0px);
+            transform: rotateZ(0deg) rotateX(-90deg) translateY(0px);
+  }
+  100% {
+    -webkit-transform: rotateZ(-360deg) rotateX(-90deg) translateY(0px);
+            transform: rotateZ(-360deg) rotateX(-90deg) translateY(0px);
+  }
+}
+@keyframes pedalB {
+  0% {
+    -webkit-transform: rotateZ(0deg) rotateX(-90deg) translateY(0px);
+            transform: rotateZ(0deg) rotateX(-90deg) translateY(0px);
+  }
+  100% {
+    -webkit-transform: rotateZ(-360deg) rotateX(-90deg) translateY(0px);
+            transform: rotateZ(-360deg) rotateX(-90deg) translateY(0px);
+  }
+}
+@-webkit-keyframes wind {
+  0% {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+  }
+  100% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+}
+@keyframes wind {
+  0% {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+  }
+  100% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+}
