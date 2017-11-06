@@ -1,0 +1,175 @@
+$l: 13em; // pyramid edge
+$nf: 5; // same as in HTML
+$gap: .02;
+$default-c: gainsboro;
+$default-p: 25%;
+$shades: #f0a #fa0 #af0 #0af #a0f;
+$rp: 80%;
+$bp: $rp*.5/$nf;
+$t: 10s;
+
+$n-3gon: 3;
+$ca-3gon: 360deg/$n-3gon;
+$a-3gon: ($n-3gon - 2)*180deg/$n-3gon;
+$rc-3gon: .5*$l/sin(.5*$ca-3gon);
+$ri-3gon: .5*$l/tan(.5*$ca-3gon);
+$h-3gon: $l*sin($a-3gon);
+
+$n-4gon: 4;
+$ca-4gon: 360deg/$n-4gon;
+$rc-4gon: .5*$l/sin(.5*$ca-4gon);
+$ri-4gon: .5*$l/tan(.5*$ca-4gon);
+
+$ax-4pyramid: 180deg/pi()*asin($ri-4gon/$h-3gon);
+$h-4pyramid: sqrt(pow($h-3gon, 2) - pow($ri-4gon, 2));
+
+@mixin lshade($base: $default-c, $p: $default-p) {
+	$c1: darken($base, $p);
+	$c2: darken($base, $p);
+	background-image: linear-gradient(90deg, $base, $c1, $c2, $c1, $base);
+}
+
+body {
+	overflow: hidden;
+	margin: 0;
+	height: 100vh;
+	perspective: 40em;
+	perspective-origin: 50% calc(50% - #{.5*$h-4pyramid});
+	background: #000;
+}
+
+div, :before, :after {
+	position: absolute;
+	top: 50%; left: 50%;
+	transform-style: preserve-3d;
+}
+
+.a3d {
+	margin-top: .5*$h-4pyramid - $ri-3gon;
+	animation: ani $t linear infinite;
+}
+
+@keyframes ani {
+	#{$rp} {
+		transform: rotateY(1turn);
+		animation-timing-function: ease-out;
+	}
+	100% { transform: rotateY(1turn) translate(calc(-50vw - #{2*$l})); }
+}
+
+.s3d {
+	@for $i from 0 to $nf {
+		$jt: $i/$nf + min($i, 1)*$gap;
+		$dt: $jt*$l; // edge of square base
+		$tt: $ri-3gon + ($jt - 1)*$h-4pyramid;
+		$shade: nth($shades, $i + 1);
+		
+		&:nth-child(#{$i + 1}) {
+			transform: translateY(calc(-50vh - #{$h-4pyramid}));
+			animation: fall-#{$i + 1} $t cubic-bezier(.68, 0, .265, 1.125) infinite;
+			
+			.s2d {
+				&:nth-child(-n + 4) {
+					clip-path: url(#c#{$i + 1});
+					
+					&:after {
+						@include lshade($shade);
+						animation: fill-#{$i + 1} $t ease-in infinite, 
+							shade $t linear infinite;
+					}
+				}
+				
+				&:nth-child(5) {
+					margin: -.5*$dt;
+					width: $dt; height: $dt;
+					transform: translateY($tt) rotateX(90deg);
+					
+					&:before {
+						background: lighten($shade, $default-p);
+						animation: fill-#{$i + 1} $t infinite;
+					}
+					&:after {
+						animation: shadow-#{$i + 1} $t infinite;
+					}
+				}
+			}
+		}
+		
+		@at-root {
+			@keyframes fall-#{$i + 1} {
+				#{($nf - $i)*$bp}, 100% { transform: none; }
+ 			}
+			@keyframes fill-#{$i + 1} {
+				0%, #{(2*$nf - $i - 1)*$bp} { opacity: .001; }
+				#{(2*$nf - $i)*$bp}, 100% { opacity: .999; }
+ 			}
+			@keyframes shadow-#{$i + 1} {
+				0%, #{($nf - $i - .5)*$bp} {
+					opacity: .001;
+					transform: scale(.1);
+				}
+				#{($nf - $i + .5)*$bp}, 100% {
+					opacity: .5;
+					transform: scale(1 - $gap);
+				}
+ 			}
+		}
+	}
+}
+
+.s2d {
+	overflow: hidden;
+	-moz-backface-visibility: hidden;
+	
+	&:before, &:after { content: '';}
+	
+	&:nth-child(-n + 4) {
+		margin: -$rc-3gon;
+		width: 2*$rc-3gon; height: 2*$rc-3gon;
+		transform-origin: 50% $h-3gon;
+		
+		&:before, &:after {
+			top: 0; left: 0;
+			width: 500%; height: 100%;
+			@include lshade();
+			background-size: 80% 100%;
+		}
+	}
+	
+	&:nth-child(5) {
+		background: lighten($default-c, $default-p);
+		
+		&:before, &:after {
+			margin: inherit;
+			width: inherit; height: inherit;
+		}
+		
+		&:after {
+			background: currentColor;
+			filter: blur(10px);
+		}
+	}
+	
+	@for $i from 0 to $n-4gon {
+		&:nth-child(#{$i + 1}) {
+			transform: rotateY($i*$ca-4gon) 
+				translateZ($ri-4gon) rotateX($ax-4pyramid);
+			
+			&:before, &:after {
+				background-position: -$i*2*$rc-3gon;
+				animation: shade $t linear infinite;
+			}
+		}
+	}
+}
+
+@keyframes shade {
+	#{$rp}, 100% { transform: translate(-$n-4gon*2*$rc-3gon) }
+}
+
+a {
+	position: absolute;
+	top: 1em; left: 1em;
+	color: lime;
+	font: 1em trebuchet ms, verdana, sans-serif;
+}

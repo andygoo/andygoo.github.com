@@ -1,0 +1,46 @@
+- var nlayers = 5;
+
+mixin slice3gon(k, gap)
+	- var n3gon = 3;
+	- var ba = 2*Math.PI/n3gon;
+	- var r = .5;
+	- var v = []; // storing 3gon vertex coords
+	- var p = []; // vertex coords for slices
+	- for(var i = 0; i < n3gon; i++) {
+		- var a = i*ba - .5*Math.PI;
+		- var x = r*(1 + Math.cos(a));
+		- var y = r*(1 + Math.sin(a));
+		- v.push([x, y]);
+	-}
+	- for(var i = 0; i < k; i++) {
+		- p.push([]);
+		- var j1 = i/k + Math.min(1, i)*gap;
+		- var j2 = (i + 1)/k - Math.min(1, k - i - 1)*gap;
+		- var x = (1 - j1)*v[0][0] + j1*v[1][0];
+		- var y = (1 - j1)*v[0][1] + j1*v[1][1];
+		- p[i].push([x.toFixed(5), y.toFixed(5)]);
+		- var x = (1 - j2)*v[0][0] + j2*v[1][0];
+		- var y = (1 - j2)*v[0][1] + j2*v[1][1];
+		- p[i].push([x.toFixed(5), y.toFixed(5)]);
+		- var x = (1 - j2)*v[0][0] + j2*v[2][0];
+		- var y = (1 - j2)*v[0][1] + j2*v[2][1];
+		- p[i].push([x.toFixed(5), y.toFixed(5)]);
+		- var x = (1 - j1)*v[0][0] + j1*v[2][0];
+		- var y = (1 - j1)*v[0][1] + j1*v[2][1];
+		- p[i].push([x.toFixed(5), y.toFixed(5)]);
+		clipPath(id=`c${i + 1}` clipPathUnits='objectBoundingBox')
+			polygon(points=p[i].join(' '))
+	-}
+	
+
+svg
+	+slice3gon(nlayers, .02)
+
+.a3d
+	while nlayers--
+		.s3d
+			- var nfaces = (nlayers == 4)?4:5;
+			while nfaces--
+				.s2d
+
+a(href='https://codepen.io/thebabydino/pen/adYaQX' target='_blank') see my other layered pyramid
